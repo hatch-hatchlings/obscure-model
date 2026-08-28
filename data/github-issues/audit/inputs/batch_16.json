@@ -1,0 +1,416 @@
+[
+ {
+  "number": 2434,
+  "url": "https://github.com/mavlink/MAVSDK/issues/2434",
+  "title": "MAVSDK Debian does not include MAVSDK::mavsdk_action target",
+  "state": "closed",
+  "labels": [],
+  "created_at": "2024-10-24",
+  "body": "# Description\r\n\r\nI want to follow the quick start guide and command an ArduPilot plane to take off, but I cannot compile the recommended example.\r\n\r\n## Steps\r\n\r\nFollow the quick start here to install the latest release on Ubuntu 22.\r\nhttps://mavsdk.mavlink.io/main/en/cpp/quickstart.html#install-mavsdk-library\r\n\r\n```bash\r\nwget https://github.com/mavlink/MAVSDK/releases/download/v2.12.12/libmavsdk-dev_2.12.12_ubuntu22.04_amd64.deb\r\nsudo dpkg -i ./libmavsdk-dev_2.12.12_ubuntu22.04_amd64.deb\r\n```\r\n\r\nCreate a `main.cpp` and `CMakeLists.txt` with the following, as per the takeoff guide:\r\nhttps://mavsdk.mavlink.io/main/en/cpp/guide/taking_off_landing.html#taking-off\r\n\r\n```cmake\r\ncmake_minimum_required(VERSION 3.10.2)\r\n\r\nset(CMAKE_CXX_STANDARD 17)\r\nset(CMAKE_CXX_STANDARD_REQUIRED ON)\r\nproject(mavsdk_takeoff)\r\n\r\nfind_package(MAVSDK REQUIRED)\r\n\r\nadd_executable(main main.cpp)\r\ntarget_link_libraries(main  MAVSDK::mavsdk MAVSDK::mavsdk_action)\r\n```\r\n\r\nAnd, copy the first part of the C++ code\r\n```c++\r\n#include <mavsdk/mavsdk.h>\r\nMavsdk mavsdk;\r\nConnectionResult conn_result = mavsdk.add_udp_connection();\r\n// Wait for the system to connect via heartbeat\r\nwhile (mavsdk.system().size() == 0) {\r\n   sleep_for(seconds(1));\r\n}\r\n// System got discovered.\r\nSystem system = mavsdk.systems()[0];\r\n```\r\n\r\nBuild the demo:\r\n```bash\r\ncolcon build --packages-up-to mavsdk_demo\r\n```\r\n\r\nSee the CMake configure error:\r\n```\r\nCMake Error at CMakeLists.txt:9 (add_executable):\r\n  Target \"main\" links to target \"MAVSDK::mavsdk_action\" but the target was\r\n  not found.  Perhaps a find_package() call is missing for an IMPORTED\r\n  target, or an ALIAS target is missing?\r\n  ```\r\n\r\n\r\n",
+  "n_comments_total": 6,
+  "comments": [
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Remove `MAVSDK::mavsdk_action`. That's no longer a thing. It's just one `libmavsdk.so` library now, well has been for a while. It's just that the docs are sometimes out of date, sorry about that.\r\n\r\nIt's actually fixed here:\r\nhttps://github.com/mavlink/MAVSDK-docs/blob/main/en/cpp/guide/taking_off_landing.md\r\n\r\nIt's just that the docs generation in CI doesn't seem to run anymore. Sorry about that. I'm hoping to fix that soon."
+   },
+   {
+    "user": "Ryanf55",
+    "assoc": "CONTRIBUTOR",
+    "body": "Thanks! What about \r\n\r\n```\r\n/home/ryan/Dev/ardupilot_ws/src/mavsdk_demo/main.cpp:9:19: error: \u2018class mavsdk::Mavsdk\u2019 has no member named \u2018system\u2019; did you mean \u2018systems\u2019?\r\n    9 |     while (mavsdk.system().size() == 0) {\r\n ```"
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "> error: \u2018class mavsdk::Mavsdk\u2019 has no member named \u2018system\u2019; did you mean \u2018systems\u2019?\r\n\r\nUse `mavsdk.systems()` instead \ud83d\ude09 "
+   },
+   {
+    "user": "Ryanf55",
+    "assoc": "CONTRIBUTOR",
+    "body": "Yea, seems like the docs are just out of date. There's missing `using` declarations too.\r\n```\r\n/home/ryan/Dev/ardupilot_ws/src/mavsdk_demo/main.cpp: In function \u2018int main()\u2019:\r\n/home/ryan/Dev/ardupilot_ws/src/mavsdk_demo/main.cpp:10:15: error: \u2018seconds\u2019 was not declared in this scope; did you mean \u2018useconds_t\u2019?\r\n   10 |     sleep_for(seconds(1));\r\n      |               ^~~~~~~\r\n      |               useconds_t\r\n/home/ryan/Dev/ardupilot_ws/src/mavsdk_demo/main.cpp:10:5: error: \u2018sleep_for\u2019 was not declared in this scope\r\n   10 |     sleep_for(seconds(1));\r\n```\r\n\r\nPerhaps the tutorials could be updated such that you can copy-paste the code without changes and have it compile?"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Agreed. Feel free to make pull requests. I'm meaning to do a pass through the docs but it will be after the v3 release."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Docs are updated now, closing."
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "resolution_class": "answered",
+   "solved": true,
+   "resolution_evidence": [
+    "substantive maintainer answer (703 chars)"
+   ],
+   "relevancy_score": 0.7433,
+   "relevancy_hits": {
+    "pos": {
+     "build": 8.7,
+     "docker_ci": 2.4,
+     "lang": 5.8
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.3821
+  }
+ },
+ {
+  "number": 1153,
+  "url": "https://github.com/mavlink/MAVSDK/issues/1153",
+  "title": "How to setup a VTOL takeoff mission with mission_raw?",
+  "state": "closed",
+  "labels": [
+   "question"
+  ],
+  "created_at": "2020-07-27",
+  "body": "Hello everyone, \r\n\r\nI am trying to achieve a VTOL takeoff mission with the navigation setpoint triplet uploaded beforehand. For my specific task it is important to know the next waypoint while performing the transition. The two options I found working on the QGCS are as following:\r\n\r\n**What I am trying to achieve:**\r\nOption 1: perform a standard MC takeoff followed by a transition to FW\r\n![Screenshot from 2020-07-27 10-22-34](https://user-images.githubusercontent.com/17237189/88520351-c0fc8a80-cff3-11ea-9ab6-39d8f10d9acf.png)\r\n\r\nOption 2: perform a Vtol takeoff command\r\n![Screenshot from 2020-07-27 09-14-52](https://user-images.githubusercontent.com/17237189/88520358-c3f77b00-cff3-11ea-8a8a-a3ffe04aa5bd.png)\r\n\r\n**Solution with mission and action commands:**\r\n![image](https://user-images.githubusercontent.com/17237189/88523272-f60adc00-cff7-11ea-9c61-8a521771eafc.png)\r\n\r\nIf I try to achieve my goal with the currently implemented mission and action commands it looks like shown above. The problem there is, that the vtol will not turn towards the next waypoint before performing the transition. It will just accelerate in whatever heading it is after takeoff. \r\nFor now, lets stick with option 1 and try to achieve this with the mission_raw.\r\n\r\n**Setup Issues for mission_raw:**\r\n It seems like creating a MissionItem with 3 entries should be enough to solve this task, but I am getting stuck filling my upload_mission(). I tried both options (async and normal but both seem to be _undefined reference_. I build on top of the autopilot_tester in px4\r\n\r\nThat's the setup ()\r\n![image](https://user-images.githubusercontent.com/17237189/88521656-7c71ee80-cff5-11ea-8bb0-6d73ca5128cb.png)\r\n\r\nThat's the function:\r\n![image](https://user-images.githubusercontent.com/17237189/88521878-dd99c200-cff5-11ea-8052-a516246a7926.png)\r\nAnd terminal output:\r\n![image](https://user-images.githubusercontent.com/17237189/88521923-f013fb80-cff5-11ea-85fb-c9f23b165e89.png)\r\n\r\nSince the setup for my mission_raw is the same as the normal mission, I don't realy understand the _undefined reference_ problem.\r\n\r\n**Questions/ Further Goals**\r\n\r\n1. Is the way with mission_raw the \"best\" way to follow to achieve my goal?\r\n2. One of the fail conditions would be an excessive deviation from the planned ground truth. How would you implement this?\r\n \r\n\r\n",
+  "n_comments_total": 11,
+  "comments": [
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Until we support VTOL in the mission plugin, the mission_raw approach makes sense.\r\n\r\nThe undefined reference problem is easy,  it just means it doesn't find the symbols because you forgot to link to them.\r\n\r\nJust add `MAVSDK::mission_raw` here:\r\nhttps://github.com/PX4/Firmware/blob/7354e3989335dfb38cc41216182f48fe84d165c7/test/mavsdk_tests/CMakeLists.txt#L23\r\n\r\nAlso, I see you are using/extending the PX4 AutopilotTester to work for VTOL. Would you mind contributing that back so that we have some VTOL tests upstream? That would be nice!"
+   },
+   {
+    "user": "notoriou5",
+    "assoc": "NONE",
+    "body": "haha, such an easy fix\r\n\r\nI will try to implement my mission and will report back to you if I hit some trouble.  If the mission ends up working fine I will upstream it :+1: "
+   },
+   {
+    "user": "notoriou5",
+    "assoc": "NONE",
+    "body": "> You can run the test with `--debugger gdb` which should give you a stacktrace.\r\n\r\nWhen running with `--debugger gdb`, mavsdk seems to have trouble connecting with my system. At least the connect() function fails due to timeout reasons. Any clue why this is happening? I checked and gdb is installed (8.1-0ubuntu3). \r\n\r\n\r\n> > For a possible upstream it would be nice to have some kind of logic behind creating missionRaw items instead of filling each one separately and pushing them back.\r\n> \r\n> That's why we have the mission plugin. So mission_raw will stay unsupported and \"raw\" while we're discussing on how to add VTOL capabilities to mission or creating a mission_vtol plugin. Also see the discussion in [mavlink/MAVSDK-Proto#168](https://github.com/mavlink/MAVSDK-Proto/issues/168).\r\n\r\nI will check it out, thanks for pointing it out to me :+1: "
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "> Any clue why this is happening?\r\n\r\nYer, I see gdb is actually started for px4 instead of the test, so that doesn't help.\r\n\r\nYou can run the mavsdk tests it with gdb like this:\r\n```\r\ndiff --git a/test/mavsdk_tests/process_helper.py b/test/mavsdk_tests/process_helper.py\r\nindex 826bd6d9cb..602b862579 100644\r\n--- a/test/mavsdk_tests/process_helper.py\r\n+++ b/test/mavsdk_tests/process_helper.py\r\n@@ -257,6 +257,5 @@ class TestRunner(Runner):\r\n         self.name = \"mavsdk_tests\"\r\n         self.cwd = workspace_dir\r\n         self.env = {\"PATH\": os.environ['PATH']}\r\n-        self.cmd = workspace_dir + \\\r\n-            \"/build/px4_sitl_default/mavsdk_tests/mavsdk_tests\"\r\n-        self.args = [\"--url\", mavlink_connection, case]\r\n+        self.cmd = \"gdb\"\r\n+        self.args = [\"-ex\", \"run\", \"--args\", workspace_dir + \"/build/px4_sitl_default/mavsdk_tests/mavsdk_tests\", \"--url\", mavlink_connection, case]\r\n```"
+   },
+   {
+    "user": "notoriou5",
+    "assoc": "NONE",
+    "body": "@julianoes Thanks, starting the debugger worked :) Now I am stuck with this error message which I don't really know how to read. Could you have a look at it?\r\n\r\n![image](https://user-images.githubusercontent.com/17237189/88633191-f2895a80-d0b4-11ea-9d6a-506226f8dd27.png)\r\n"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Ok any chance you can type `bt` enter to get a backtrace?"
+   },
+   {
+    "user": "notoriou5",
+    "assoc": "NONE",
+    "body": "Sorry, I didn't really work with the gdb before. But here it is :D Does this make any sense to you @julianoes ?\r\n![image](https://user-images.githubusercontent.com/17237189/89381335-49b4ae00-d6f9-11ea-9bbd-6df5c72bf139.png)\r\n\r\n@Edit: I found my error, it was an initialization error of mission_raw ^^\r\n"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Nice!"
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "resolution_class": "self_resolved",
+   "solved": true,
+   "resolution_evidence": [
+    "author states own resolution"
+   ],
+   "relevancy_score": 0.7329,
+   "relevancy_hits": {
+    "pos": {
+     "build": 2.7,
+     "server_rpc": 1.0,
+     "api_logic": 10.2,
+     "logic_bug": 1.7
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.3798
+  }
+ },
+ {
+  "number": 1253,
+  "url": "https://github.com/mavlink/MAVSDK/issues/1253",
+  "title": "where can i find the mavsdk_server file?",
+  "state": "closed",
+  "labels": [],
+  "created_at": "2020-11-13",
+  "body": "so that i can perform multiple drones setup on sitl? can't find it in the Mavsdk-python folder.\r\n\r\nthank you in advance",
+  "n_comments_total": 11,
+  "comments": [
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "First, you can get it from the [release artifacts of the mavsdk repo](https://github.com/mavlink/mavsdk/releases) (note: this is not mavsdk-python, but mavsdk-python uses mavsdk).\r\n\r\nAlternately, if you install mavsdk-python with `pip3 install mavsdk`, `mavsdk_server` comes embedded with it. For instance, say I install it in a venv:\r\n\r\n```\r\nmkdir /tmp/test_venv && cd /tmp/test_venv\r\npython3 -m venv venv\r\nsource ./venv/bin/activate\r\npip install mavsdk\r\nfind . | grep mavsdk_server\r\n```\r\n\r\nI will get the following output:\r\n\r\n```\r\n% find . | grep mavsdk_server\r\n./venv/lib/python3.8/site-packages/mavsdk/bin/mavsdk_server\r\n```"
+   },
+   {
+    "user": "kois86",
+    "assoc": "NONE",
+    "body": "> First, you can get it from the [release artifacts of the mavsdk repo](https://github.com/mavlink/mavsdk/releases) (note: this is not mavsdk-python, but mavsdk-python uses mavsdk).\r\n> \r\n> Alternately, if you install mavsdk-python with `pip3 install mavsdk`, `mavsdk_server` comes embedded with it. For instance, say I install it in a venv:\r\n> \r\n> ```\r\n> mkdir /tmp/test_venv && cd /tmp/test_venv\r\n> python3 -m venv venv\r\n> source ./venv/bin/activate\r\n> pip install mavsdk\r\n> find . | grep mavsdk_server\r\n> ```\r\n> \r\n> I will get the following output:\r\n> \r\n> ```\r\n> % find . | grep mavsdk_server\r\n> ./venv/lib/python3.8/site-packages/mavsdk/bin/mavsdk_server\r\n> ```\r\n\r\nthanks. \r\n\r\nwhen i do  this >>find . | grep mavsdk_server\r\n\r\nthe output is as below. is this correct? if so, i need to navigate to this directory\r\n\r\n./.local/lib/python3.6/site-packages/mavsdk/bin/mavsdk_server\r\n\r\nto perform this command?\r\n./mavsdk_server -p 50040\r\n\r\nthanks again\r\n\r\n\r\n./MAVSDK/templates/mavsdk_server/call.j2\r\n./MAVSDK/templates/mavsdk_server/file.j2\r\n./MAVSDK/templates/mavsdk_server/enum.j2\r\n./MAVSDK/templates/mavsdk_server/stream.j2\r\n./MAVSDK/templates/mavsdk_server/struct.j2\r\n./MAVSDK/build/default/src/backend/src/CMakeFiles/mavsdk_server.dir\r\n./MAVSDK/build/default/src/backend/src/CMakeFiles/mavsdk_server.dir/grpc_server.cpp.o\r\n./MAVSDK/build/default/src/backend/src/CMakeFiles/mavsdk_server.dir/build.make\r\n./MAVSDK/build/default/src/backend/src/CMakeFiles/mavsdk_server.dir/cmake_clean.cmake\r\n./MAVSDK/\n...[truncated]"
+   },
+   {
+    "user": "kois86",
+    "assoc": "NONE",
+    "body": "> You need to tell mavsdk-python to not start `mavsdk_server` itself (because you start it manually). That's when you create the `System`:\r\n> \r\n> ```\r\n> from mavsdk import System\r\n> \r\n> drone = System(mavsdk_server_address=\"localhost\", port=50051)\r\n> ```\r\n> \r\n> Note how the port is what you passed to `./mavsdk_server -p 50051`. You'll need multiple ports if you start multiple instances of mavsdk_server, one for each drone.\r\n\r\ni do this -->  drone = System(mavsdk_server_address=\"localhost\", port=50051)\r\n\r\nin order to assign drone to the system. for example, for multiple drone i would write like this:\r\n\r\n drone = System(mavsdk_server_address=\"localhost\", port=50040)\r\n    await drone.connect()\r\n    drone1 = System(mavsdk_server_address=\"localhost\", port=50041)\r\n    await drone1.connect()\r\n\r\nif i simply write like this --->  drone = System()\r\n\r\nhow can i assign for drone1. doesn't drone1=System() will contradict the above? sorry for the noob question, or do i have to open another issue?\r\n\r\nthanks again\r\n\r\n"
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "> if i simply write like this ---> drone = System()\r\n\r\nNo you can't. That's why you need to write the other one you pasted above."
+   },
+   {
+    "user": "kois86",
+    "assoc": "NONE",
+    "body": "Hi Jonas,\r\n\r\nI have question, does this excerpt important?\r\n\r\n#This waits till a mavlink based drone is connected\r\n    async for state in drone.core.connection_state():\r\n        if state.is_connected:\r\n            print(f\"-- Connected to drone with UUID: {state.uuid}\")\r\n            break\r\n\r\nbecause with this, when i run my mavsdk_server manually, the drone wont connect, but without it will, but some of the APIs wont work\r\n\r\nthank you"
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "Which version of `mavsdk_server` are you running?"
+   },
+   {
+    "user": "kois86",
+    "assoc": "NONE",
+    "body": "> Which version of `mavsdk_server` are you running?\r\n\r\nSorry, im not sure which version and how to check it.\r\n\r\nthing is, my program will stuck after it is successfully connect to the mavsdk_server due to the excerpt i mentioned above. if i remove it will run the program, such as takeoff and goto location, but some API cant work for example follow_me.\r\n\r\nWaiting for mavsdk_server to be ready...\r\nConnected to mavsdk_server!\r\nWaiting for mavsdk_server to be ready...\r\nConnected to mavsdk_server!\r\n\r\nbelow is the program that i plan to run. Noted that im using 2 iris drone. TQVM\r\n\r\n\r\n`#!/usr/bin/env python3\r\nimport asyncio\r\nfrom mavsdk import System\r\nfrom mavsdk.follow_me import (Config, FollowMeError, TargetLocation)\r\n\r\ndefault_height = 8.0 #in Meters\r\nfollow_distance = 2.0 #in Meters, this is the distance that the drone will remain away from Target while following it\r\n#Direction relative to the Target\r\n#Options are NONE, FRONT, FRONT_LEFT, FRONT_RIGHT, BEHIND\r\ndirection = Config.FollowDirection.BEHIND\r\nresponsiveness =  0.02\r\n\r\n\r\n#./mavsdk_server -p 50040 udp://:14540\r\n#./mavsdk_server -p 50041 udp://:14541\r\n\r\nasync def run():\r\n    drone = System(mavsdk_server_address=\"localhost\", port=50040)\r\n    await drone.connect()\r\n    drone1 = System(mavsdk_server_address=\"localhost\", port=50041)\r\n    await drone1.connect()\r\n\r\n    # This waits till a mavlink based drone is connected\r\n    async for state in drone.core.connection_state():\r\n        if state.is_connected:\r\n            print(f\"\n...[truncated]"
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "When you run `./mavsdk_server`, one of the first output lines tells you the version"
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "resolution_class": "answered",
+   "solved": true,
+   "resolution_evidence": [
+    "thread converges on a working answer"
+   ],
+   "relevancy_score": 0.6972,
+   "relevancy_hits": {
+    "pos": {
+     "sitl_sim": 1.0,
+     "build": 1.8,
+     "server_rpc": 27.9,
+     "api_logic": 9.4,
+     "lang": 9.0,
+     "logic_bug": 0.3
+    },
+    "neg": {
+     "flight_hw": 0.7
+    }
+   },
+   "is_meta": false,
+   "signal_score": 0.3798
+  }
+ },
+ {
+  "number": 2611,
+  "url": "https://github.com/mavlink/MAVSDK/issues/2611",
+  "title": "Double Unlock in LockedQueue::Guard",
+  "state": "closed",
+  "labels": [
+   "bug"
+  ],
+  "created_at": "2025-07-13",
+  "body": "## Problem\n\n- The `LockedQueue::Guard` class locks the mutex in constructor and unlocks in destructor\n- `wait_and_pop_front()` manually unlocks the mutex, then re-locks with `unique_lock`\n- When the method returns, both the `unique_lock` and `Guard` get destroyed as they leave scope\n- The `unique_lock` destructor AND `Guard` destructor try to unlock the same mutex\n- This causes undefined behavior (double-unlock) that can crash/hang the program\n\nPersonally I experienced this causing indefinite hangs in my application.\n\n## History\n\n- First observed in v3.7.0 release\n- Does not reproduce in v3.6.0 release\n- Likely introduced in commit https://github.com/mavlink/MAVSDK/commit/1abe3ea074e3c340d6c26865788a5980826a1c8e by @julianoes ",
+  "n_comments_total": 4,
+  "comments": [
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Oh dear, sorry about that. And thanks for the issue. Clearly, I didn't review this carefully enough.\n\nI'll fix or revert it this week. Unless you beat me to it with a pull request."
+   },
+   {
+    "user": "grantwilk",
+    "assoc": "NONE",
+    "body": "No worries, I appreciate the improvements toward thread safety! The 3.6.0 release works great until then."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Thanks! I have seen system_test segfaults come back in CI recently, so this hopefully explains it.\n\nAnd your analysis was exactly right, pretty sure.\n\nHere comes a fix: https://github.com/mavlink/MAVSDK/pull/2613"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Hopefully fixed with https://github.com/mavlink/MAVSDK/releases/tag/v3.7.1."
+   }
+  ],
+  "linked_prs": [
+   {
+    "number": 2613,
+    "merged": true,
+    "title": "core: fix regression in locked_queue"
+   }
+  ],
+  "close_commits": [],
+  "ASSIGNED": {
+   "resolution_class": "fixed_merged_pr",
+   "solved": true,
+   "resolution_evidence": [
+    "merged PR xref: [2613]"
+   ],
+   "relevancy_score": 0.6015,
+   "relevancy_hits": {
+    "pos": {
+     "docker_ci": 0.3,
+     "crash_repro": 2.4,
+     "steps": 1.0,
+     "logic_bug": 3.4
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.38
+  }
+ },
+ {
+  "number": 2000,
+  "url": "https://github.com/mavlink/MAVSDK/issues/2000",
+  "title": "Loading a JSON task file",
+  "state": "closed",
+  "labels": [
+   "question"
+  ],
+  "created_at": "2023-03-09",
+  "body": "hello, I want to load the json task file to q ground control without connecting to the drone with a separate script on my gcs computer. How can \u0131 do it.",
+  "n_comments_total": 8,
+  "comments": [
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "What's a JSON task file? Is that a QGroundControl mission plan?"
+   },
+   {
+    "user": "swimmingseeds",
+    "assoc": "NONE",
+    "body": "This issue has been mentioned on **Discussion Forum for PX4, Pixhawk, QGroundControl, MAVSDK, MAVLink**. There might be relevant details there:\n\nhttps://discuss.px4.io/t/import-mission-to-qgc-help/31187/2\n"
+   },
+   {
+    "user": "thepitho",
+    "assoc": "NONE",
+    "body": "> https://dev.qgroundcontrol.com/master/en/file_formats/plan.html\r\n\r\nyes, we can import an externally prepared plan file into q ground control. How can I turn this into an automatic script?\r\n\r\n"
+   },
+   {
+    "user": "thepitho",
+    "assoc": "NONE",
+    "body": "> This issue has been mentioned on **Discussion Forum for PX4, Pixhawk, QGroundControl, MAVSDK, MAVLink**. There might be relevant details there:\r\n> \r\n> https://discuss.px4.io/t/import-mission-to-qgc-help/31187/2\r\n\r\nyes i asked that too :)"
+   },
+   {
+    "user": "thepitho",
+    "assoc": "NONE",
+    "body": "Anybody help"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "> Anybody help\r\n\r\nSorry, it's the weekend here and given you don't pay me to answer you, you can't expect an answer immediately anyway.\r\n\r\n> yes, we can import an externally prepared plan file into q ground control. How can I turn this into an automatic script?\r\n\r\nIt's still not clear to me what you're trying to do. So do you create a mission plan in QGC and then you want to upload it from MAVSDK? Or do you need help in automatically create such a script?"
+   },
+   {
+    "user": "thepitho",
+    "assoc": "NONE",
+    "body": "> \r\n\r\nI want to upload a plan file to q ground control without a direct drone connection in a script I want andddd sorry for being impatient :("
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "I still don't understand what you mean. Please describe the steps that you would take or give some context. You need to actually invest some time into formulating a question if you expect help from maintainers."
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "resolution_class": "answered",
+   "solved": true,
+   "resolution_evidence": [
+    "substantive maintainer answer (734 chars)"
+   ],
+   "relevancy_score": 0.3079,
+   "relevancy_hits": {
+    "pos": {
+     "api_logic": 1.4,
+     "logic_bug": 3.4
+    },
+    "neg": {
+     "flight_hw": 0.7
+    }
+   },
+   "is_meta": false,
+   "signal_score": 0.3803
+  }
+ },
+ {
+  "number": 1056,
+  "url": "https://github.com/mavlink/MAVSDK/issues/1056",
+  "title": "Rename all leftover `dc`, `dcsdk` etc. to `mavsdk`",
+  "state": "closed",
+  "labels": [
+   "enhancement",
+   "beginner"
+  ],
+  "created_at": "2020-04-23",
+  "body": "Back when MAVSDK was named differently we also called the instance of `Mavsdk` different. Leftovers are still sprinkled all over the integration tests and examples. It would be nice to get them cleaned up.",
+  "n_comments_total": 5,
+  "comments": [
+   {
+    "user": "Siddharth1698",
+    "assoc": "CONTRIBUTOR",
+    "body": "I am new to working on this code. If this is an manual and easy task just tell me ill work on it."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Sure, that would be great. I would quickly wait until https://github.com/mavlink/MAVSDK/pull/1076 and https://github.com/mavlink/MAVSDK/pull/1075 are merged to avoid conflicts though.\r\n\r\nHere is an example:\r\nhttps://github.com/mavlink/MAVSDK/blob/242437c1b29d2e78cd60ca9383fda8d7b6858a6b/src/integration_tests/mission_cancellation.cpp#L26\r\n\r\nIt should just be `Mavsdk mavsdk;`."
+   },
+   {
+    "user": "Siddharth1698",
+    "assoc": "CONTRIBUTOR",
+    "body": "Cool. Got this. I should do this completely on all the files right."
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "> Cool. Got this. I should do this completely on all the files right.\r\n\r\nIdeally, yes. If it's too much work, it can be split in smaller chunks, too :blush: (like integration tests first, then examples, etc). Your call :wink:!"
+   },
+   {
+    "user": "Siddharth1698",
+    "assoc": "CONTRIBUTOR",
+    "body": "No prob. Got it.. :+1: "
+   }
+  ],
+  "linked_prs": [
+   {
+    "number": 1270,
+    "merged": true,
+    "title": "Cleanup"
+   }
+  ],
+  "close_commits": [],
+  "ASSIGNED": {
+   "resolution_class": "fixed_merged_pr",
+   "solved": true,
+   "resolution_evidence": [
+    "merged PR xref: [1270]"
+   ],
+   "relevancy_score": 0.1263,
+   "relevancy_hits": {
+    "pos": {
+     "lang": 0.3
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.3818
+  }
+ }
+]

@@ -1,0 +1,972 @@
+bucket,number,state,resolution_class,solved,is_meta,signal_score,relevancy_score,combined_score,n_comments,n_participants,n_xref_merged_prs,reactions_total,reopened,labels,created_at,title,url
+3,2720,closed,fixed_merged_pr,True,False,0.6794,0.97,0.8247,18,3,2,2,1,bug,2025-11-28T15:02:12Z,PX4 SITL MAVSDK test seg faulting,https://github.com/mavlink/MAVSDK/issues/2720
+3,2852,closed,fixed_merged_pr,True,False,0.6088,0.95,0.7794,10,2,3,0,1,,2026-04-07T17:47:21Z,Mavsdk and Ros2 causes nondescript segfault,https://github.com/mavlink/MAVSDK/issues/2852
+3,836,closed,fixed_merged_pr,True,False,0.5705,0.97,0.7702,14,3,1,0,0,bug|help wanted,2019-08-12T07:52:46Z,Protobuf fails to build on RPi,https://github.com/mavlink/MAVSDK/issues/836
+3,1673,closed,fixed_merged_pr,True,False,0.6523,0.8632,0.7577,19,3,1,0,1,bug|ci,2022-01-18T13:49:00Z,package architecture (amd64) does not match system (arm64),https://github.com/mavlink/MAVSDK/issues/1673
+3,2648,closed,fixed_merged_pr,True,False,0.5167,0.95,0.7333,7,2,1,1,0,,2025-09-08T15:37:28Z,mavlink_direct: Message filtering not working in subscribe_message (v3.10.1),https://github.com/mavlink/MAVSDK/issues/2648
+3,2691,closed,fixed_merged_pr,True,False,0.6154,0.8441,0.7297,18,4,2,0,0,,2025-10-23T23:10:21Z,Document/support process for using custom mavlink dialect,https://github.com/mavlink/MAVSDK/issues/2691
+3,2374,closed,fixed_merged_pr,True,False,0.5573,0.894,0.7257,12,3,2,0,0,,2024-08-15T21:36:18Z,Build From Source Failure (Raspbian OS),https://github.com/mavlink/MAVSDK/issues/2374
+3,931,closed,answered,True,False,0.6129,0.8313,0.7221,14,5,0,0,0,,2019-12-15T18:28:02Z,How to connect mavsdk-server to multiple devices?,https://github.com/mavlink/MAVSDK/issues/931
+1,1665,open,open,,False,0.629,0.796,0.7125,22,6,0,0,0,question,2022-01-11T04:43:46Z,MAVSDK collision avoidance,https://github.com/mavlink/MAVSDK/issues/1665
+3,2392,closed,answered,True,False,0.4741,0.95,0.712,11,4,0,0,0,,2024-09-04T11:38:55Z,mavsdk_server doesn't check if the server it is connected to is MavSDK.,https://github.com/mavlink/MAVSDK/issues/2392
+3,2489,closed,fixed_merged_pr,True,False,0.5496,0.8686,0.7091,10,3,1,0,0,,2025-01-03T01:54:25Z,SSL error building/configuring library on Ubuntu 22.04 in WSL2 and building docs,https://github.com/mavlink/MAVSDK/issues/2489
+3,1852,closed,fixed_merged_pr,True,False,0.56,0.8385,0.6993,7,4,2,0,0,enhancement,2022-07-12T13:45:27Z,Telemetry::Health::is_global_position_ok does not gurarantee that global position estimate is ok,https://github.com/mavlink/MAVSDK/issues/1852
+3,353,closed,answered,True,False,0.665,0.7244,0.6947,17,5,0,0,0,,2018-04-07T12:59:59Z,Problems connecting to multiple PX4s in SITL,https://github.com/mavlink/MAVSDK/issues/353
+3,1956,closed,self_resolved,True,False,0.4913,0.8978,0.6946,15,4,0,0,0,,2023-01-12T02:30:23Z,mavsdk_server build fail ,https://github.com/mavlink/MAVSDK/issues/1956
+3,885,closed,fixed_merged_pr,True,False,0.5879,0.7933,0.6906,13,3,1,0,0,question,2019-10-22T20:35:54Z,Landed State is jumping between modes,https://github.com/mavlink/MAVSDK/issues/885
+3,2100,closed,fixed_stated,True,False,0.4193,0.95,0.6846,5,3,0,0,0,more_info_needed,2023-07-19T03:22:00Z,get params segmentation fault,https://github.com/mavlink/MAVSDK/issues/2100
+3,977,closed,fixed_merged_pr,True,False,0.5206,0.844,0.6823,7,2,2,0,1,bug,2020-01-29T10:25:06Z,unit_tests_backend stall ,https://github.com/mavlink/MAVSDK/issues/977
+3,728,closed,fixed_merged_pr,True,False,0.8211,0.542,0.6816,39,14,2,6,0,enhancement,2019-04-23T13:11:27Z,Adding support for ArduPilot,https://github.com/mavlink/MAVSDK/issues/728
+3,2075,closed,fixed_merged_pr,True,False,0.5226,0.838,0.6803,8,3,1,0,0,,2023-06-09T05:07:02Z,SIGABRT when destructing mavsdk,https://github.com/mavlink/MAVSDK/issues/2075
+3,2665,closed,fixed_merged_pr,True,False,0.6352,0.7214,0.6783,10,4,1,1,0,enhancement,2025-09-26T13:34:25Z,Proper way to build with superbuild off?,https://github.com/mavlink/MAVSDK/issues/2665
+3,1263,closed,answered,True,False,0.4387,0.914,0.6764,18,3,0,0,0,bug,2020-11-23T07:17:33Z,Consecutive param sets trigger exception,https://github.com/mavlink/MAVSDK/issues/1263
+3,2027,closed,answered,True,False,0.5167,0.8307,0.6737,13,5,0,0,0,,2023-04-25T07:38:47Z,Problem with TCP connection to a PX4 SITL,https://github.com/mavlink/MAVSDK/issues/2027
+3,1683,closed,fixed_merged_pr,True,False,0.5104,0.8365,0.6734,13,3,1,0,0,question,2022-01-20T13:55:31Z,Handling of MAVLINK params,https://github.com/mavlink/MAVSDK/issues/1683
+1,1990,open,open,,False,0.5436,0.7954,0.6695,6,3,1,1,0,bug,2023-02-18T03:34:28Z,"""MAVSDK"" and ""Arducopter SITL"" incompatibility (and fly_qgc_mission.cpp and QGC incompatibility)",https://github.com/mavlink/MAVSDK/issues/1990
+2,2699,closed,abandoned_no_response,False,False,0.5027,0.8258,0.6643,7,3,0,1,0,,2025-10-31T04:36:39Z,CMake local install RPATH missing,https://github.com/mavlink/MAVSDK/issues/2699
+3,2149,closed,answered,True,False,0.4316,0.894,0.6628,6,3,0,0,0,,2023-10-06T21:10:51Z,Python: drone.connect() to remote SITL/PX4 hangs ,https://github.com/mavlink/MAVSDK/issues/2149
+3,609,closed,fixed_merged_pr,True,False,0.5335,0.7885,0.661,9,5,1,0,0,bug|help wanted|beginner,2018-11-23T14:41:23Z,Spurious send tries in backend,https://github.com/mavlink/MAVSDK/issues/609
+3,2696,closed,fixed_stated,True,False,0.4613,0.8583,0.6598,14,3,0,0,0,,2025-10-27T14:14:56Z,Compile err “undefined reference to `SSL_get0_group_name'” when using as a sub_dir of a cmake project,https://github.com/mavlink/MAVSDK/issues/2696
+3,955,closed,fixed_merged_pr,True,False,0.6236,0.6924,0.658,34,5,1,0,0,question,2020-01-16T11:29:51Z,Routing custom dialect with MavlinkPassthrough,https://github.com/mavlink/MAVSDK/issues/955
+3,1989,closed,fixed_stated,True,False,0.6232,0.6893,0.6562,13,4,0,0,0,bug|ci,2023-02-17T03:08:29Z,MAVSDK verson on macOS aarch64,https://github.com/mavlink/MAVSDK/issues/1989
+3,1307,closed,fixed_merged_pr,True,False,0.5211,0.7795,0.6503,15,2,1,0,0,enhancement,2021-02-04T02:08:33Z,Offboard doesnt want to enable after a is_active() check. ,https://github.com/mavlink/MAVSDK/issues/1307
+1,3018,open,open,,False,0.4476,0.8485,0.6481,7,3,0,0,1,,2026-07-26T18:30:07Z,mavsdk.pc forces bundled private dependencies on shared-library consumers,https://github.com/mavlink/MAVSDK/issues/3018
+3,151,closed,fixed_merged_pr,True,False,0.4833,0.8126,0.648,6,2,2,0,0,bug,2017-11-05T23:54:28Z,External library may not work and is not providing errors,https://github.com/mavlink/MAVSDK/issues/151
+3,1805,closed,fixed_stated,True,False,0.6152,0.6808,0.648,30,3,0,0,0,,2022-06-13T22:37:26Z,Param Server - exception when using custom string parameter,https://github.com/mavlink/MAVSDK/issues/1805
+0,401,closed,fixed_merged_pr,True,False,0.3098,0.97,0.6399,1,2,1,0,0,bug,2018-05-21T05:37:33Z,transition_vtol_fixed_wing example never ready to arm,https://github.com/mavlink/MAVSDK/issues/401
+3,2211,closed,answered,True,False,0.6041,0.6721,0.6381,15,5,0,0,0,,2024-01-12T20:05:43Z,Mission Upload issues with Mavsdk Java and Ardupilot,https://github.com/mavlink/MAVSDK/issues/2211
+3,2639,closed,fixed_merged_pr,True,False,0.4911,0.7794,0.6352,13,2,1,0,0,bug,2025-08-12T14:30:37Z,Bus error on Raspberry Pi with 3.9.0,https://github.com/mavlink/MAVSDK/issues/2639
+3,992,closed,answered,True,False,0.6779,0.5875,0.6327,18,7,0,0,1,question,2020-02-18T09:22:46Z,takeoff_and_land error (fatal error: plugin_base.h: No such file or directory),https://github.com/mavlink/MAVSDK/issues/992
+3,1785,closed,fixed_merged_pr,True,False,0.43,0.8323,0.6311,7,2,1,0,0,bug,2022-05-21T08:59:13Z,get_all_params error (std::future_error: Promise already satisfied),https://github.com/mavlink/MAVSDK/issues/1785
+1,967,open,open,,False,0.6179,0.6414,0.6297,15,6,0,0,0,feature,2020-01-27T19:32:44Z,Add Avoidance Plugin to MAVSDK,https://github.com/mavlink/MAVSDK/issues/967
+0,1010,closed,fixed_merged_pr,True,False,0.3902,0.869,0.6296,3,1,1,0,0,bug|ci,2020-03-09T09:36:45Z,Passthrough integration test crashes ,https://github.com/mavlink/MAVSDK/issues/1010
+3,157,closed,fixed_merged_pr,True,False,0.5052,0.7529,0.629,10,3,1,0,0,,2017-11-09T02:17:21Z,Example fails with library not found after #130,https://github.com/mavlink/MAVSDK/issues/157
+0,2273,closed,answered,True,False,0.3567,0.9,0.6283,7,2,0,0,0,bug,2024-04-05T13:09:08Z,Info plugin blocking on async command,https://github.com/mavlink/MAVSDK/issues/2273
+3,2216,closed,fixed_merged_pr,True,False,0.4654,0.7837,0.6245,9,3,1,0,0,bug,2024-02-08T12:42:25Z,followme not found in C++,https://github.com/mavlink/MAVSDK/issues/2216
+2,1917,closed,abandoned_no_response,False,False,0.4528,0.7916,0.6222,11,2,0,1,0,bug,2022-10-18T20:19:48Z,seg fault when trying to read results of mavsdk::Param::get_all_params,https://github.com/mavlink/MAVSDK/issues/1917
+0,2152,closed,answered,True,False,0.3963,0.844,0.6201,6,4,0,0,0,bug,2023-10-10T14:02:13Z,"ArduPlane Takeoff Seg Fault ""Cannot translate flight mode to ArduPilot Plane mode.""",https://github.com/mavlink/MAVSDK/issues/2152
+3,2143,closed,answered,True,False,0.5062,0.7339,0.62,14,4,0,1,0,bug,2023-09-20T21:11:47Z,Building MAIN breaks Euler Angle Values - ArduCopter (Returns NaN but works in v1.4.16),https://github.com/mavlink/MAVSDK/issues/2143
+3,1685,closed,answered,True,False,0.4137,0.8208,0.6172,11,3,0,0,0,,2022-01-20T17:26:32Z,undefined reference with debian11_armv7 on docker Ubutun18.04 linux/arm/v7,https://github.com/mavlink/MAVSDK/issues/1685
+3,2058,closed,fixed_stated,True,False,0.5991,0.6348,0.6169,14,4,0,0,0,,2023-05-26T19:23:36Z,MissionRaw stopped working from v1.2.0 to v1.3.0,https://github.com/mavlink/MAVSDK/issues/2058
+3,364,closed,answered,True,False,0.4996,0.7325,0.616,19,5,0,0,0,question,2018-04-13T07:37:56Z,using dronecore with multiple vehicle simlation in ros gazebo,https://github.com/mavlink/MAVSDK/issues/364
+0,997,closed,answered,True,False,0.3939,0.838,0.6159,4,2,0,0,0,question,2020-02-28T23:02:50Z,Python wheel for RPI,https://github.com/mavlink/MAVSDK/issues/997
+3,720,closed,answered,True,False,0.4992,0.7288,0.614,14,3,0,0,0,,2019-04-09T10:04:50Z,Aborted when download mission,https://github.com/mavlink/MAVSDK/issues/720
+3,1729,closed,fixed_merged_pr,True,False,0.5577,0.67,0.6139,9,2,1,1,2,bug,2022-04-05T03:51:10Z,std::optional for CommandLong always returns true. Causes fault on Ardupilot,https://github.com/mavlink/MAVSDK/issues/1729
+3,2282,closed,answered,True,False,0.4609,0.7667,0.6138,25,3,0,0,0,enhancement,2024-04-15T23:19:27Z,Mavsdk app fails to build on GLIBC 2.31,https://github.com/mavlink/MAVSDK/issues/2282
+3,2431,closed,answered,True,False,0.4609,0.7648,0.6129,17,3,0,0,0,,2024-10-22T20:44:30Z,Camera Commands Infinite loop with gazebo sitl with typhoon model,https://github.com/mavlink/MAVSDK/issues/2431
+3,1507,closed,fixed_merged_pr,True,False,0.5155,0.7091,0.6123,23,3,1,0,0,,2021-08-12T12:06:56Z,Testing an 'Unsupported component' with sitl?,https://github.com/mavlink/MAVSDK/issues/1507
+3,2183,closed,answered,True,False,0.4553,0.768,0.6117,18,3,0,0,0,,2023-11-15T20:06:13Z,MAVSDK remote control hangs,https://github.com/mavlink/MAVSDK/issues/2183
+3,2862,closed,fixed_merged_pr,True,False,0.5595,0.6616,0.6105,7,3,2,0,0,,2026-04-14T00:12:52Z,MavlinkDirect does not receive some messages via serial,https://github.com/mavlink/MAVSDK/issues/2862
+3,871,closed,answered,True,False,0.4871,0.732,0.6096,8,3,0,0,0,bug,2019-10-03T17:02:01Z,mavsdk_server crashes when a geofence is uploaded,https://github.com/mavlink/MAVSDK/issues/871
+3,2117,closed,fixed_merged_pr,True,False,0.4677,0.747,0.6074,8,3,1,0,0,question,2023-08-15T19:01:35Z,"Stuck on ""Vehicle is getting ready to arm"" in autopilot_server",https://github.com/mavlink/MAVSDK/issues/2117
+0,2659,closed,answered,True,False,0.3622,0.8524,0.6073,7,2,0,0,0,,2025-09-23T14:16:51Z,Help: Multiple Connections via MavSdk_Server,https://github.com/mavlink/MAVSDK/issues/2659
+0,2173,closed,abandoned_no_response,False,False,0.2362,0.97,0.6031,2,2,0,0,0,bug,2023-11-09T20:08:59Z,How to use FTP Server and Client working together,https://github.com/mavlink/MAVSDK/issues/2173
+0,2127,closed,answered,True,False,0.3055,0.9,0.6028,5,1,0,0,0,bug,2023-09-05T09:27:39Z,"Segfault, pthread_once in CI",https://github.com/mavlink/MAVSDK/issues/2127
+3,2221,closed,answered,True,False,0.4609,0.7427,0.6018,5,4,0,0,0,bug,2024-02-14T23:47:47Z,Discrepancy between Documentation and Example,https://github.com/mavlink/MAVSDK/issues/2221
+0,1536,closed,answered,True,False,0.376,0.8243,0.6001,7,3,0,0,0,bug,2021-09-08T13:46:43Z,Linking of openssl fails on Ubuntu 18.04,https://github.com/mavlink/MAVSDK/issues/1536
+2,1616,closed,abandoned_no_response,False,False,0.4442,0.7516,0.5979,19,3,0,0,0,,2021-11-09T22:05:20Z,Missing Param - SITL. Not reading position,https://github.com/mavlink/MAVSDK/issues/1616
+0,2116,closed,answered,True,False,0.3127,0.8826,0.5977,4,3,0,0,0,,2023-08-14T15:55:23Z,Linker error when building with libc++,https://github.com/mavlink/MAVSDK/issues/2116
+3,618,closed,answered,True,False,0.5136,0.6781,0.5958,78,4,0,0,0,question,2018-12-05T21:24:34Z,Trouble installing Python wrapper,https://github.com/mavlink/MAVSDK/issues/618
+3,2142,closed,fixed_merged_pr,True,False,0.7002,0.4897,0.595,25,5,1,0,1,feature,2023-09-18T13:12:42Z,Adding telemetry logs,https://github.com/mavlink/MAVSDK/issues/2142
+3,1527,closed,fixed_merged_pr,True,False,0.6127,0.5719,0.5923,12,5,1,0,0,,2021-09-03T13:11:32Z,Promise already satisfied ,https://github.com/mavlink/MAVSDK/issues/1527
+3,2575,closed,fixed_merged_pr,True,False,0.5377,0.6453,0.5915,30,3,1,0,0,bug|docs,2025-05-15T22:28:06Z,Windows 11 dependencies not found,https://github.com/mavlink/MAVSDK/issues/2575
+3,938,closed,fixed_stated,True,False,0.6124,0.5697,0.5911,35,9,0,0,0,feature,2019-12-17T23:05:40Z,Rally points uploading mission.,https://github.com/mavlink/MAVSDK/issues/938
+0,2119,closed,answered,True,False,0.3643,0.8083,0.5863,7,2,0,0,0,bug,2023-08-18T21:15:30Z,Can't do goto_location or do_orbit with C++ SDK,https://github.com/mavlink/MAVSDK/issues/2119
+0,1614,closed,answered,True,False,0.3732,0.7993,0.5862,5,3,0,1,0,bug,2021-11-09T16:23:19Z,Heartbeats times out in SITL with multiple vehicles,https://github.com/mavlink/MAVSDK/issues/1614
+0,1656,closed,unclear,,False,0.2898,0.88,0.5849,3,2,0,0,0,,2021-12-28T18:57:18Z,C++ No Mission Progress,https://github.com/mavlink/MAVSDK/issues/1656
+3,2256,closed,answered,True,False,0.4249,0.7337,0.5793,15,2,0,0,0,question,2024-03-24T20:36:18Z,mavlink error when adding a udp connection with port forwarding On,https://github.com/mavlink/MAVSDK/issues/2256
+1,2128,open,open,,False,0.5723,0.5856,0.579,7,4,0,0,0,question,2023-09-06T12:21:29Z,set flight mode function,https://github.com/mavlink/MAVSDK/issues/2128
+3,233,closed,fixed_merged_pr,True,False,0.8297,0.3275,0.5786,28,6,2,0,1,,2018-01-22T19:16:36Z,Flight testing DroneCore examples on Intel Aero,https://github.com/mavlink/MAVSDK/issues/233
+3,800,closed,answered,True,False,0.5411,0.6162,0.5786,55,10,0,0,0,bug|more_info_needed,2019-07-17T17:25:25Z,Windows Local Install,https://github.com/mavlink/MAVSDK/issues/800
+3,2110,closed,fixed_merged_pr,True,False,0.575,0.5766,0.5758,11,3,2,0,0,bug,2023-08-09T06:21:58Z,ArduPilot - Problem identified that may be causing the mission module to fail (fly_mission example),https://github.com/mavlink/MAVSDK/issues/2110
+3,2496,closed,fixed_merged_pr,True,False,0.5661,0.5838,0.575,9,2,1,0,1,bug,2025-01-18T12:20:21Z,Throw invalid argument exception  in camera plugin,https://github.com/mavlink/MAVSDK/issues/2496
+3,291,closed,fixed_merged_pr,True,False,0.5848,0.5633,0.574,31,4,1,0,0,enhancement,2018-02-27T13:14:11Z,Can't arm immediately after instantiating Action plugin,https://github.com/mavlink/MAVSDK/issues/291
+3,1924,closed,answered,True,False,0.4432,0.7043,0.5737,13,2,0,2,0,,2022-11-04T15:29:40Z,Provided MAVLink headers are installed to the wrong directory,https://github.com/mavlink/MAVSDK/issues/1924
+3,1684,closed,answered,True,False,0.466,0.6803,0.5732,7,3,0,0,0,question,2022-01-20T14:14:44Z,undefined reference with debian11_armv7 on RPi,https://github.com/mavlink/MAVSDK/issues/1684
+0,1962,closed,fixed_merged_pr,True,False,0.3493,0.7952,0.5723,2,2,2,0,0,bug,2023-01-25T09:29:59Z,Uploading empty mission on mission_raw_server  lead to core dump,https://github.com/mavlink/MAVSDK/issues/1962
+2,2349,closed,moved_elsewhere,False,False,0.3299,0.8113,0.5706,6,2,0,0,0,question|more_info_needed,2024-07-12T15:34:28Z,Unable to connect,https://github.com/mavlink/MAVSDK/issues/2349
+3,2475,closed,fixed_merged_pr,True,False,0.5075,0.6337,0.5706,6,3,1,1,0,,2024-12-17T13:29:20Z,pkg-config file has CI paths,https://github.com/mavlink/MAVSDK/issues/2475
+3,1692,closed,answered,True,False,0.593,0.542,0.5675,17,5,0,0,0,enhancement|help wanted,2022-02-04T08:26:05Z, MAVSDK-Python / examples / camera.py doesn't work,https://github.com/mavlink/MAVSDK/issues/1692
+2,1227,closed,wontfix_out_of_scope,False,False,0.4026,0.7299,0.5663,11,3,0,0,0,bug|more_info_needed,2020-10-13T21:15:15Z,Seg fault at system(),https://github.com/mavlink/MAVSDK/issues/1227
+3,399,closed,answered,True,False,0.4672,0.6639,0.5655,9,2,0,0,0,,2018-05-18T06:54:36Z,fly_mission and fly_qgc_mission examples freezes on mission accepted,https://github.com/mavlink/MAVSDK/issues/399
+0,2426,closed,fixed_merged_pr,True,False,0.3358,0.795,0.5654,3,2,1,0,0,,2024-10-16T13:56:04Z,ArduPilot SITL : SIGSEGV Sending message 76,https://github.com/mavlink/MAVSDK/issues/2426
+0,1875,closed,answered,True,False,0.4006,0.7251,0.5628,7,2,0,0,0,question,2022-08-01T00:44:34Z,follow_me.cpp won't build,https://github.com/mavlink/MAVSDK/issues/1875
+0,2434,closed,answered,True,False,0.3821,0.7433,0.5627,6,3,0,0,0,,2024-10-24T06:37:50Z,MAVSDK Debian does not include MAVSDK::mavsdk_action target,https://github.com/mavlink/MAVSDK/issues/2434
+0,1836,closed,answered,True,False,0.3672,0.7577,0.5625,4,3,0,0,1,,2022-07-05T10:02:43Z,autopilot_server vs 1.4.3 does not compile,https://github.com/mavlink/MAVSDK/issues/1836
+0,1789,closed,fixed_stated,True,False,0.3281,0.7959,0.562,4,3,0,0,0,,2022-05-23T11:48:20Z,Command denied appears in logs when mission plugin is instantiated,https://github.com/mavlink/MAVSDK/issues/1789
+0,1045,closed,fixed_merged_pr,True,False,0.2548,0.869,0.5619,2,1,1,0,0,bug|ci,2020-04-20T08:48:14Z,Asan issue in SITL v1.9 CI test,https://github.com/mavlink/MAVSDK/issues/1045
+0,1778,closed,answered,True,False,0.3104,0.8132,0.5618,3,3,0,0,0,enhancement,2022-05-19T11:57:54Z,Unsupported Mission Commands from QGroundcontrol created mission,https://github.com/mavlink/MAVSDK/issues/1778
+2,2615,closed,abandoned_no_response,False,False,0.4664,0.6563,0.5614,17,3,0,0,0,,2025-07-16T15:57:18Z,add_any_connection not working as intended,https://github.com/mavlink/MAVSDK/issues/2615
+0,914,closed,answered,True,False,0.3971,0.7244,0.5608,18,2,0,0,0,question,2019-11-26T07:54:23Z,fly_qgc_mission issue: Mission int messages not supported,https://github.com/mavlink/MAVSDK/issues/914
+3,2031,closed,fixed_stated,True,False,0.499,0.6219,0.5605,7,4,0,0,0,,2023-05-11T10:54:29Z,Changing mode to GUIDED,https://github.com/mavlink/MAVSDK/issues/2031
+0,1153,closed,self_resolved,True,False,0.3798,0.7329,0.5564,11,2,0,0,0,question,2020-07-27T09:03:09Z,How to setup a VTOL takeoff mission with mission_raw?,https://github.com/mavlink/MAVSDK/issues/1153
+3,2002,closed,fixed_merged_pr,True,True,0.8267,0.2847,0.5557,13,5,2,3,0,enhancement,2023-03-15T03:48:01Z,Work to get v2.0 out the door,https://github.com/mavlink/MAVSDK/issues/2002
+0,1914,closed,answered,True,False,0.3188,0.7917,0.5553,6,2,0,0,0,,2022-10-11T21:13:37Z,Dockcross for armv6 slow,https://github.com/mavlink/MAVSDK/issues/1914
+3,106,closed,fixed_stated,True,False,0.4559,0.6523,0.5541,9,3,0,0,0,enhancement|plugins,2017-09-28T10:59:12Z,Dynamic plug-in infrastructure,https://github.com/mavlink/MAVSDK/issues/106
+3,1935,closed,answered,True,False,0.5398,0.5659,0.5528,21,3,0,0,2,feature,2022-11-27T22:57:02Z,Emulate Camera in MavSdk,https://github.com/mavlink/MAVSDK/issues/1935
+0,2871,closed,fixed_merged_pr,True,False,0.4,0.7054,0.5527,5,2,1,0,0,,2026-04-24T23:17:56Z,Add mavsdk API for STATUSTEXT,https://github.com/mavlink/MAVSDK/issues/2871
+0,1582,closed,answered,True,False,0.2656,0.838,0.5518,4,2,0,0,0,,2021-10-27T17:41:03Z,"Can't connect to SITL - ""Ignoring unknown ping sequence"" (possibly not bug)",https://github.com/mavlink/MAVSDK/issues/1582
+0,2725,closed,fixed_stated,True,False,0.4076,0.6942,0.5509,8,3,0,0,0,,2025-12-02T01:58:56Z,User callback queue too slow.,https://github.com/mavlink/MAVSDK/issues/2725
+0,2355,closed,self_resolved,True,False,0.3183,0.782,0.5502,4,3,0,0,0,question,2024-07-22T07:47:54Z,"Example error ：[ImportError: sys.meta_path is None, Python is likely shutting down]",https://github.com/mavlink/MAVSDK/issues/2355
+2,2697,closed,moved_elsewhere,False,False,0.4852,0.6103,0.5477,12,2,0,0,0,more_info_needed,2025-10-28T16:51:30Z,actuator_output_status() and set_actuator() not work on arduPilot,https://github.com/mavlink/MAVSDK/issues/2697
+0,1941,closed,self_resolved,True,False,0.3188,0.7749,0.5469,6,2,0,0,0,,2022-12-09T17:10:15Z,takeoff_and_landing example build error,https://github.com/mavlink/MAVSDK/issues/1941
+3,2685,closed,fixed_merged_pr,True,False,0.4428,0.646,0.5444,8,2,1,0,0,bug,2025-10-14T18:33:25Z,sender/receiver based on MavlinkDirect working too slow,https://github.com/mavlink/MAVSDK/issues/2685
+0,903,closed,self_resolved,True,False,0.3515,0.7336,0.5425,8,2,0,0,0,question,2019-11-14T09:31:33Z,"How to add ""src/core"" functions to example projects",https://github.com/mavlink/MAVSDK/issues/903
+3,708,closed,answered,True,False,0.4691,0.6158,0.5424,21,4,0,0,0,,2019-03-26T08:17:33Z,How to cross-compile dronecodesdk to run on armv9?,https://github.com/mavlink/MAVSDK/issues/708
+3,2287,closed,answered,True,False,0.4104,0.6721,0.5413,9,3,0,0,0,question,2024-04-18T19:55:31Z,Getting HTTP 503 when attempting to subscribe to telemetry but works after connecting with QGroundControl,https://github.com/mavlink/MAVSDK/issues/2287
+3,1843,closed,answered,True,False,0.4497,0.6318,0.5408,11,4,0,0,0,,2022-07-06T03:53:31Z,takeoff_and_landing.cpp won't build.,https://github.com/mavlink/MAVSDK/issues/1843
+1,1633,open,open,,False,0.4082,0.6717,0.5399,18,2,0,0,0,feature,2021-11-24T16:53:58Z,mavsdk_server with more than one remote system,https://github.com/mavlink/MAVSDK/issues/1633
+3,2555,closed,fixed_merged_pr,True,False,0.4106,0.6691,0.5399,5,2,1,0,0,more_info_needed,2025-04-28T05:58:41Z,when BUILD_WITHOUT_CURL=ON and BUILD_MAVSDK_SERVER=OFF,https://github.com/mavlink/MAVSDK/issues/2555
+0,1253,closed,answered,True,False,0.3798,0.6972,0.5385,11,2,0,0,0,,2020-11-13T13:53:40Z,where can i find the mavsdk_server file?,https://github.com/mavlink/MAVSDK/issues/1253
+3,204,closed,fixed_merged_pr,True,False,0.5298,0.5468,0.5383,14,3,1,0,0,enhancement|plugins,2017-12-19T03:19:40Z,Clarify FollowMe::Config::min_height_m and follow_dist_m ,https://github.com/mavlink/MAVSDK/issues/204
+0,1823,closed,fixed_stated,True,False,0.2921,0.7808,0.5365,4,2,0,0,0,bug,2022-06-28T15:19:18Z,Autopilot Server Example segfaults,https://github.com/mavlink/MAVSDK/issues/1823
+3,1610,closed,fixed_stated,True,False,0.5646,0.508,0.5363,11,5,0,0,0,question,2021-11-08T06:25:33Z,battery information is not correct!!,https://github.com/mavlink/MAVSDK/issues/1610
+3,2620,closed,fixed_stated,True,False,0.4304,0.642,0.5362,22,2,0,0,0,,2025-07-23T01:53:46Z,"use gimbal plugin's gibal_list and attitude function, the gimbal_id is not match.",https://github.com/mavlink/MAVSDK/issues/2620
+0,1912,closed,fixed_merged_pr,True,False,0.3664,0.7043,0.5353,3,2,1,0,0,,2022-10-10T15:40:21Z,Bad include in mavlink_passthrough.h,https://github.com/mavlink/MAVSDK/issues/1912
+3,2050,closed,answered,True,False,0.4749,0.5935,0.5342,12,4,0,0,0,,2023-05-23T14:40:47Z,Linking Error Compiling On RPI4 with Atomic,https://github.com/mavlink/MAVSDK/issues/2050
+3,2590,closed,fixed_merged_pr,True,False,0.4966,0.5699,0.5333,14,2,1,0,0,,2025-05-30T00:17:14Z,Camera server freezes up and disconnects upon taking photo or record video 3.5,https://github.com/mavlink/MAVSDK/issues/2590
+3,1121,closed,answered,True,False,0.5361,0.5283,0.5322,13,6,0,0,0,question,2020-06-07T12:37:37Z,Preflight check in simulation??,https://github.com/mavlink/MAVSDK/issues/1121
+3,1162,closed,answered,True,False,0.4802,0.5829,0.5315,10,3,0,0,0,bug,2020-08-11T15:18:56Z,mission_raw->mission_changed not received on mission clear all,https://github.com/mavlink/MAVSDK/issues/1162
+3,1569,closed,fixed_merged_pr,True,False,0.5217,0.5382,0.53,10,4,1,0,0,bug,2021-10-06T11:41:19Z,Telemetry.set_rate_attitude() seems to have no effect,https://github.com/mavlink/MAVSDK/issues/1569
+0,2306,closed,unclear,,False,0.2154,0.844,0.5297,1,1,0,0,0,bug,2024-05-20T05:36:07Z,grpc use-after-poison,https://github.com/mavlink/MAVSDK/issues/2306
+0,1737,closed,unclear,,False,0.1331,0.925,0.5291,1,1,0,0,0,bug|ci,2022-04-13T22:11:51Z,CI SITL address sanitizer failure case,https://github.com/mavlink/MAVSDK/issues/1737
+0,1974,closed,answered,True,False,0.3965,0.6613,0.5289,8,3,0,0,0,,2023-01-31T21:35:48Z,Using MAVSDK with only Iridium connection,https://github.com/mavlink/MAVSDK/issues/1974
+0,1566,closed,answered,True,False,0.3132,0.7436,0.5284,6,2,0,0,0,question,2021-09-27T14:33:42Z,How to connect multiple instances of mavsdk into the same mavlink port?,https://github.com/mavlink/MAVSDK/issues/1566
+0,2437,closed,answered,True,False,0.3498,0.7062,0.528,8,2,0,0,0,,2024-11-08T08:05:31Z,"Emergency! help help！！！！I am from China, you are a great and lovely group of people, I have a problem now,",https://github.com/mavlink/MAVSDK/issues/2437
+3,603,closed,fixed_stated,True,False,0.5348,0.5195,0.5272,17,4,0,0,0,,2018-11-21T19:50:32Z,Trouble installing backend,https://github.com/mavlink/MAVSDK/issues/603
+0,1296,closed,fixed_merged_pr,True,False,0.3552,0.6962,0.5257,3,3,1,0,0,bug,2021-01-29T23:32:28Z,Compilation failed for Raspberry Pi with undefined reference to `__atomic_store_8',https://github.com/mavlink/MAVSDK/issues/1296
+3,1817,closed,answered,True,False,0.4333,0.6173,0.5253,12,3,0,0,0,,2022-06-24T09:01:20Z,Fail to build v1.4.0 or later on armv7,https://github.com/mavlink/MAVSDK/issues/1817
+0,2266,closed,self_resolved,True,False,0.2124,0.838,0.5252,2,2,0,0,0,,2024-03-30T16:26:47Z,MAVSDK_SERVER build error: 'undefined reference to `EVP_MAC_free'',https://github.com/mavlink/MAVSDK/issues/2266
+0,932,closed,fixed_merged_pr,True,False,0.2576,0.7924,0.525,1,1,1,1,0,bug|core,2019-12-17T07:13:03Z,Segfault on plugin init,https://github.com/mavlink/MAVSDK/issues/932
+0,2811,closed,fixed_merged_pr,True,False,0.4038,0.6457,0.5248,3,3,1,0,0,enhancement,2026-03-27T20:14:15Z,libmavsdk.so exports statically linked curl/openssl symbols causing conflicts with ROS2 FastDDS middleware,https://github.com/mavlink/MAVSDK/issues/2811
+1,1630,open,open,,False,0.6442,0.4049,0.5245,9,6,1,0,0,feature,2021-11-22T08:48:16Z,Allow more fine-grained offboard control,https://github.com/mavlink/MAVSDK/issues/1630
+0,2735,closed,unclear,,False,0.2179,0.8283,0.5231,2,2,0,0,0,question,2025-12-11T12:36:35Z,call download_mission() err:  Waypoint frame not supported unsupported,https://github.com/mavlink/MAVSDK/issues/2735
+0,1334,closed,abandoned_no_response,False,False,0.3238,0.7197,0.5217,7,2,0,0,0,,2021-02-28T20:06:57Z,[mavsdk-python SITL] mavsdk-server crashes when reading EulerAngle,https://github.com/mavlink/MAVSDK/issues/1334
+0,2448,closed,answered,True,False,0.3567,0.686,0.5213,7,2,0,0,0,,2024-11-21T02:32:45Z,"log_capture feature has some problem, my guess.",https://github.com/mavlink/MAVSDK/issues/2448
+3,355,closed,answered,True,False,0.6068,0.4339,0.5203,29,6,0,0,0,,2018-04-09T06:52:45Z,[Help]  How to use DroneCore in HITL Gazebo,https://github.com/mavlink/MAVSDK/issues/355
+1,2015,open,open,,False,0.4925,0.5465,0.5195,11,3,0,0,1,feature,2023-04-05T17:44:36Z,MAVSDK equivalent of POSITION_GLOBAL_TARGET_INT?,https://github.com/mavlink/MAVSDK/issues/2015
+0,1946,closed,answered,True,False,0.3425,0.695,0.5188,5,3,0,0,0,,2022-12-20T19:45:27Z,How can I use an older version of MAVLink with MAVSDK?,https://github.com/mavlink/MAVSDK/issues/1946
+1,1568,open,open,,False,0.5778,0.4595,0.5187,4,5,1,1,0,feature,2021-09-29T13:07:00Z,ArduPilot support limitations,https://github.com/mavlink/MAVSDK/issues/1568
+3,494,closed,answered,True,False,0.574,0.4628,0.5184,12,3,0,0,0,bug,2018-08-16T14:56:51Z,Verify multiple drone support,https://github.com/mavlink/MAVSDK/issues/494
+3,275,closed,answered,True,False,0.6485,0.3868,0.5176,32,7,0,0,0,enhancement|help wanted,2018-02-16T14:28:26Z,Project/components names,https://github.com/mavlink/MAVSDK/issues/275
+0,2663,closed,fixed_merged_pr,True,False,0.2891,0.7449,0.517,2,2,1,0,0,,2025-09-25T11:41:01Z,"Invalid index not handled properly in set_current_mission_item_async, ultimately causing segmentation fault",https://github.com/mavlink/MAVSDK/issues/2663
+0,2527,closed,answered,True,False,0.3087,0.7243,0.5165,4,2,0,0,0,bug,2025-03-18T14:50:44Z,Problem with Parm-Server Update,https://github.com/mavlink/MAVSDK/issues/2527
+3,1158,closed,fixed_merged_pr,True,False,0.4594,0.5735,0.5164,9,3,1,0,0,question,2020-08-05T04:28:08Z,set own usage_type?,https://github.com/mavlink/MAVSDK/issues/1158
+1,1757,open,open,,False,0.371,0.6607,0.5158,6,3,0,0,0,feature,2022-04-28T21:19:46Z,Cannot start offboard plugin from the RC switch (instead of calling offboard->start()),https://github.com/mavlink/MAVSDK/issues/1757
+0,2139,closed,self_resolved,True,False,0.3336,0.6974,0.5155,4,3,0,0,0,,2023-09-12T20:38:37Z,Cannot build on windows following documented build process.,https://github.com/mavlink/MAVSDK/issues/2139
+3,996,closed,fixed_merged_pr,True,False,0.4173,0.6117,0.5145,4,3,1,0,0,,2020-02-24T17:25:13Z,Promise already satisfied,https://github.com/mavlink/MAVSDK/issues/996
+3,1440,closed,self_resolved,True,False,0.4442,0.5831,0.5136,11,4,0,0,0,,2021-05-22T14:16:22Z,"""set_actuator"" example doesn't work well, Warning ""command unsupported(187)""",https://github.com/mavlink/MAVSDK/issues/1440
+3,1207,closed,answered,True,False,0.4802,0.5434,0.5118,10,3,0,0,0,,2020-10-06T16:59:02Z,"process_fixedwing_metrics does not return groundspeed, alt and heading",https://github.com/mavlink/MAVSDK/issues/1207
+0,2653,closed,answered,True,False,0.2702,0.7531,0.5116,3,2,0,0,0,question,2025-09-13T18:07:46Z,MavlinkPassthrough unable to receive DATA32 messages,https://github.com/mavlink/MAVSDK/issues/2653
+0,2561,closed,abandoned_no_response,False,False,0.3087,0.7142,0.5114,4,2,0,0,0,,2025-05-06T16:14:24Z,I cannot access the 'Info' in the status text.,https://github.com/mavlink/MAVSDK/issues/2561
+0,2376,closed,fixed_stated,True,False,0.2529,0.7681,0.5105,4,2,0,0,0,question,2024-08-18T07:52:33Z,Issue with action.terminate() in terminate.cpp example with SITL,https://github.com/mavlink/MAVSDK/issues/2376
+3,1316,closed,fixed_merged_pr,True,False,0.6651,0.3552,0.5101,27,7,1,0,0,question,2021-02-10T09:40:48Z,"Getting ""timeout"" issue while uploading mission on PixHawk (PX4) via MAVSDK",https://github.com/mavlink/MAVSDK/issues/1316
+3,2023,closed,fixed_merged_pr,True,False,0.533,0.4858,0.5094,5,5,1,0,0,,2023-04-18T08:16:04Z,ArduCopter – fly_mission.cpp example,https://github.com/mavlink/MAVSDK/issues/2023
+0,2642,closed,answered,True,False,0.3622,0.6563,0.5092,7,2,0,0,0,,2025-08-14T01:22:12Z,How to send statustext message?,https://github.com/mavlink/MAVSDK/issues/2642
+2,612,closed,abandoned_no_response,False,False,0.5571,0.4572,0.5071,12,4,0,3,0,enhancement|beginner,2018-11-26T16:16:04Z,Cross-compile and deploy for Raspberry Pi,https://github.com/mavlink/MAVSDK/issues/612
+3,940,closed,fixed_merged_pr,True,False,0.5544,0.4582,0.5063,15,3,1,0,0,,2019-12-18T12:21:01Z,Trouble using shell plugin,https://github.com/mavlink/MAVSDK/issues/940
+3,1869,closed,answered,True,False,0.4168,0.5913,0.504,7,2,0,0,0,,2022-07-24T20:38:32Z,Add tags and multiple architectures to official docker images,https://github.com/mavlink/MAVSDK/issues/1869
+1,2172,open,open,,False,0.4793,0.5261,0.5027,18,2,0,0,1,feature,2023-11-07T19:49:36Z,How to enable Avoid ADSB mode?,https://github.com/mavlink/MAVSDK/issues/2172
+0,2612,closed,answered,True,False,0.3592,0.646,0.5026,5,3,0,0,0,,2025-07-14T08:34:02Z,Accessing mock MAVSDK classes,https://github.com/mavlink/MAVSDK/issues/2612
+3,321,closed,fixed_merged_pr,True,False,0.5827,0.4198,0.5012,9,3,3,0,0,enhancement,2018-03-15T06:51:58Z,Rendering of reference and pointer parameters in markdown script,https://github.com/mavlink/MAVSDK/issues/321
+3,2207,closed,fixed_merged_pr,True,False,0.4411,0.5612,0.5011,7,2,1,0,0,,2024-01-10T15:56:02Z,heap-use-after-free after heartbeats timed out when using UDP connection,https://github.com/mavlink/MAVSDK/issues/2207
+1,1999,open,open,,False,0.4749,0.5262,0.5006,12,4,0,0,0,feature,2023-03-09T08:01:06Z,Timesync adjustment for incoming messages is not implemented?,https://github.com/mavlink/MAVSDK/issues/1999
+3,614,closed,fixed_merged_pr,True,False,0.5708,0.428,0.4994,31,5,1,0,0,bug,2018-11-27T19:01:00Z,Arming fails without GPS but external vision position estimates,https://github.com/mavlink/MAVSDK/issues/614
+3,1,closed,fixed_merged_pr,True,False,0.4788,0.5198,0.4993,5,2,3,0,0,bug,2017-06-21T06:52:59Z,Error while building example: takeoff_and_land,https://github.com/mavlink/MAVSDK/issues/1
+3,1428,closed,fixed_merged_pr,True,False,0.5286,0.4696,0.4991,11,4,1,0,0,feature,2021-05-06T08:17:56Z,Feature req: pkgconfig for building,https://github.com/mavlink/MAVSDK/issues/1428
+3,2339,closed,answered,True,False,0.4672,0.5299,0.4986,10,4,0,0,0,more_info_needed,2024-06-12T15:14:15Z,MAVSDK Download Log is always error with missing chunk ??,https://github.com/mavlink/MAVSDK/issues/2339
+0,2675,closed,fixed_merged_pr,True,False,0.1157,0.88,0.4979,0,1,1,0,0,,2025-10-01T21:41:57Z,Thread sanitizer issue in CI,https://github.com/mavlink/MAVSDK/issues/2675
+3,452,closed,fixed_merged_pr,True,False,0.5128,0.4818,0.4973,23,2,1,0,0,bug|question,2018-07-17T11:55:51Z,NDK_ROOT is undefined,https://github.com/mavlink/MAVSDK/issues/452
+3,1282,closed,fixed_merged_pr,True,False,0.4255,0.5686,0.497,7,3,1,0,0,bug,2020-12-05T03:55:41Z,mavsdk_server does not clean mission state after flight,https://github.com/mavlink/MAVSDK/issues/1282
+3,2068,closed,answered,True,False,0.4259,0.568,0.497,16,3,0,0,0,,2023-06-01T05:24:37Z,Installing and building MAVSDK for debugging,https://github.com/mavlink/MAVSDK/issues/2068
+0,2690,closed,no_maintainer_reply,False,False,0.0994,0.8945,0.497,1,1,0,0,0,,2025-10-23T21:15:17Z,Include errors in 3.10.2 debian,https://github.com/mavlink/MAVSDK/issues/2690
+0,1822,closed,unclear,,False,0.2241,0.7689,0.4965,3,2,0,0,0,,2022-06-27T22:36:06Z,libmavsdk.so.1: cannot open shared object file for armv7,https://github.com/mavlink/MAVSDK/issues/1822
+3,2046,closed,fixed_merged_pr,True,False,0.5229,0.4701,0.4965,8,2,2,1,0,,2023-05-22T16:23:03Z,Unknown type: bool (param_value.cpp:317) error,https://github.com/mavlink/MAVSDK/issues/2046
+0,1327,closed,answered,True,False,0.3465,0.6445,0.4955,4,2,0,0,1,,2021-02-23T03:07:22Z,Connection Error,https://github.com/mavlink/MAVSDK/issues/1327
+0,947,closed,answered,True,False,0.3381,0.6521,0.4951,6,3,0,0,0,question,2019-12-31T06:36:35Z,"MAVSDK shows as ""Vehicle 190""",https://github.com/mavlink/MAVSDK/issues/947
+3,2162,closed,fixed_stated,True,False,0.5273,0.4628,0.495,24,5,0,0,0,,2023-10-20T07:27:20Z,Not able to list logs for download if high number of logs,https://github.com/mavlink/MAVSDK/issues/2162
+3,804,closed,answered,True,False,0.4501,0.5392,0.4947,7,5,0,0,0,enhancement,2019-07-19T08:01:21Z,No support of VTOL TAKEOFF and LAND in mission plugin,https://github.com/mavlink/MAVSDK/issues/804
+0,1618,closed,answered,True,False,0.3844,0.6044,0.4944,6,2,0,0,0,,2021-11-16T08:19:05Z,Can the gRPC server be started before mavsdk-server discovers/connects to a system?,https://github.com/mavlink/MAVSDK/issues/1618
+3,1108,closed,answered,True,False,0.5099,0.4767,0.4933,11,4,0,0,0,enhancement|feature,2020-05-25T17:50:24Z,Add MAVSDK to Vcpkg,https://github.com/mavlink/MAVSDK/issues/1108
+3,2731,closed,fixed_merged_pr,True,False,0.5061,0.48,0.493,9,2,1,0,0,question,2025-12-05T11:07:17Z,Ways to handle things in a user-thread.,https://github.com/mavlink/MAVSDK/issues/2731
+2,727,closed,moved_elsewhere,False,False,0.3256,0.66,0.4928,4,1,0,1,0,bug,2019-04-23T12:29:03Z,Arming not working HITL in Python example,https://github.com/mavlink/MAVSDK/issues/727
+2,2375,closed,abandoned_no_response,False,False,0.3338,0.6483,0.491,5,2,0,0,0,question,2024-08-17T13:08:01Z,Connecting my MAVSDK server with c++ to my front-end,https://github.com/mavlink/MAVSDK/issues/2375
+0,2611,closed,fixed_merged_pr,True,False,0.38,0.6015,0.4908,4,2,1,0,0,bug,2025-07-13T20:43:14Z,Double Unlock in LockedQueue::Guard,https://github.com/mavlink/MAVSDK/issues/2611
+3,2396,closed,fixed_merged_pr,True,False,0.4894,0.4899,0.4897,7,3,2,0,0,bug,2024-09-10T10:33:10Z,Getting UINT16 param from ArduPilot doesn't work,https://github.com/mavlink/MAVSDK/issues/2396
+0,1492,closed,answered,True,False,0.1957,0.7808,0.4883,2,2,0,0,0,bug,2021-07-29T00:47:03Z,mavsdk_server errors when running in container,https://github.com/mavlink/MAVSDK/issues/1492
+0,2327,closed,invalid_misfiled,False,False,0.0939,0.88,0.4869,1,1,0,0,0,,2024-06-03T02:49:31Z,How do you use `telemetry_server` correctly?,https://github.com/mavlink/MAVSDK/issues/2327
+2,2144,closed,abandoned_no_response,False,False,0.4325,0.5393,0.4859,11,3,0,0,0,bug,2023-09-21T16:47:38Z,Cannot subscribe to/from messages using MavlinkPassthrough,https://github.com/mavlink/MAVSDK/issues/2144
+3,1441,closed,fixed_merged_pr,True,False,0.6835,0.2855,0.4845,21,6,1,0,1,question,2021-05-23T16:19:32Z,MAVSDK timeout tuning,https://github.com/mavlink/MAVSDK/issues/1441
+0,2477,closed,fixed_merged_pr,True,False,0.3984,0.57,0.4842,3,2,2,0,0,bug,2024-12-18T17:07:52Z,MAVSDK v2.14.0 regression: getParamInt not working correctly anymore (it works on v2.13.0),https://github.com/mavlink/MAVSDK/issues/2477
+0,1091,closed,fixed_merged_pr,True,False,0.2432,0.7245,0.4839,1,1,1,0,0,bug,2020-05-12T09:59:36Z,Segfault in mavsdk_server,https://github.com/mavlink/MAVSDK/issues/1091
+3,2895,closed,fixed_merged_pr,True,False,0.5692,0.3979,0.4836,7,3,3,0,0,,2026-06-09T17:08:22Z,Add support for disabling native heartbeat sending and triggering HEARTBEAT over gRPC,https://github.com/mavlink/MAVSDK/issues/2895
+3,2220,closed,self_resolved,True,False,0.4312,0.5354,0.4833,10,3,0,0,0,,2024-02-14T10:42:23Z,Not sending message rc_channels_override,https://github.com/mavlink/MAVSDK/issues/2220
+0,2408,closed,unclear,,False,0.2418,0.7245,0.4832,2,2,0,0,0,bug,2024-09-30T14:20:41Z,Error in `fly_mission` example: `Falling back to gimbal protocol v1 (mission_impl.cpp:128)`,https://github.com/mavlink/MAVSDK/issues/2408
+0,1154,closed,fixed_merged_pr,True,False,0.3136,0.6522,0.4829,3,2,1,0,0,,2020-07-27T14:47:16Z,Unknown mav_frame enum value: 12 (telemetry_service_impl.h:648),https://github.com/mavlink/MAVSDK/issues/1154
+0,2409,closed,unclear,,False,0.2618,0.7037,0.4828,2,2,0,1,0,bug,2024-09-30T18:53:39Z,Error in parameters write for Ardupilot (Arducopter),https://github.com/mavlink/MAVSDK/issues/2409
+0,1743,closed,fixed_merged_pr,True,False,0.3784,0.5868,0.4826,4,3,1,0,0,feature,2022-04-18T06:38:43Z,Mission import from Mission Planner mission plain text file,https://github.com/mavlink/MAVSDK/issues/1743
+3,2753,closed,fixed_merged_pr,True,False,0.4976,0.4668,0.4822,8,3,1,0,0,,2026-01-26T22:05:04Z,Log File Download and Ardupilot,https://github.com/mavlink/MAVSDK/issues/2753
+0,2334,closed,fixed_merged_pr,True,False,0.313,0.6503,0.4817,2,2,1,0,0,,2024-06-04T16:25:38Z,libmavsdk-dev_2.12.1_debian12_arm64 - fails to link (cmake),https://github.com/mavlink/MAVSDK/issues/2334
+3,2248,closed,answered,True,False,0.4596,0.5036,0.4816,9,4,0,0,0,,2024-03-13T20:53:18Z,Building MAVSDK for Android failing (Apple Silicon M2 Max),https://github.com/mavlink/MAVSDK/issues/2248
+3,2588,closed,fixed_stated,True,False,0.4304,0.5328,0.4816,5,3,0,0,0,bug,2025-05-27T15:57:41Z,MAVSDK 3.5.0 has issues with mavsdk-server and camera definition fetching,https://github.com/mavlink/MAVSDK/issues/2588
+0,1704,closed,answered,True,False,0.3188,0.6429,0.4808,6,2,0,0,0,,2022-02-21T18:09:14Z,Build on Linux gives error: jsoncpp does not appear to contain CMakeLists.txt,https://github.com/mavlink/MAVSDK/issues/1704
+2,1846,closed,wontfix_out_of_scope,False,False,0.4014,0.5595,0.4804,7,4,0,0,0,,2022-07-07T16:51:49Z,Command unsupported (511). (mavlink_command_sender.cpp:198),https://github.com/mavlink/MAVSDK/issues/1846
+0,917,closed,fixed_merged_pr,True,False,0.3212,0.6394,0.4803,2,3,1,0,0,bug,2019-12-03T10:12:40Z,MAVSDK - setup_udp_remote - no MAVLink being received using Passthrough,https://github.com/mavlink/MAVSDK/issues/917
+3,1522,closed,answered,True,False,0.4336,0.5256,0.4796,13,3,0,0,0,question,2021-09-01T22:40:14Z,Waypoint frame not supported,https://github.com/mavlink/MAVSDK/issues/1522
+3,226,closed,answered,True,False,0.4207,0.5383,0.4795,5,3,0,0,0,,2018-01-16T03:00:36Z,Error during make default,https://github.com/mavlink/MAVSDK/issues/226
+3,2111,closed,fixed_merged_pr,True,False,0.4355,0.5228,0.4792,5,3,1,0,0,feature,2023-08-09T21:35:17Z,ArduPilot - Possibility of using MAV_CMD_DO_SET_SERVO instead of MAV_CMD_DO_SET_ACTUATOR,https://github.com/mavlink/MAVSDK/issues/2111
+0,247,closed,fixed_merged_pr,True,False,0.2681,0.688,0.478,1,2,1,0,0,bug|plugins,2018-02-06T04:46:20Z,Waypoints of Mission integration tests for default PX4 SITL Home are far away,https://github.com/mavlink/MAVSDK/issues/247
+3,1272,closed,fixed_stated,True,False,0.5231,0.433,0.478,11,4,0,0,0,enhancement,2020-12-01T04:40:19Z,Mission upload progress functionality,https://github.com/mavlink/MAVSDK/issues/1272
+3,244,closed,fixed_merged_pr,True,False,0.4899,0.4631,0.4765,9,3,1,0,0,enhancement,2018-02-05T04:31:01Z,Connection URL for DroneCore applications,https://github.com/mavlink/MAVSDK/issues/244
+3,652,closed,fixed_merged_pr,True,False,0.5904,0.3619,0.4762,20,4,1,0,0,enhancement|question,2019-01-23T16:38:02Z,Allow sending STATUS_TEXT message,https://github.com/mavlink/MAVSDK/issues/652
+3,909,closed,answered,True,False,0.5769,0.3728,0.4748,14,4,0,0,0,enhancement|feature,2019-11-20T05:37:01Z,Yaw/heading not accessible in MissionItem class,https://github.com/mavlink/MAVSDK/issues/909
+3,1463,closed,answered,True,False,0.4505,0.4989,0.4747,10,4,0,0,0,,2021-06-07T15:56:52Z,drone.telemetry.scaled_pressure() hangs,https://github.com/mavlink/MAVSDK/issues/1463
+0,2225,closed,unclear,,False,0.3536,0.5938,0.4737,5,3,0,0,0,,2024-02-17T11:49:14Z,Build with Cmake: Doesn't build with python3.12 or higher: ModuleNotFoundError: No module named 'imp',https://github.com/mavlink/MAVSDK/issues/2225
+0,937,closed,fixed_merged_pr,True,False,0.3971,0.5494,0.4733,5,3,1,0,0,question,2019-12-17T23:02:57Z,Airspeed data missing on telemetry,https://github.com/mavlink/MAVSDK/issues/937
+0,1171,closed,fixed_stated,True,False,0.4089,0.537,0.4729,10,3,0,0,0,,2020-08-21T01:57:27Z,Euler Angles Wrong?,https://github.com/mavlink/MAVSDK/issues/1171
+0,1117,closed,answered,True,False,0.3352,0.6098,0.4725,3,4,0,0,0,,2020-06-01T11:16:25Z,Cross-Compile for RaspberryPi Error ,https://github.com/mavlink/MAVSDK/issues/1117
+3,736,closed,fixed_merged_pr,True,False,0.618,0.3242,0.4711,24,5,1,0,0,bug|help wanted|beginner,2019-04-30T00:36:32Z,Health not clearing cache,https://github.com/mavlink/MAVSDK/issues/736
+0,222,closed,answered,True,False,0.3058,0.6349,0.4704,4,3,0,0,0,enhancement|question,2018-01-10T13:21:25Z,Rename Telemetry APIs that does status update,https://github.com/mavlink/MAVSDK/issues/222
+3,24,closed,answered,True,False,0.5743,0.3655,0.4699,13,3,0,0,0,core|ci,2017-08-21T15:41:04Z,Fool proof installation package,https://github.com/mavlink/MAVSDK/issues/24
+0,857,closed,answered,True,False,0.4103,0.529,0.4697,11,3,0,0,0,,2019-09-16T09:29:00Z,"Running SITL for 4 days, heartbeat lost",https://github.com/mavlink/MAVSDK/issues/857
+0,1876,closed,wontfix_out_of_scope,False,False,0.2535,0.6844,0.4689,3,2,0,0,0,question,2022-08-02T01:26:32Z,udp://127.0.0.1 won't connect.  udp:// will.,https://github.com/mavlink/MAVSDK/issues/1876
+3,1803,closed,answered,True,False,0.4138,0.5236,0.4687,16,2,0,0,0,,2022-06-10T06:43:40Z,Use 2 UDP ports for sending and receiving data,https://github.com/mavlink/MAVSDK/issues/1803
+3,388,closed,fixed_merged_pr,True,False,0.5765,0.3589,0.4677,18,4,1,0,0,enhancement,2018-05-08T15:22:50Z,Python bindings for the core library,https://github.com/mavlink/MAVSDK/issues/388
+0,1061,closed,answered,True,False,0.158,0.7767,0.4673,1,2,0,0,0,,2020-04-27T14:18:55Z,Error compiling takeoff_and_land example on Docker.,https://github.com/mavlink/MAVSDK/issues/1061
+3,1769,closed,self_resolved,True,False,0.4125,0.5217,0.4671,9,3,0,0,0,enhancement,2022-05-09T04:36:46Z,Switch CI to Ubuntu 22.04,https://github.com/mavlink/MAVSDK/issues/1769
+3,1860,closed,answered,True,False,0.4845,0.4489,0.4667,9,5,0,0,0,question,2022-07-15T05:21:28Z,What happens when communication is disconnected,https://github.com/mavlink/MAVSDK/issues/1860
+0,1756,closed,fixed_merged_pr,True,False,0.3085,0.6233,0.4659,2,3,1,0,0,,2022-04-28T09:04:49Z,Follow Me messages getting sent in burst form (2 at once),https://github.com/mavlink/MAVSDK/issues/1756
+3,2488,closed,answered,True,False,0.4714,0.4598,0.4656,7,3,0,0,1,,2025-01-03T00:48:10Z,SSL error building library on Windows in configure step,https://github.com/mavlink/MAVSDK/issues/2488
+2,823,closed,invalid_misfiled,False,False,0.4141,0.5161,0.4651,7,4,0,0,0,question,2019-07-30T08:48:48Z,Missing plugins when Mavsdk is installed from *.deb in Ubuntu 18.04,https://github.com/mavlink/MAVSDK/issues/823
+0,2740,closed,abandoned_no_response,False,False,0.3087,0.6204,0.4645,4,2,0,0,0,,2025-12-16T15:01:35Z,"For arduRover, mavsdk not worked for calibration and set_current_mission_item()",https://github.com/mavlink/MAVSDK/issues/2740
+3,1804,closed,answered,True,False,0.427,0.5005,0.4637,11,3,0,0,0,question,2022-06-10T12:01:46Z,Mission progress not triggered when mission is uploaded from QGC,https://github.com/mavlink/MAVSDK/issues/1804
+3,358,closed,fixed_merged_pr,True,False,0.4938,0.4316,0.4627,6,3,1,2,0,enhancement|question,2018-04-10T07:26:41Z,Its time to switch Coding style to Clang format,https://github.com/mavlink/MAVSDK/issues/358
+0,1467,closed,fixed_stated,True,False,0.2404,0.683,0.4617,1,1,0,0,0,bug,2021-06-17T06:40:17Z,Mavsdk instances should not share mavlink_status_t,https://github.com/mavlink/MAVSDK/issues/1467
+0,1600,closed,fixed_merged_pr,True,False,0.3369,0.5857,0.4613,4,2,1,0,0,bug,2021-11-05T09:38:50Z,"When used the cancel of calibration plugin class, there is crash!!!  ",https://github.com/mavlink/MAVSDK/issues/1600
+0,224,closed,answered,True,False,0.4058,0.5163,0.461,4,3,0,2,1,question,2018-01-13T11:00:31Z," DroneCore shell, a command line tool for interacting with a MAVLink device",https://github.com/mavlink/MAVSDK/issues/224
+0,802,closed,answered,True,False,0.3258,0.594,0.4599,4,2,0,0,0,question,2019-07-17T22:04:18Z,Compiling example with g++ directly instead of CMake,https://github.com/mavlink/MAVSDK/issues/802
+3,858,closed,answered,True,False,0.484,0.4359,0.4599,14,4,0,1,0,enhancement|question,2019-09-18T21:03:24Z,Add GPS UTC time to Telemetry::GPSInfo,https://github.com/mavlink/MAVSDK/issues/858
+3,1508,closed,fixed_merged_pr,True,False,0.5817,0.338,0.4598,10,4,1,0,1,,2021-08-13T15:27:59Z,(slightly off-topic) How to 'reset' Gazebo after running integrations tests?,https://github.com/mavlink/MAVSDK/issues/1508
+2,2493,closed,abandoned_no_response,False,False,0.4159,0.5038,0.4598,9,3,0,0,0,question,2025-01-16T05:00:10Z,How can i fix that,https://github.com/mavlink/MAVSDK/issues/2493
+3,381,closed,fixed_merged_pr,True,False,0.4151,0.5021,0.4586,3,2,1,0,0,bug,2018-05-03T00:10:16Z,fly_qgc_mission error loading shared libraries: libjson11.so,https://github.com/mavlink/MAVSDK/issues/381
+3,1637,closed,fixed_merged_pr,True,False,0.5221,0.3918,0.4569,7,3,1,1,0,enhancement,2021-11-26T09:48:25Z,Support multiple callback-subscribers,https://github.com/mavlink/MAVSDK/issues/1637
+0,229,closed,unclear,,False,0.1468,0.7667,0.4568,1,2,0,0,0,enhancement|question|plugins,2018-01-18T07:25:28Z,Maintaining Plugin list,https://github.com/mavlink/MAVSDK/issues/229
+2,2742,closed,wontfix_out_of_scope,False,False,0.4218,0.4909,0.4564,6,3,0,0,0,bug,2025-12-23T21:41:57Z,Set rate position and attitude_euler not working with ArduPilot,https://github.com/mavlink/MAVSDK/issues/2742
+0,2188,closed,unclear,,False,0.3965,0.5154,0.4559,8,3,0,0,0,more_info_needed,2023-11-26T11:49:49Z,set_rate_attitude(): ignores requested rate,https://github.com/mavlink/MAVSDK/issues/2188
+0,429,closed,answered,True,False,0.3865,0.5236,0.455,5,3,0,0,0,enhancement,2018-06-14T06:10:42Z,Decide how to pass callbacks to API,https://github.com/mavlink/MAVSDK/issues/429
+0,2705,closed,fixed_merged_pr,True,False,0.3386,0.5711,0.4549,2,2,1,1,0,bug,2025-11-06T10:36:57Z,MAVSDK Server: Warn -> Connection using udp:// is deprecated,https://github.com/mavlink/MAVSDK/issues/2705
+0,845,closed,answered,True,False,0.3421,0.5673,0.4547,7,2,0,0,0,question,2019-08-19T13:42:30Z,Quadcopter does not apply set_takeoff_altitude ,https://github.com/mavlink/MAVSDK/issues/845
+3,695,closed,fixed_merged_pr,True,False,0.5715,0.3362,0.4538,11,3,1,2,0,plugins,2019-03-14T10:59:06Z,Camera range options not supported,https://github.com/mavlink/MAVSDK/issues/695
+0,2070,closed,answered,True,False,0.295,0.6127,0.4538,3,3,0,0,0,,2023-06-01T09:52:25Z,mavsdk server compile failed on MacOS 11.6,https://github.com/mavlink/MAVSDK/issues/2070
+0,2328,closed,fixed_merged_pr,True,False,0.3547,0.5522,0.4535,2,2,1,0,0,,2024-06-03T07:14:19Z,Unable to install latest version 2.12.0-debian11-arm64 on jetson jetpack 5.1 docker,https://github.com/mavlink/MAVSDK/issues/2328
+3,304,closed,fixed_merged_pr,True,False,0.5518,0.355,0.4534,7,3,1,0,0,enhancement|question|core,2018-03-06T05:26:37Z,DroneCore handles only one component,https://github.com/mavlink/MAVSDK/issues/304
+0,1094,closed,answered,True,False,0.2272,0.6794,0.4533,3,1,0,0,0,bug,2020-05-12T12:24:35Z,Intermittent mavsdk_server unit test failure,https://github.com/mavlink/MAVSDK/issues/1094
+3,814,closed,fixed_merged_pr,True,False,0.491,0.414,0.4525,7,3,1,0,0,,2019-07-24T12:17:36Z,Error building mavsdk_server (LNK1149),https://github.com/mavlink/MAVSDK/issues/814
+0,2597,closed,abandoned_no_response,False,False,0.3062,0.5983,0.4523,3,3,0,0,0,,2025-06-18T06:15:19Z,grpc_server.h: error: expected identifier,https://github.com/mavlink/MAVSDK/issues/2597
+3,112,closed,fixed_merged_pr,True,False,0.6006,0.3019,0.4513,6,5,1,8,0,help wanted|feature,2017-10-03T14:51:12Z,[Plugin] Forward RTK RTCM packets to FCU,https://github.com/mavlink/MAVSDK/issues/112
+0,2063,closed,abandoned_no_response,False,False,0.295,0.6055,0.4503,3,3,0,0,0,,2023-05-30T13:48:06Z,can't connect to SITL - udp,https://github.com/mavlink/MAVSDK/issues/2063
+0,2319,closed,fixed_merged_pr,True,False,0.3535,0.5466,0.45,4,2,1,0,0,bug,2024-05-28T21:47:35Z,MAV_RESULT_IN_PROGRESS: Sigfault when multiple IN_PROGRESS messages are sent before arming,https://github.com/mavlink/MAVSDK/issues/2319
+3,925,closed,fixed_stated,True,False,0.596,0.3023,0.4491,6,4,0,0,0,feature,2019-12-09T23:25:41Z,Adding DISTANCE_SENSOR and possibly other raw sensor messages.,https://github.com/mavlink/MAVSDK/issues/925
+3,2415,closed,answered,True,False,0.4381,0.4602,0.4491,11,3,0,0,0,,2024-10-04T19:42:07Z,Simplify build process,https://github.com/mavlink/MAVSDK/issues/2415
+3,2516,closed,fixed_merged_pr,True,False,0.5414,0.3543,0.4478,11,4,1,1,0,enhancement,2025-02-27T10:43:07Z,Telemetry rates: set_rate_rc unsupported,https://github.com/mavlink/MAVSDK/issues/2516
+3,1109,closed,fixed_merged_pr,True,False,0.4417,0.4519,0.4468,7,3,1,0,0,bug,2020-05-26T12:17:22Z,attitude_euler bug,https://github.com/mavlink/MAVSDK/issues/1109
+0,248,closed,fixed_stated,True,False,0.3497,0.5413,0.4455,5,3,0,0,0,bug|plugins|beginner,2018-02-06T05:11:00Z,Mission integration test SitlTest.MissionChangeSpeed is failing.,https://github.com/mavlink/MAVSDK/issues/248
+3,2589,closed,answered,True,False,0.4159,0.4741,0.445,9,3,0,0,0,bug,2025-05-29T20:44:29Z,Mismatch between upload_mission_async() and subsequent download_mission_async(),https://github.com/mavlink/MAVSDK/issues/2589
+1,121,open,open,,False,0.485,0.4048,0.4449,7,3,0,0,1,enhancement|help wanted,2017-10-19T09:21:27Z,Example Fly mission uses hard-coding of mission points,https://github.com/mavlink/MAVSDK/issues/121
+0,2089,closed,answered,True,False,0.3481,0.5418,0.4449,5,3,0,0,0,question,2023-06-19T10:29:36Z,Cmake error at third party build target ,https://github.com/mavlink/MAVSDK/issues/2089
+3,2340,closed,answered,True,False,0.4198,0.47,0.4449,14,2,0,0,0,question,2024-06-14T01:26:16Z,mission download on the server side,https://github.com/mavlink/MAVSDK/issues/2340
+3,960,closed,answered,True,False,0.5343,0.3553,0.4448,8,3,0,1,0,bug,2020-01-23T11:19:44Z,Timesync message warning spam,https://github.com/mavlink/MAVSDK/issues/960
+0,2390,closed,answered,True,False,0.4021,0.4846,0.4434,11,2,0,0,0,,2024-09-03T14:59:48Z,"""undefined reference"" linker error with ARM build",https://github.com/mavlink/MAVSDK/issues/2390
+3,292,closed,answered,True,True,0.7496,0.1365,0.4431,28,5,0,0,0,plugins,2018-02-27T13:41:17Z,Camera plugin to implement MAVLink Camera Protocol client interface,https://github.com/mavlink/MAVSDK/issues/292
+3,1984,closed,answered,True,False,0.4913,0.3946,0.443,15,4,0,0,0,question,2023-02-08T13:14:07Z,Move deps like tinyxml and jsoncpp to plugins,https://github.com/mavlink/MAVSDK/issues/1984
+0,1916,closed,self_resolved,True,False,0.3788,0.5068,0.4428,6,2,0,0,1,,2022-10-14T23:25:02Z,MAVSDK on Jetson Nano,https://github.com/mavlink/MAVSDK/issues/1916
+0,1571,closed,self_resolved,True,False,0.3892,0.4952,0.4422,7,3,0,0,0,bug,2021-10-12T10:51:16Z,Failed to build tinyxml2 on Raspberry Pi 3B+ ( armv7),https://github.com/mavlink/MAVSDK/issues/1571
+0,2660,closed,abandoned_no_response,False,False,0.291,0.593,0.442,3,2,0,0,0,,2025-09-23T14:28:36Z,MavlinkDirect doesn't support STATUSTEXT with newlines,https://github.com/mavlink/MAVSDK/issues/2660
+3,2191,closed,fixed_merged_pr,True,False,0.5266,0.3561,0.4414,16,3,1,0,0,,2023-12-08T22:16:45Z,"When multiple vehicles are connected, all systems get data from all vehicles, regardless of sysid.",https://github.com/mavlink/MAVSDK/issues/2191
+0,1391,closed,answered,True,False,0.4069,0.4738,0.4404,9,3,0,0,0,,2021-03-31T17:19:27Z,Structure Cmake for Cpp package managers,https://github.com/mavlink/MAVSDK/issues/1391
+3,827,closed,answered,True,False,0.4854,0.3945,0.44,7,4,0,0,0,bug,2019-07-30T15:13:02Z,Missing dll on windows,https://github.com/mavlink/MAVSDK/issues/827
+3,2156,closed,answered,True,False,0.5266,0.3525,0.4395,25,3,0,0,0,question|more_info_needed,2023-10-16T09:49:47Z,Build problem,https://github.com/mavlink/MAVSDK/issues/2156
+3,1700,closed,fixed_merged_pr,True,False,0.5373,0.3407,0.439,7,3,1,0,0,,2022-02-17T20:55:10Z,server plugins should not be limited to a single system,https://github.com/mavlink/MAVSDK/issues/1700
+2,1397,closed,abandoned_no_response,False,False,0.3904,0.4873,0.4389,3,2,0,0,0,,2021-04-06T07:47:37Z,Link libc statically for Android,https://github.com/mavlink/MAVSDK/issues/1397
+0,2120,closed,answered,True,False,0.3405,0.537,0.4388,6,2,0,0,0,more_info_needed,2023-08-22T21:19:37Z,Camera plugin telemetries using deprecated subscription messages,https://github.com/mavlink/MAVSDK/issues/2120
+3,783,closed,answered,True,False,0.5345,0.3374,0.4359,13,5,0,2,0,enhancement|beginner,2019-07-03T14:35:27Z,Add brew install for lib,https://github.com/mavlink/MAVSDK/issues/783
+0,2515,closed,answered,True,False,0.2729,0.5987,0.4358,5,2,0,0,0,,2025-02-19T20:28:01Z,MAVSDK 2.3.0: Ardupilot system not disconnecting after soft-reboot,https://github.com/mavlink/MAVSDK/issues/2515
+3,2083,closed,answered,True,False,0.4256,0.4443,0.4349,10,3,0,0,0,,2023-06-13T16:32:57Z,Mavlink header install using ExternalProject_Add,https://github.com/mavlink/MAVSDK/issues/2083
+0,1645,closed,answered,True,False,0.3132,0.5559,0.4345,6,2,0,0,0,question,2021-12-03T01:17:22Z,question: how can I get the RC inputs from mavsdk_server ?,https://github.com/mavlink/MAVSDK/issues/1645
+3,1902,closed,self_resolved,True,False,0.4138,0.4553,0.4345,5,3,0,0,0,,2022-09-20T22:37:54Z,"Errors building example/takeoff_and_land, following initial MAVSDK installation/configuration",https://github.com/mavlink/MAVSDK/issues/1902
+0,640,closed,answered,True,False,0.3971,0.4712,0.4342,11,3,0,0,0,question,2019-01-15T21:04:20Z,unknown warning option '-Wno-unused-lambda-capture',https://github.com/mavlink/MAVSDK/issues/640
+3,1023,closed,fixed_merged_pr,True,False,0.5459,0.3211,0.4335,18,4,1,0,0,enhancement,2020-03-29T04:01:25Z,Generalizing MAVSDK for non-autopilot control,https://github.com/mavlink/MAVSDK/issues/1023
+0,2371,closed,fixed_merged_pr,True,False,0.3744,0.491,0.4327,4,2,1,0,0,,2024-08-12T12:31:25Z,Bug in battery.cpp example,https://github.com/mavlink/MAVSDK/issues/2371
+3,411,closed,fixed_stated,True,False,0.4937,0.37,0.4319,14,3,0,0,0,question,2018-05-25T10:20:36Z,what is DroneCores's uuid with multiple vehicles?,https://github.com/mavlink/MAVSDK/issues/411
+0,1936,closed,fixed_merged_pr,True,False,0.3993,0.4645,0.4319,4,3,1,0,0,bug,2022-11-29T17:00:11Z,Bug in MissionRawImpl::set_current_mission_item_async(),https://github.com/mavlink/MAVSDK/issues/1936
+3,1988,closed,fixed_merged_pr,True,False,0.4193,0.4441,0.4317,5,3,1,0,0,,2023-02-10T09:41:09Z,"Trouble with Visual Studio 2019 and the ""takeoff_and_land"" example. ",https://github.com/mavlink/MAVSDK/issues/1988
+3,1130,closed,answered,True,False,0.5353,0.3277,0.4315,13,4,0,0,0,question,2020-06-14T09:19:50Z,How to connect multiple drones correctly?,https://github.com/mavlink/MAVSDK/issues/1130
+0,813,closed,fixed_merged_pr,True,False,0.3581,0.504,0.431,3,2,1,0,0,question|more_info_needed,2019-07-23T15:50:23Z,Failed to setpoint in offboard mode in SITL,https://github.com/mavlink/MAVSDK/issues/813
+0,1459,closed,unclear,,False,0.27,0.5915,0.4308,1,1,0,0,0,feature,2021-06-07T09:15:40Z,MAVLink passthrough in language wrappers,https://github.com/mavlink/MAVSDK/issues/1459
+1,2103,open,open,,False,0.4616,0.3999,0.4307,10,4,0,0,0,feature,2023-07-19T16:49:27Z,Mission feasability check status,https://github.com/mavlink/MAVSDK/issues/2103
+0,2438,closed,fixed_merged_pr,True,False,0.3358,0.5252,0.4305,3,2,1,0,0,bug,2024-11-11T18:11:11Z,Access to MavlinkCommandSender::_work_queue without locking the mutex,https://github.com/mavlink/MAVSDK/issues/2438
+3,1319,closed,fixed_merged_pr,True,False,0.4983,0.3622,0.4303,8,3,1,0,0,feature,2021-02-11T20:58:02Z,Using multiple UDP remotes,https://github.com/mavlink/MAVSDK/issues/1319
+1,1996,open,open,,False,0.5956,0.2649,0.4303,6,5,2,0,0,bug,2023-03-02T10:00:59Z,Ardupilot and MAVSDK compatability,https://github.com/mavlink/MAVSDK/issues/1996
+3,279,closed,fixed_merged_pr,True,False,0.456,0.4036,0.4298,6,4,1,0,0,question,2018-02-20T05:51:23Z,Why don't we use exception handling ?,https://github.com/mavlink/MAVSDK/issues/279
+0,1734,closed,answered,True,False,0.3072,0.5517,0.4294,4,3,0,0,0,question,2022-04-08T07:30:19Z,Cannot use QGroundControl simultaneously with an active mavsdk script in hardware testing,https://github.com/mavlink/MAVSDK/issues/1734
+0,1791,closed,answered,True,False,0.2307,0.6268,0.4288,2,2,0,0,0,question,2022-05-26T04:20:54Z,Build issue with zlib 1.2.12,https://github.com/mavlink/MAVSDK/issues/1791
+3,1908,closed,answered,True,False,0.593,0.2636,0.4283,19,5,0,0,0,,2022-10-05T20:48:03Z,Incombatibility issues with PX4's most recent firmware,https://github.com/mavlink/MAVSDK/issues/1908
+0,1754,closed,answered,True,False,0.3785,0.4779,0.4282,5,4,0,0,0,,2022-04-27T06:03:02Z,.deb file for Ubuntu 18.04 Jetson nano,https://github.com/mavlink/MAVSDK/issues/1754
+0,1786,closed,answered,True,False,0.3065,0.5496,0.428,5,2,0,0,0,,2022-05-21T13:20:28Z,Errors while using mavsdk::Geofence reference,https://github.com/mavlink/MAVSDK/issues/1786
+3,1387,closed,answered,True,False,0.4145,0.4414,0.4279,10,3,0,0,0,more_info_needed,2021-03-30T06:55:24Z,Compiling error on Raspberry Pi 4,https://github.com/mavlink/MAVSDK/issues/1387
+3,750,closed,answered,True,False,0.6624,0.1927,0.4275,18,7,0,0,0,,2019-05-21T22:49:11Z,Create MAVSDK Logo,https://github.com/mavlink/MAVSDK/issues/750
+3,1967,closed,fixed_merged_pr,True,False,0.5165,0.3332,0.4248,7,2,1,0,0,,2023-01-28T12:55:44Z,MAVSDK Only Connects to PX4 Autopilot AFTER QGroundControl is Launched!,https://github.com/mavlink/MAVSDK/issues/1967
+0,1948,closed,fixed_merged_pr,True,False,0.3247,0.5237,0.4242,3,2,1,0,0,feature,2022-12-22T11:57:36Z,Directly import a mission as character data,https://github.com/mavlink/MAVSDK/issues/1948
+0,2337,closed,answered,True,False,0.2646,0.5836,0.4241,3,2,0,0,0,question,2024-06-10T08:55:21Z,MavSDK server is connected to drone but not listening to port,https://github.com/mavlink/MAVSDK/issues/2337
+3,2033,closed,answered,True,False,0.4565,0.3914,0.424,8,3,0,0,1,,2023-05-12T13:12:17Z,Connect to serial and take_photo() returns TIMEOUT.,https://github.com/mavlink/MAVSDK/issues/2033
+3,201,closed,fixed_merged_pr,True,False,0.5476,0.2995,0.4235,9,3,1,0,0,bug,2017-12-15T16:15:32Z,TCP connection drop causes high CPU usage,https://github.com/mavlink/MAVSDK/issues/201
+0,2043,closed,answered,True,False,0.35,0.497,0.4235,7,3,0,0,0,question,2023-05-21T13:35:52Z,vscode - debug: step into MAVSDK functions,https://github.com/mavlink/MAVSDK/issues/2043
+0,1014,closed,answered,True,False,0.3105,0.5345,0.4225,5,3,0,0,0,question,2020-03-20T00:01:21Z,PositionBody not supported by Telemetry Class?,https://github.com/mavlink/MAVSDK/issues/1014
+3,1689,closed,fixed_stated,True,False,0.4353,0.4095,0.4224,9,4,0,0,0,,2022-01-24T08:15:22Z,Error in mavsdk/plugin_base.h,https://github.com/mavlink/MAVSDK/issues/1689
+3,1909,closed,answered,True,False,0.4385,0.4026,0.4205,5,4,0,0,1,,2022-10-07T08:15:48Z,'mavsdk_server' is not distributed platform : Running MAVSDK on Raspberry Pi4 with Ubuntu 20.04,https://github.com/mavlink/MAVSDK/issues/1909
+0,1837,closed,no_maintainer_reply,False,False,0.0828,0.7563,0.4195,1,1,0,0,0,,2022-07-05T11:12:32Z,autopilot_server vs 1.4.3 segmentation fault,https://github.com/mavlink/MAVSDK/issues/1837
+0,1702,closed,fixed_stated,True,False,0.4014,0.4361,0.4187,7,4,0,0,0,,2022-02-21T11:43:54Z,Add set flight mode to public API?,https://github.com/mavlink/MAVSDK/issues/1702
+2,1711,closed,abandoned_no_response,False,False,0.3948,0.4415,0.4182,7,3,0,0,0,bug|windows,2022-03-03T08:25:18Z,mavsdk::Gimbal::control() exception but mavsdk::Gimbal::subscribe_control() OK,https://github.com/mavlink/MAVSDK/issues/1711
+0,1313,closed,answered,True,False,0.2801,0.5553,0.4177,5,2,0,0,0,,2021-02-08T23:10:24Z,MAVSDK server build fails,https://github.com/mavlink/MAVSDK/issues/1313
+0,717,closed,answered,True,False,0.3789,0.4532,0.4161,7,2,0,0,0,bug,2019-04-04T01:57:24Z,warnings during mission upload and download,https://github.com/mavlink/MAVSDK/issues/717
+0,1680,closed,answered,True,False,0.335,0.4947,0.4148,6,2,0,0,0,bug,2022-01-19T21:51:39Z,package architecture (armv7) does not match system (armhf),https://github.com/mavlink/MAVSDK/issues/1680
+3,2082,closed,answered,True,False,0.5889,0.2401,0.4145,8,6,0,0,0,,2023-06-13T08:57:02Z,Compatibility to Ardupilot version 4.0.5 ,https://github.com/mavlink/MAVSDK/issues/2082
+0,1474,closed,unclear,,False,0.1957,0.6319,0.4138,2,2,0,0,0,,2021-07-07T21:22:27Z,Building MAVSDK for Jetson Nano aarch64,https://github.com/mavlink/MAVSDK/issues/1474
+0,2717,closed,answered,True,False,0.3232,0.5034,0.4133,5,2,0,0,0,,2025-11-25T07:57:49Z,[03:09:59|Error] Int messages are not supported. (mavlink_mission_transfer_client.cpp:38),https://github.com/mavlink/MAVSDK/issues/2717
+3,1003,closed,fixed_merged_pr,True,False,0.4178,0.408,0.4129,5,4,1,0,0,bug|beginner,2020-03-05T14:03:30Z,No result with set_current_mission_item_async,https://github.com/mavlink/MAVSDK/issues/1003
+3,1170,closed,answered,True,False,0.5446,0.2808,0.4127,9,5,0,0,0,,2020-08-19T09:36:05Z,Who should initiate TIMESYNC?,https://github.com/mavlink/MAVSDK/issues/1170
+3,2129,closed,fixed_merged_pr,True,False,0.4677,0.3557,0.4117,8,3,1,0,0,,2023-09-06T16:26:48Z,When running MAVSDK against ArduCopter SITL the Action/goto_location function always responds with Command Denied,https://github.com/mavlink/MAVSDK/issues/2129
+0,2522,closed,unclear,,False,0.3186,0.5028,0.4107,2,2,0,0,0,,2025-03-14T14:29:09Z,RC_Status and mavlink remote health,https://github.com/mavlink/MAVSDK/issues/2522
+0,2549,closed,fixed_stated,True,False,0.2739,0.5473,0.4106,2,3,0,1,0,,2025-04-18T03:58:43Z,Build failed with CMake 4.0,https://github.com/mavlink/MAVSDK/issues/2549
+3,2689,closed,answered,True,False,0.4208,0.4004,0.4106,8,3,0,0,0,,2025-10-23T10:08:47Z,"Unable to control servo using MAVSDK - set_actuator, MAV_CMD_DO_SET_ACTUATOR, MAV_CMD_DO_SET_SERVO not working",https://github.com/mavlink/MAVSDK/issues/2689
+0,1183,closed,fixed_merged_pr,True,False,0.2814,0.5392,0.4103,2,2,1,1,0,bug,2020-09-01T09:27:01Z,Hold time is ignored for waypoints when importing with import_qgroundcontrol_mission,https://github.com/mavlink/MAVSDK/issues/1183
+0,2618,closed,fixed_merged_pr,True,False,0.2891,0.529,0.4091,2,2,1,0,0,,2025-07-21T15:33:02Z,MAVSDK connection freezes when using mavsdk_server_win32.exe when using python subprocess with stdout=subprocess.PIPE,https://github.com/mavlink/MAVSDK/issues/2618
+2,483,closed,abandoned_no_response,False,False,0.3703,0.4453,0.4078,5,3,0,0,0,enhancement|question,2018-08-07T21:13:25Z,Failed to compile custom app on Mac,https://github.com/mavlink/MAVSDK/issues/483
+3,2593,closed,answered,True,False,0.4313,0.3836,0.4074,10,2,0,0,1,,2025-06-03T15:30:31Z,Intermittent issue of all gimbal control erroring with Pixy LR gimbal,https://github.com/mavlink/MAVSDK/issues/2593
+0,6,closed,fixed_merged_pr,True,False,0.3338,0.4807,0.4073,1,2,1,0,0,bug,2017-07-05T16:43:26Z,Windows build broken,https://github.com/mavlink/MAVSDK/issues/6
+0,2190,closed,fixed_stated,True,False,0.259,0.5554,0.4072,3,2,0,0,0,,2023-12-06T16:02:56Z,unix_epoch_time subscription not working in C++ and Python ,https://github.com/mavlink/MAVSDK/issues/2190
+0,936,closed,answered,True,False,0.1846,0.6277,0.4062,2,2,0,0,0,,2019-12-17T17:14:07Z,cmake --target install doesn't install thirdparty files,https://github.com/mavlink/MAVSDK/issues/936
+0,2783,closed,fixed_merged_pr,True,False,0.3364,0.4757,0.4061,2,2,1,0,0,bug,2026-02-27T08:15:03Z,Building with a non-default dialect is broken?,https://github.com/mavlink/MAVSDK/issues/2783
+2,1965,closed,abandoned_no_response,False,False,0.3897,0.4196,0.4046,6,3,0,0,0,,2023-01-26T15:12:32Z,subscribe_on_new_system callback never triggered,https://github.com/mavlink/MAVSDK/issues/1965
+0,1687,closed,unclear,,False,0.1891,0.6175,0.4033,1,2,0,1,0,bug,2022-01-21T13:00:09Z,Error when calling Telemetry.get_gps_global_origin() for second vehicle with multiple Simulations running,https://github.com/mavlink/MAVSDK/issues/1687
+3,189,closed,fixed_merged_pr,True,False,0.4695,0.335,0.4022,6,3,2,0,0,enhancement|help wanted,2017-12-04T02:37:18Z,Follow Me has no example,https://github.com/mavlink/MAVSDK/issues/189
+3,2091,closed,fixed_merged_pr,True,False,0.5826,0.2211,0.4018,34,4,1,1,0,bug,2023-06-20T21:40:02Z,Log download via udp over ethernet stalls,https://github.com/mavlink/MAVSDK/issues/2091
+3,1115,closed,fixed_merged_pr,True,False,0.5768,0.2247,0.4007,14,5,1,0,0,question,2020-05-30T08:13:08Z,Zoom Support missing (Camera/Gimbal),https://github.com/mavlink/MAVSDK/issues/1115
+0,981,closed,self_resolved,True,False,0.3228,0.4784,0.4006,6,3,0,0,0,,2020-02-01T10:58:11Z,Missing stropts.h is stopping the installation of  cURL,https://github.com/mavlink/MAVSDK/issues/981
+3,486,closed,answered,True,False,0.4755,0.325,0.4002,9,2,0,0,0,question,2018-08-11T15:13:43Z,Get a vector of systems,https://github.com/mavlink/MAVSDK/issues/486
+0,873,closed,fixed_merged_pr,True,False,0.1876,0.6107,0.3992,1,1,1,0,0,bug|ci,2019-10-08T07:12:30Z,Intermittent CI fail: not landed before mission start,https://github.com/mavlink/MAVSDK/issues/873
+3,610,closed,fixed_merged_pr,True,False,0.4691,0.3291,0.3991,10,3,1,0,0,core|beginner,2018-11-26T16:12:43Z,Remove hard-coded `-j8` argument for `make`,https://github.com/mavlink/MAVSDK/issues/610
+0,1411,closed,answered,True,False,0.3577,0.4394,0.3986,9,2,0,0,0,,2021-04-14T10:20:21Z,How to connect a drone using system id with mavsdk,https://github.com/mavlink/MAVSDK/issues/1411
+0,855,closed,fixed_merged_pr,True,False,0.2236,0.5728,0.3982,1,2,1,0,0,question,2019-09-14T21:44:56Z,Issue with SITL Arming,https://github.com/mavlink/MAVSDK/issues/855
+3,2310,closed,fixed_merged_pr,True,False,0.4248,0.3717,0.3982,4,2,2,0,0,feature,2024-05-21T16:22:07Z,Adding Home Position Mavlink Message to Telemetry,https://github.com/mavlink/MAVSDK/issues/2310
+3,314,closed,fixed_merged_pr,True,False,0.4369,0.359,0.398,2,3,1,0,0,enhancement,2018-03-12T06:23:07Z,Choosing reference over pointer,https://github.com/mavlink/MAVSDK/issues/314
+3,70,closed,fixed_merged_pr,True,False,0.5057,0.2898,0.3978,11,2,2,0,0,enhancement,2017-09-14T07:28:17Z,Allow system-wide installation,https://github.com/mavlink/MAVSDK/issues/70
+0,2003,closed,self_resolved,True,False,0.3897,0.404,0.3969,6,3,0,0,0,enhancement|ci,2023-03-15T04:15:26Z,Move docker images away from dockerhub,https://github.com/mavlink/MAVSDK/issues/2003
+0,1722,closed,answered,True,False,0.407,0.3864,0.3967,6,4,0,0,0,question,2022-03-17T16:48:09Z,Undefined symbols for architecture x86_64:,https://github.com/mavlink/MAVSDK/issues/1722
+0,1763,closed,self_resolved,True,False,0.2241,0.5688,0.3964,3,2,0,0,0,,2022-05-05T08:50:16Z,Undefined reference to a specific function (offboard.h),https://github.com/mavlink/MAVSDK/issues/1763
+0,2102,closed,fixed_merged_pr,True,False,0.3956,0.3957,0.3957,6,2,1,0,0,question,2023-07-19T16:40:42Z,"Module range mismatch in ""ActionImpl::set_actuator_async"" function",https://github.com/mavlink/MAVSDK/issues/2102
+3,1134,closed,answered,True,False,0.5043,0.2821,0.3932,6,3,0,0,1,,2020-06-22T15:42:40Z,Comm error with RPi connected to PX4.,https://github.com/mavlink/MAVSDK/issues/1134
+3,698,closed,fixed_merged_pr,True,False,0.5959,0.1901,0.393,10,3,3,0,0,bug,2019-03-15T20:12:33Z,Cancel mission upload and download lead to crashes,https://github.com/mavlink/MAVSDK/issues/698
+0,2035,closed,answered,True,False,0.3871,0.3985,0.3928,7,3,0,0,0,,2023-05-17T12:41:49Z,How to use MAVSDK with QgroundControl,https://github.com/mavlink/MAVSDK/issues/2035
+0,1504,closed,answered,True,False,0.3492,0.436,0.3926,6,3,0,0,0,,2021-08-09T05:55:26Z,Multiple telementry not accesible,https://github.com/mavlink/MAVSDK/issues/1504
+2,1458,closed,abandoned_no_response,False,False,0.4069,0.3768,0.3919,9,3,0,0,0,question,2021-06-07T06:12:46Z,Best way to work with qtcreator?,https://github.com/mavlink/MAVSDK/issues/1458
+0,2029,closed,answered,True,False,0.3605,0.423,0.3917,8,2,0,0,0,,2023-05-05T07:58:47Z,"Mission upload failed: Unsupported, exiting.",https://github.com/mavlink/MAVSDK/issues/2029
+3,1688,closed,fixed_merged_pr,True,False,0.521,0.2623,0.3916,35,3,1,0,0,bug,2022-01-22T00:41:29Z,Windows Executable - missing mavsdk.dll,https://github.com/mavlink/MAVSDK/issues/1688
+0,317,closed,fixed_merged_pr,True,False,0.3648,0.4161,0.3905,3,2,1,0,0,bug|core,2018-03-14T06:23:20Z,DroneCore application (GCS) should NOT mix up with System/Device,https://github.com/mavlink/MAVSDK/issues/317
+3,949,closed,fixed_merged_pr,True,False,0.4482,0.3329,0.3905,3,4,1,0,0,enhancement|docs,2020-01-01T18:47:15Z,Quickstart in README is not as quick as it could be,https://github.com/mavlink/MAVSDK/issues/949
+3,1858,closed,answered,True,False,0.4333,0.3475,0.3904,12,3,0,0,0,,2022-07-14T09:05:48Z,Changing from offboard mode to mission mode,https://github.com/mavlink/MAVSDK/issues/1858
+0,607,closed,fixed_stated,True,False,0.1108,0.6687,0.3897,1,1,0,0,0,bug|beginner,2018-11-23T09:54:31Z,Async hover test disarms mid-air,https://github.com/mavlink/MAVSDK/issues/607
+2,1959,closed,abandoned_no_response,False,False,0.4163,0.3625,0.3894,8,4,0,0,0,question,2023-01-21T11:51:03Z,How to arm drone without GPS,https://github.com/mavlink/MAVSDK/issues/1959
+0,167,closed,fixed_merged_pr,True,False,0.3042,0.4727,0.3885,1,2,1,0,0,enhancement,2017-11-19T23:54:24Z,Bugs in APIref,https://github.com/mavlink/MAVSDK/issues/167
+0,2037,closed,answered,True,False,0.2912,0.4844,0.3878,5,2,0,0,0,,2023-05-18T03:05:48Z,mission_raw   missionitem,https://github.com/mavlink/MAVSDK/issues/2037
+3,176,closed,fixed_merged_pr,True,False,0.4588,0.3167,0.3877,7,3,1,0,0,bug,2017-11-27T12:35:22Z,Serial connection at 100% CPU,https://github.com/mavlink/MAVSDK/issues/176
+0,2656,closed,answered,True,False,0.3394,0.4343,0.3869,5,2,0,0,0,,2025-09-17T13:28:01Z,GPS Info Not Updating Correctly: Satellites and FixType Always Return Defaults in MAVSDK,https://github.com/mavlink/MAVSDK/issues/2656
+0,192,closed,answered,True,False,0.1735,0.5987,0.3861,2,2,0,0,0,question,2017-12-06T08:45:23Z,Examples fails to find path to libdronecore.so at runtime.,https://github.com/mavlink/MAVSDK/issues/192
+3,723,closed,answered,True,False,0.4174,0.3546,0.386,10,2,0,0,0,bug,2019-04-17T11:39:58Z,Including the SDK inside a Node C++ Addon,https://github.com/mavlink/MAVSDK/issues/723
+3,191,closed,fixed_merged_pr,True,False,0.4857,0.286,0.3859,6,3,2,0,0,enhancement,2017-12-04T03:08:10Z,FollowMe API feels inconsistent,https://github.com/mavlink/MAVSDK/issues/191
+1,1531,open,open,,False,0.5286,0.243,0.3858,11,4,1,0,0,feature,2021-09-06T02:14:15Z,Can MAVSDK support set ekf origin?,https://github.com/mavlink/MAVSDK/issues/1531
+0,2130,closed,answered,True,False,0.2068,0.5648,0.3858,2,2,0,0,0,question,2023-09-07T08:49:20Z,mission-variable as member of C++-Class,https://github.com/mavlink/MAVSDK/issues/2130
+2,2163,closed,abandoned_no_response,False,False,0.3843,0.3846,0.3844,5,3,0,1,0,,2023-10-20T16:05:59Z,"""Sending message failed"" on main branch - Cannot Upload Missions on PX4 or ArduPilot Systems",https://github.com/mavlink/MAVSDK/issues/2163
+0,1947,closed,answered,True,False,0.2895,0.4779,0.3837,3,3,0,0,0,,2022-12-21T11:10:14Z,"""WARNING: THIS FILE IS AUTOGENERATED"" comments in plugin files",https://github.com/mavlink/MAVSDK/issues/1947
+0,1410,closed,answered,True,False,0.2839,0.4827,0.3833,3,3,0,0,0,question,2021-04-12T10:38:34Z,What problems will we encounter by using Ardupilot + MAVSDK ?,https://github.com/mavlink/MAVSDK/issues/1410
+3,1101,closed,fixed_merged_pr,True,False,0.4803,0.286,0.3831,5,4,1,0,0,,2020-05-15T10:45:54Z,Mission generation should use NAV_DELAY instead of sending two waypoints on the same location,https://github.com/mavlink/MAVSDK/issues/1101
+3,2859,closed,self_resolved,True,False,0.4263,0.3391,0.3827,8,3,0,0,0,,2026-04-10T05:33:23Z,Assets missing files,https://github.com/mavlink/MAVSDK/issues/2859
+2,2428,closed,abandoned_no_response,False,False,0.3792,0.3861,0.3826,8,2,0,0,0,bug,2024-10-21T11:37:04Z,MAVSDK mission RAW subscribe_incoming_mission only one mission item input,https://github.com/mavlink/MAVSDK/issues/2428
+0,1915,closed,answered,True,False,0.2895,0.4737,0.3816,3,3,0,0,0,bug,2022-10-12T11:58:24Z,mission_raw_import_and_fly.cpp inconsistency in frame type ,https://github.com/mavlink/MAVSDK/issues/1915
+3,1867,closed,answered,True,False,0.4392,0.3237,0.3814,13,3,0,0,0,,2022-07-21T11:57:18Z,Running example takeoff_and_land compiles errors on Macos,https://github.com/mavlink/MAVSDK/issues/1867
+3,2554,closed,answered,True,False,0.4159,0.346,0.381,9,3,0,0,0,,2025-04-25T06:06:45Z,MAVSDK/src/core unavailable while cloning MAVSDK,https://github.com/mavlink/MAVSDK/issues/2554
+0,680,closed,fixed_merged_pr,True,False,0.3352,0.4263,0.3808,2,2,1,0,0,enhancement,2019-02-20T14:30:34Z,Enable cross compilation for devices like Raspberry Pi,https://github.com/mavlink/MAVSDK/issues/680
+3,481,closed,answered,True,False,0.4119,0.3491,0.3805,4,2,0,0,0,question,2018-08-06T13:48:08Z,Failed to Compile on Mac,https://github.com/mavlink/MAVSDK/issues/481
+0,653,closed,answered,True,False,0.3261,0.4341,0.3801,5,2,0,1,0,bug|beginner,2019-01-28T10:33:41Z,Segfault if port failed to open,https://github.com/mavlink/MAVSDK/issues/653
+0,1932,closed,abandoned_no_response,False,False,0.2535,0.5058,0.3797,3,2,0,0,0,more_info_needed,2022-11-24T06:30:53Z,Reading the Status of RC switches with MavlinkPassthrough,https://github.com/mavlink/MAVSDK/issues/1932
+0,1549,closed,abandoned_no_response,False,False,0.2688,0.4903,0.3795,3,2,0,0,0,bug,2021-09-15T10:26:34Z,Documentation offboard is_active method is confusing,https://github.com/mavlink/MAVSDK/issues/1549
+0,2483,closed,abandoned_no_response,False,False,0.3176,0.4414,0.3795,5,2,0,0,0,more_info_needed,2024-12-20T06:51:40Z, how can i resolve this problem? please,https://github.com/mavlink/MAVSDK/issues/2483
+0,1970,closed,duplicate,False,False,0.1746,0.5836,0.3791,1,2,0,0,0,,2023-01-30T01:58:33Z,want to write example code of drone mission_raw,https://github.com/mavlink/MAVSDK/issues/1970
+3,616,closed,fixed_stated,True,False,0.4471,0.3099,0.3785,12,4,0,0,0,beginner,2018-11-30T14:01:44Z,Expose full mission list,https://github.com/mavlink/MAVSDK/issues/616
+0,1679,closed,fixed_merged_pr,True,False,0.3424,0.4131,0.3778,4,2,1,0,0,bug,2022-01-19T20:12:47Z,MAVSDK Windows Installation,https://github.com/mavlink/MAVSDK/issues/1679
+3,1800,closed,fixed_merged_pr,True,False,0.4839,0.2707,0.3773,6,3,1,0,0,,2022-06-06T15:29:37Z,[Rtk] Data above 180 bytes length not working,https://github.com/mavlink/MAVSDK/issues/1800
+0,2187,closed,fixed_stated,True,False,0.3405,0.4131,0.3768,6,2,0,0,0,bug,2023-11-24T16:53:38Z,MavlinkPassthrough  subscription handles are not unique,https://github.com/mavlink/MAVSDK/issues/2187
+3,193,closed,fixed_merged_pr,True,False,0.4439,0.309,0.3765,5,3,1,0,0,enhancement|help wanted,2017-12-06T10:38:22Z,Exposing Flight mode APIs in core/device_impl.h,https://github.com/mavlink/MAVSDK/issues/193
+3,651,closed,fixed_merged_pr,True,False,0.455,0.2978,0.3764,5,3,2,0,0,beginner|feature,2019-01-23T16:34:14Z,Expose temperature,https://github.com/mavlink/MAVSDK/issues/651
+3,424,closed,fixed_merged_pr,True,False,0.4178,0.3341,0.376,6,2,1,0,0,enhancement,2018-06-11T09:22:52Z,Dronecore as subproject,https://github.com/mavlink/MAVSDK/issues/424
+0,689,closed,fixed_stated,True,False,0.3437,0.4078,0.3758,3,3,0,0,0,bug,2019-03-06T20:08:42Z,Mission progress won't send event until aircraft reaches the following waypoint ,https://github.com/mavlink/MAVSDK/issues/689
+3,1907,closed,answered,True,False,0.4618,0.2895,0.3756,10,5,0,1,0,question,2022-10-02T18:37:16Z,Is It Possible To Get RC Channel Values,https://github.com/mavlink/MAVSDK/issues/1907
+3,1197,closed,fixed_stated,True,False,0.4747,0.2739,0.3743,17,4,0,0,0,feature,2020-09-27T17:00:26Z,Adding disconnect button to kill/disconnect to any port or kill not used variables. ,https://github.com/mavlink/MAVSDK/issues/1197
+0,1749,closed,answered,True,False,0.2712,0.4771,0.3741,4,2,0,0,0,,2022-04-20T21:25:44Z,Get current speed of the drone and Change heading when drone in hold mode,https://github.com/mavlink/MAVSDK/issues/1749
+3,32,closed,answered,True,False,0.4908,0.2565,0.3737,12,2,0,0,0,enhancement|plugins,2017-08-21T15:43:39Z,Feature: Add support for vision estimate feed,https://github.com/mavlink/MAVSDK/issues/32
+0,2420,closed,fixed_merged_pr,True,False,0.3358,0.4104,0.3731,3,2,1,0,0,,2024-10-07T08:56:26Z,Timeout for commands with ACK,https://github.com/mavlink/MAVSDK/issues/2420
+0,869,closed,answered,True,False,0.2368,0.5084,0.3726,3,2,0,0,0,question,2019-10-02T09:45:45Z,Velocity issue with set_velocity_body() function,https://github.com/mavlink/MAVSDK/issues/869
+3,1164,closed,answered,True,False,0.4357,0.3093,0.3725,6,5,0,1,0,,2020-08-12T16:03:12Z,GMock Linker Error: Build MAVSDK On Windows,https://github.com/mavlink/MAVSDK/issues/1164
+0,2896,closed,fixed_merged_pr,True,False,0.3847,0.3602,0.3725,4,2,1,1,0,,2026-06-09T21:40:14Z,"Android: camera definition fails to load, Camera.getCurrentSettings() returns UNAVAILABLE",https://github.com/mavlink/MAVSDK/issues/2896
+0,2362,closed,self_resolved,True,False,0.3032,0.4412,0.3722,4,2,0,0,0,,2024-07-29T03:16:18Z,odometry data is incorrect,https://github.com/mavlink/MAVSDK/issues/2362
+0,685,closed,answered,True,False,0.3114,0.4313,0.3714,4,3,0,0,0,,2019-02-26T17:35:35Z,calibration without STATUSTEXT commands,https://github.com/mavlink/MAVSDK/issues/685
+0,1186,closed,answered,True,False,0.1901,0.5507,0.3704,2,2,0,0,0,enhancement,2020-09-06T07:21:10Z,error messages on actions do not reveil error reason,https://github.com/mavlink/MAVSDK/issues/1186
+0,907,closed,answered,True,False,0.3885,0.3503,0.3694,6,3,0,0,0,bug,2019-11-19T03:02:07Z,How to  use the gimbal properly?,https://github.com/mavlink/MAVSDK/issues/907
+3,487,closed,fixed_stated,True,False,0.5136,0.2237,0.3686,19,4,0,0,0,bug|question,2018-08-13T07:53:05Z,How to connect to a real vehicle?,https://github.com/mavlink/MAVSDK/issues/487
+3,1625,closed,fixed_stated,True,False,0.4444,0.2928,0.3686,5,3,0,1,0,,2021-11-18T05:14:11Z,Absence of mutex locking in Gimbal plugin causing SEGV_ACCERR,https://github.com/mavlink/MAVSDK/issues/1625
+0,2702,closed,fixed_merged_pr,True,False,0.1574,0.5797,0.3685,0,1,1,0,0,bug,2025-11-04T09:06:04Z,Mission system test fails intermittently,https://github.com/mavlink/MAVSDK/issues/2702
+0,214,closed,fixed_merged_pr,True,False,0.3828,0.3538,0.3683,4,2,1,0,0,bug,2018-01-04T01:41:59Z,Device never gets connected again after heartbeat timed out,https://github.com/mavlink/MAVSDK/issues/214
+2,2598,closed,abandoned_no_response,False,False,0.4208,0.3157,0.3682,8,3,0,0,0,,2025-06-19T16:28:33Z,UDP reconnect logic with PX4,https://github.com/mavlink/MAVSDK/issues/2598
+1,2830,open,open,,True,0.6207,0.115,0.3679,9,3,3,0,0,enhancement,2026-03-31T20:31:13Z,v4 plan,https://github.com/mavlink/MAVSDK/issues/2830
+0,2249,closed,abandoned_no_response,False,False,0.2418,0.4938,0.3678,2,2,0,0,0,,2024-03-14T20:34:26Z,Increase rx rate ,https://github.com/mavlink/MAVSDK/issues/2249
+0,611,closed,fixed_merged_pr,True,False,0.3234,0.4107,0.367,3,2,1,0,0,enhancement|ci|beginner,2018-11-26T16:14:35Z,Remove `-Werror` except for CI,https://github.com/mavlink/MAVSDK/issues/611
+3,50,closed,fixed_merged_pr,True,False,0.5495,0.1833,0.3664,10,4,1,0,0,question,2017-09-06T02:42:08Z,Why is Loiter Mode Set request sent before Arm and Takeoff commands ?,https://github.com/mavlink/MAVSDK/issues/50
+0,245,closed,fixed_merged_pr,True,False,0.3214,0.41,0.3657,2,2,1,0,0,,2018-02-05T23:27:34Z,Can't build docs,https://github.com/mavlink/MAVSDK/issues/245
+0,1745,closed,fixed_merged_pr,True,False,0.119,0.6081,0.3635,0,1,1,1,0,bug,2022-04-20T00:16:51Z,Mission download corrupt with low timeout,https://github.com/mavlink/MAVSDK/issues/1745
+3,2013,closed,fixed_merged_pr,True,False,0.555,0.1712,0.3631,10,2,1,0,0,enhancement,2023-03-31T23:58:18Z,REQUEST_MESSAGE vs custom getters like REQUEST_CAMERA_INFORMATION,https://github.com/mavlink/MAVSDK/issues/2013
+0,816,closed,fixed_merged_pr,True,False,0.1934,0.5325,0.3629,1,2,1,1,0,,2019-07-25T11:32:37Z,Move protoc generation out of cmake and version generated files,https://github.com/mavlink/MAVSDK/issues/816
+3,2138,closed,answered,True,False,0.4317,0.2941,0.3629,8,2,0,0,0,question,2023-09-11T18:52:49Z,motor didnt spin when arm and drone not lift off,https://github.com/mavlink/MAVSDK/issues/2138
+0,296,closed,fixed_merged_pr,True,False,0.198,0.5255,0.3618,0,1,2,0,0,docs,2018-03-01T00:41:10Z,Add documentation for methods in device.h,https://github.com/mavlink/MAVSDK/issues/296
+0,227,closed,closed_silently,False,False,0.1268,0.596,0.3614,0,1,0,0,0,bug,2018-01-16T08:53:56Z,Running integration tests with `AUTOSTART_SITL=1` fails,https://github.com/mavlink/MAVSDK/issues/227
+0,1182,closed,answered,True,False,0.3077,0.4151,0.3614,6,2,0,0,0,,2020-08-28T01:56:15Z,MAVSDK failed to initiate UDP connection,https://github.com/mavlink/MAVSDK/issues/1182
+0,721,closed,fixed_stated,True,False,0.3553,0.3664,0.3609,5,3,0,0,0,,2019-04-10T21:03:32Z,Get mavlink messages through the SDK,https://github.com/mavlink/MAVSDK/issues/721
+1,1445,open,open,,False,0.4499,0.272,0.3609,4,3,0,2,0,feature,2021-05-26T12:42:21Z,Provide Autopilot/Server functionality for MAVLink services,https://github.com/mavlink/MAVSDK/issues/1445
+2,2500,closed,abandoned_no_response,False,False,0.5118,0.2086,0.3602,13,4,0,1,0,more_info_needed,2025-01-27T11:08:44Z,Bug in latest versions for Android?,https://github.com/mavlink/MAVSDK/issues/2500
+3,2105,closed,fixed_stated,True,False,0.5057,0.2132,0.3595,8,4,0,0,1,question,2023-07-25T07:15:50Z,Adding functionality without changing the MAVSDK library,https://github.com/mavlink/MAVSDK/issues/2105
+3,234,closed,fixed_merged_pr,True,False,0.5031,0.2156,0.3594,8,3,1,0,0,question,2018-01-23T09:01:53Z,Arming Rejected,https://github.com/mavlink/MAVSDK/issues/234
+0,284,closed,self_resolved,True,False,0.4038,0.3151,0.3594,6,3,0,0,0,,2018-02-25T15:03:10Z,Example for installing the DroneCore on Raspberrypi ,https://github.com/mavlink/MAVSDK/issues/284
+3,1252,closed,answered,True,False,0.4643,0.2534,0.3589,8,3,0,0,0,feature,2020-11-12T19:25:18Z,Add Functionality to Broadcast to Interface without Explicit Vehicle Connection,https://github.com/mavlink/MAVSDK/issues/1252
+0,325,closed,fixed_merged_pr,True,False,0.3231,0.394,0.3586,3,2,1,0,0,question|core|plugins,2018-03-16T05:53:35Z,Re-organize System/Device class interface for plugins and applications,https://github.com/mavlink/MAVSDK/issues/325
+2,1470,closed,abandoned_no_response,False,False,0.3654,0.3509,0.3581,6,3,0,0,0,question,2021-06-19T11:31:28Z,how to access when flying mission,https://github.com/mavlink/MAVSDK/issues/1470
+0,570,closed,answered,True,False,0.3325,0.3836,0.358,6,3,0,0,0,enhancement,2018-10-04T10:12:33Z,Gimbal plugin implementation idea,https://github.com/mavlink/MAVSDK/issues/570
+1,780,open,open,,False,0.4333,0.2826,0.3579,5,3,0,1,0,enhancement,2019-07-01T08:27:19Z,Support indoor VIO/flow setups,https://github.com/mavlink/MAVSDK/issues/780
+0,1611,closed,answered,True,False,0.1635,0.5521,0.3578,1,2,0,0,0,,2021-11-08T13:52:17Z,MAVSDK with Dronekit-SITL,https://github.com/mavlink/MAVSDK/issues/1611
+0,999,closed,fixed_merged_pr,True,False,0.3042,0.41,0.3571,3,2,1,1,0,enhancement,2020-03-04T06:37:46Z,Organize & Cleanup Receiver System & Component ID Handling,https://github.com/mavlink/MAVSDK/issues/999
+0,2543,closed,fixed_merged_pr,True,True,0.3791,0.3339,0.3565,4,2,1,1,0,bug,2025-04-16T14:30:16Z,Uploading .plan to ArduPilot using import_qgroundcontrol_mission corrupts parameter,https://github.com/mavlink/MAVSDK/issues/2543
+3,830,closed,fixed_merged_pr,True,False,0.4618,0.251,0.3564,5,2,2,0,0,enhancement,2019-08-07T09:15:19Z,Add option to build without curl,https://github.com/mavlink/MAVSDK/issues/830
+3,1883,closed,answered,True,False,0.4346,0.2772,0.3559,5,3,0,0,0,bug,2022-08-22T15:11:01Z,Serial port connection to PX4 SITL not working with MAVSDK v1.4.4 after upgrading to latest PX4 firmware v1.3.0,https://github.com/mavlink/MAVSDK/issues/1883
+3,933,closed,fixed_merged_pr,True,False,0.4133,0.2967,0.355,5,3,1,0,0,enhancement|core,2019-12-17T07:57:33Z,timesync warnings,https://github.com/mavlink/MAVSDK/issues/933
+3,2766,closed,answered,True,False,0.472,0.2379,0.3549,16,3,0,0,0,question|more_info_needed,2026-02-12T13:23:01Z,Disconnect multidrone,https://github.com/mavlink/MAVSDK/issues/2766
+3,749,closed,answered,True,True,0.5764,0.1326,0.3545,28,5,0,0,0,,2019-05-16T07:55:06Z,Migration to MAVLink organisation,https://github.com/mavlink/MAVSDK/issues/749
+0,731,closed,fixed_merged_pr,True,False,0.124,0.584,0.354,0,1,2,0,0,bug|ci,2019-04-26T14:22:37Z,Backend unit test sometimes locks up,https://github.com/mavlink/MAVSDK/issues/731
+3,719,closed,fixed_merged_pr,True,False,0.4528,0.2547,0.3538,6,2,1,0,0,bug,2019-04-07T09:43:36Z,Windows build is broken,https://github.com/mavlink/MAVSDK/issues/719
+3,2215,closed,fixed_merged_pr,True,False,0.4705,0.2367,0.3536,8,2,1,1,0,enhancement,2024-02-05T16:56:14Z,Race condition in assigning callbacklist handle,https://github.com/mavlink/MAVSDK/issues/2215
+0,718,closed,fixed_merged_pr,True,False,0.2236,0.4835,0.3535,0,1,2,1,0,enhancement,2019-04-05T11:33:23Z,Dronecode SDK Windows build binary for Python package,https://github.com/mavlink/MAVSDK/issues/718
+0,1357,closed,fixed_merged_pr,True,False,0.306,0.3995,0.3528,1,2,1,0,0,question,2021-03-16T02:25:46Z,[windows10] cannot connected to FCU,https://github.com/mavlink/MAVSDK/issues/1357
+2,948,closed,duplicate,False,False,0.3248,0.3806,0.3527,5,2,0,0,0,,2020-01-01T18:44:42Z,"GTest is a submodule dependency, but unless all other dependencies is not automatically downloaded",https://github.com/mavlink/MAVSDK/issues/948
+0,2632,closed,answered,True,False,0.3516,0.3524,0.352,6,2,0,0,0,,2025-07-31T02:48:40Z,Motion capture data frame rate issue,https://github.com/mavlink/MAVSDK/issues/2632
+3,2507,closed,answered,True,False,0.4173,0.2836,0.3505,7,2,0,0,0,more_info_needed,2025-02-12T00:33:06Z,Unable to control the drone with the manual control,https://github.com/mavlink/MAVSDK/issues/2507
+3,329,closed,fixed_merged_pr,True,False,0.4955,0.2037,0.3496,6,3,1,0,0,enhancement|core,2018-03-20T06:05:38Z,"Rename ""Mavlink"" stuffs to that of ""MAVLink""",https://github.com/mavlink/MAVSDK/issues/329
+0,1589,closed,answered,True,False,0.337,0.3608,0.3489,5,3,0,0,0,question,2021-10-31T09:16:27Z,Does MAVSDK support HTTP/2?,https://github.com/mavlink/MAVSDK/issues/1589
+0,1706,closed,answered,True,False,0.3681,0.3289,0.3485,8,2,0,0,0,bug|windows,2022-02-28T06:12:20Z,undefined MissionRaw XXX and Camera XXX in v1.0.8 on Windows,https://github.com/mavlink/MAVSDK/issues/1706
+0,1826,closed,fixed_stated,True,False,0.2307,0.4663,0.3485,2,2,0,0,0,bug,2022-06-28T21:34:09Z,Offboard integration tests don't realise offboard is active,https://github.com/mavlink/MAVSDK/issues/1826
+3,2316,closed,fixed_merged_pr,True,True,0.5791,0.1172,0.3481,7,2,1,5,0,enhancement|v3,2024-05-27T06:47:44Z,Steps to v3,https://github.com/mavlink/MAVSDK/issues/2316
+3,663,closed,fixed_merged_pr,True,False,0.5164,0.1776,0.347,6,4,2,0,0,beginner,2019-02-11T10:15:59Z,Mission: provide API to clear mission,https://github.com/mavlink/MAVSDK/issues/663
+0,1326,closed,fixed_merged_pr,True,False,0.2898,0.4005,0.3452,3,2,1,0,0,feature,2021-02-19T17:16:34Z,Messages forwarding feature,https://github.com/mavlink/MAVSDK/issues/1326
+1,2733,open,open,,False,0.4474,0.2429,0.3452,7,4,0,0,0,feature,2025-12-10T11:21:36Z,Could add a set mode to Manual API in action,https://github.com/mavlink/MAVSDK/issues/2733
+0,2700,closed,fixed_merged_pr,True,False,0.3414,0.348,0.3447,3,2,1,0,0,bug,2025-11-03T15:14:13Z,Mission state should not be lost on disconnect,https://github.com/mavlink/MAVSDK/issues/2700
+0,1509,closed,no_maintainer_reply,False,False,0.1845,0.5047,0.3446,1,2,0,0,0,feature,2021-08-14T22:28:41Z,Get vehicle time since boot,https://github.com/mavlink/MAVSDK/issues/1509
+0,1910,closed,fixed_merged_pr,True,False,0.3664,0.3222,0.3443,3,2,2,0,0,,2022-10-07T12:36:11Z,How to query PX4 version using MAVSDK,https://github.com/mavlink/MAVSDK/issues/1910
+0,1945,closed,fixed_stated,True,False,0.3425,0.3457,0.3441,5,3,0,0,0,,2022-12-15T20:05:28Z,Get entries stalls indefinitely,https://github.com/mavlink/MAVSDK/issues/1945
+0,2000,closed,answered,True,False,0.3803,0.3079,0.3441,8,3,0,0,0,question,2023-03-09T16:53:31Z,Loading a JSON task file,https://github.com/mavlink/MAVSDK/issues/2000
+0,1213,closed,fixed_merged_pr,True,False,0.3496,0.3384,0.344,3,3,1,0,0,bug,2020-10-08T00:38:06Z,Offboard disabled when processing other components heartbeat,https://github.com/mavlink/MAVSDK/issues/1213
+3,2679,closed,fixed_merged_pr,True,False,0.416,0.2719,0.3439,4,3,1,0,0,bug,2025-10-07T13:57:33Z,MavlinkDirect API doesn't seem to support uint64_t fields when they have large number,https://github.com/mavlink/MAVSDK/issues/2679
+0,2789,closed,abandoned_no_response,False,False,0.2889,0.3987,0.3438,2,3,0,0,0,,2026-03-09T04:10:34Z,[Android Build] CMake fails to find tinyxml2 package when building for Android,https://github.com/mavlink/MAVSDK/issues/2789
+0,190,closed,fixed_merged_pr,True,False,0.297,0.3888,0.3429,3,2,1,0,0,,2017-12-04T02:44:43Z,Global installation not working on Ubuntu,https://github.com/mavlink/MAVSDK/issues/190
+0,1603,closed,fixed_merged_pr,True,False,0.34,0.3453,0.3427,3,2,1,0,0,,2021-11-06T01:42:12Z,Support cameras without camera definition file,https://github.com/mavlink/MAVSDK/issues/1603
+0,2265,closed,unclear,,False,0.2124,0.4727,0.3426,2,2,0,0,0,,2024-03-28T17:43:11Z,Trying to compile with make,https://github.com/mavlink/MAVSDK/issues/2265
+0,829,closed,unclear,,False,0.214,0.4709,0.3424,2,2,0,0,0,bug|ci,2019-08-06T12:12:20Z,Intermittent CI fail for CameraServiceImplTest.sendsOneCurrentSettings,https://github.com/mavlink/MAVSDK/issues/829
+3,250,closed,fixed_stated,True,False,0.4407,0.244,0.3423,11,4,0,0,0,question,2018-02-06T10:37:06Z,Create new Mission,https://github.com/mavlink/MAVSDK/issues/250
+0,2623,closed,answered,True,False,0.3062,0.3784,0.3423,3,3,0,0,0,,2025-07-23T09:02:44Z,add the mavlink_passthrough in grpc,https://github.com/mavlink/MAVSDK/issues/2623
+0,1478,closed,answered,True,False,0.301,0.3832,0.3421,5,2,0,0,0,,2021-07-09T09:02:39Z,Cannot build examples on Windows (lib error),https://github.com/mavlink/MAVSDK/issues/1478
+0,1981,closed,answered,True,False,0.3481,0.3352,0.3417,5,3,0,0,0,,2023-02-07T16:23:32Z,Install interface in cmakelist,https://github.com/mavlink/MAVSDK/issues/1981
+0,1457,closed,abandoned_no_response,False,False,0.2251,0.4577,0.3414,2,2,0,0,0,question,2021-06-06T20:55:15Z,Сan not connect to the drone,https://github.com/mavlink/MAVSDK/issues/1457
+0,1111,closed,self_resolved,True,False,0.3704,0.3113,0.3408,7,3,0,0,0,question,2020-05-27T02:41:42Z,Detect waypoint too far (to close) issue before start mission,https://github.com/mavlink/MAVSDK/issues/1111
+0,1299,closed,fixed_merged_pr,True,False,0.338,0.3433,0.3407,2,2,1,0,0,bug,2021-02-01T11:57:27Z,UDP port parsing is weird,https://github.com/mavlink/MAVSDK/issues/1299
+3,2353,closed,fixed_merged_pr,True,False,0.4104,0.2705,0.3405,4,3,1,0,0,bug,2024-07-19T09:07:09Z,TCP connection from MAVSDK breaks app after 16 minutes of idle time due to reconnection,https://github.com/mavlink/MAVSDK/issues/2353
+3,2510,closed,answered,True,False,0.5024,0.1785,0.3404,26,4,0,0,0,more_info_needed,2025-02-12T12:24:35Z,rtcm messages unidentical with mavsdk::rtk.h,https://github.com/mavlink/MAVSDK/issues/2510
+0,2009,closed,answered,True,False,0.1746,0.5057,0.3402,1,2,0,0,0,question,2023-03-26T16:22:15Z,Wrong patch version in main branch,https://github.com/mavlink/MAVSDK/issues/2009
+3,91,closed,fixed_merged_pr,True,True,0.4711,0.2082,0.3397,5,2,1,0,0,bug,2017-09-26T05:40:05Z,Release builds fail,https://github.com/mavlink/MAVSDK/issues/91
+0,2443,closed,unclear,,False,0.1802,0.4993,0.3397,1,2,0,0,0,,2024-11-15T02:13:29Z,gazebo in px4-gazebo-headless container not run,https://github.com/mavlink/MAVSDK/issues/2443
+0,331,closed,fixed_merged_pr,True,False,0.3969,0.2814,0.3391,5,2,1,0,0,core,2018-03-22T06:19:22Z,Maintain a connection instance per component in case of UDP,https://github.com/mavlink/MAVSDK/issues/331
+0,2529,closed,answered,True,False,0.3232,0.3548,0.339,5,2,0,0,0,windows,2025-03-24T18:23:46Z,CMAKE parse errors when configuring on Windows x64,https://github.com/mavlink/MAVSDK/issues/2529
+0,2714,closed,answered,True,False,0.2702,0.4064,0.3383,3,2,0,0,0,,2025-11-24T14:15:53Z,delay before take_off,https://github.com/mavlink/MAVSDK/issues/2714
+0,2832,closed,fixed_merged_pr,True,False,0.2625,0.414,0.3382,1,2,1,0,0,,2026-04-01T00:44:50Z,Backport tracker: main → v3 (since v3.15.0),https://github.com/mavlink/MAVSDK/issues/2832
+3,939,closed,fixed_merged_pr,True,False,0.4653,0.2095,0.3374,8,4,1,0,0,beginner|feature,2019-12-18T00:37:36Z,Support for global position setpoints with SET_POSITION_TARGET_GLOBAL_INT,https://github.com/mavlink/MAVSDK/issues/939
+0,211,closed,answered,True,False,0.2381,0.4362,0.3372,2,1,0,0,0,enhancement|help wanted|grpc,2017-12-28T01:31:03Z,Have one gRPC server library for each plugin,https://github.com/mavlink/MAVSDK/issues/211
+1,100,open,open,,False,0.4572,0.2131,0.3352,5,3,1,0,0,enhancement|help wanted,2017-09-27T01:29:57Z,Add support for NED missions,https://github.com/mavlink/MAVSDK/issues/100
+0,2367,closed,duplicate,False,False,0.2778,0.3922,0.335,2,3,0,0,0,,2024-08-09T03:06:44Z,connected with a real drone problem,https://github.com/mavlink/MAVSDK/issues/2367
+0,2268,closed,fixed_merged_pr,True,False,0.4051,0.2648,0.3349,5,2,1,0,0,bug,2024-04-03T13:55:50Z,Server plugin should not receive commands that are addressed to other components.,https://github.com/mavlink/MAVSDK/issues/2268
+0,1992,closed,unclear,,False,0.2767,0.3919,0.3343,4,2,0,0,0,question,2023-02-22T17:13:22Z,Can't get telemetry with subscibe_position(),https://github.com/mavlink/MAVSDK/issues/1992
+0,136,open,open,,False,0.1765,0.491,0.3337,1,1,1,0,0,enhancement,2017-10-26T02:54:53Z,Review MAVLink messages and determine appropriate actions,https://github.com/mavlink/MAVSDK/issues/136
+0,2137,closed,fixed_merged_pr,True,False,0.3863,0.2811,0.3337,3,3,1,1,0,enhancement,2023-09-11T08:58:30Z,Action->set_maximum_speed doesn't work with ArduPilot?,https://github.com/mavlink/MAVSDK/issues/2137
+0,1116,closed,fixed_merged_pr,True,False,0.3845,0.2825,0.3335,8,3,1,0,0,,2020-05-30T09:52:08Z,Creating/Uploading a Survey Mission,https://github.com/mavlink/MAVSDK/issues/1116
+0,3,closed,fixed_merged_pr,True,False,0.3254,0.3413,0.3334,1,2,2,0,0,question,2017-06-27T10:51:31Z,pthread library perhaps should be linked to libdronelink.a,https://github.com/mavlink/MAVSDK/issues/3
+0,159,closed,fixed_merged_pr,True,False,0.2978,0.3687,0.3333,1,1,3,0,0,bug,2017-11-09T03:48:59Z,Make docs fails after 130,https://github.com/mavlink/MAVSDK/issues/159
+0,1027,closed,fixed_merged_pr,True,False,0.3109,0.3553,0.3331,1,2,1,2,0,enhancement|beginner,2020-04-02T01:31:41Z,Add examples to CI?,https://github.com/mavlink/MAVSDK/issues/1027
+0,1707,closed,self_resolved,True,False,0.2012,0.4631,0.3322,2,2,0,0,0,,2022-02-28T06:30:22Z,MAVSDK Make Unknown Argument,https://github.com/mavlink/MAVSDK/issues/1707
+0,1425,closed,fixed_merged_pr,True,False,0.2848,0.3766,0.3307,1,2,1,0,0,bug,2021-05-01T22:35:18Z,One drone arming and flying does not allow the other to arm.,https://github.com/mavlink/MAVSDK/issues/1425
+0,33,closed,fixed_stated,True,False,0.3923,0.2684,0.3304,10,3,0,0,0,enhancement|plugins,2017-08-21T15:44:56Z,Feature: add support for ADS-B data,https://github.com/mavlink/MAVSDK/issues/33
+2,1026,closed,abandoned_no_response,False,False,0.465,0.1943,0.3296,8,5,0,0,0,,2020-04-01T14:47:07Z,Set drone yaw in a MissionItem,https://github.com/mavlink/MAVSDK/issues/1026
+3,285,closed,answered,True,False,0.4111,0.2471,0.3291,12,3,0,0,0,question,2018-02-26T03:02:39Z,[Issue] Yaw of mission item always is 0,https://github.com/mavlink/MAVSDK/issues/285
+0,811,closed,answered,True,False,0.2754,0.3827,0.329,4,2,0,0,0,question,2019-07-23T01:36:12Z,How to connect Px4 on SITL,https://github.com/mavlink/MAVSDK/issues/811
+0,2541,closed,answered,True,True,0.3252,0.3328,0.329,7,2,0,0,0,,2025-04-15T07:28:53Z,gRPC server in ARM release version not working (?),https://github.com/mavlink/MAVSDK/issues/2541
+0,1157,closed,answered,True,False,0.2954,0.3615,0.3285,5,2,0,0,0,enhancement,2020-08-05T02:05:32Z,Could we get more info about GPS?,https://github.com/mavlink/MAVSDK/issues/1157
+0,2167,closed,fixed_stated,True,False,0.295,0.3583,0.3266,3,3,0,0,0,,2023-10-27T12:26:15Z,Odemetry Telemetry message subscription does not persist after reboot,https://github.com/mavlink/MAVSDK/issues/2167
+0,1523,closed,answered,True,False,0.3376,0.3147,0.3261,4,4,0,0,0,,2021-09-02T18:06:03Z,no entries received,https://github.com/mavlink/MAVSDK/issues/1523
+0,1573,closed,answered,True,False,0.1957,0.4561,0.3259,2,2,0,0,0,question,2021-10-19T07:50:42Z,How to build a Mock-Drone?,https://github.com/mavlink/MAVSDK/issues/1573
+3,587,closed,fixed_merged_pr,True,False,0.4532,0.1983,0.3257,5,3,1,1,0,enhancement|help wanted,2018-11-08T08:57:20Z,Enable serial and TCP connections for backend,https://github.com/mavlink/MAVSDK/issues/587
+0,1766,closed,self_resolved,True,False,0.2241,0.4259,0.325,3,2,0,0,0,bug,2022-05-05T22:22:00Z,`set_root_directory()` does not set the root directory (FTP),https://github.com/mavlink/MAVSDK/issues/1766
+0,904,closed,answered,True,False,0.25,0.3997,0.3248,2,3,0,0,0,bug,2019-11-14T14:49:28Z,IOS Build of MAVSDK throws error,https://github.com/mavlink/MAVSDK/issues/904
+0,1203,closed,answered,True,False,0.213,0.4365,0.3247,3,2,0,0,0,,2020-10-05T16:50:43Z,Copy-Paste error in TelemetryImpl::process_fixedwing_metrics,https://github.com/mavlink/MAVSDK/issues/1203
+3,162,closed,fixed_merged_pr,True,False,0.4692,0.1795,0.3244,10,2,2,0,0,bug,2017-11-14T00:27:08Z,Building example locally on windows fails after #130,https://github.com/mavlink/MAVSDK/issues/162
+0,2229,closed,self_resolved,True,False,0.2124,0.4357,0.3241,2,2,0,0,0,,2024-02-22T08:59:31Z,problem in building mavsdk example Not found Package MAVSDK on raspberry pi 4,https://github.com/mavlink/MAVSDK/issues/2229
+0,1506,closed,answered,True,False,0.2545,0.3935,0.324,3,3,0,0,0,,2021-08-11T10:24:09Z,Action not working properly,https://github.com/mavlink/MAVSDK/issues/1506
+0,745,closed,fixed_stated,True,False,0.3114,0.3356,0.3235,4,3,0,0,0,,2019-05-10T08:10:12Z,Rename to MAVLink SDK,https://github.com/mavlink/MAVSDK/issues/745
+3,854,closed,answered,True,False,0.4225,0.2237,0.3231,13,3,0,0,0,question,2019-09-14T08:55:47Z,Unable to access IMU data on terminal using MAVSDK,https://github.com/mavlink/MAVSDK/issues/854
+0,2059,closed,answered,True,False,0.3159,0.3253,0.3206,3,3,0,0,0,,2023-05-27T10:06:57Z,Does the MAVSDK support mavlink ftp server,https://github.com/mavlink/MAVSDK/issues/2059
+2,929,closed,abandoned_no_response,False,False,0.3474,0.2934,0.3204,4,4,0,0,0,question,2019-12-11T08:36:46Z, C:/MAVSDK/build/default/third_party/jsoncpp failed to build!,https://github.com/mavlink/MAVSDK/issues/929
+0,84,closed,answered,True,False,0.2701,0.3697,0.3199,6,2,0,0,0,bug|help wanted,2017-09-21T07:15:53Z,Offboard mode can lead to crash,https://github.com/mavlink/MAVSDK/issues/84
+0,902,closed,answered,True,False,0.2754,0.3642,0.3198,4,2,0,0,0,question,2019-11-14T08:59:15Z,Building Mavlink_Passthrough does not build the plugin,https://github.com/mavlink/MAVSDK/issues/902
+0,2452,closed,answered,True,False,0.2823,0.3545,0.3184,4,2,0,0,0,question,2024-11-26T02:20:23Z,How to use the `set_always_send_heartbeats` of Configuration ,https://github.com/mavlink/MAVSDK/issues/2452
+0,2584,closed,answered,True,False,0.2702,0.3661,0.3181,3,2,0,0,0,,2025-05-24T07:41:07Z,How to use the lqr or mpc controller with mavsdk?,https://github.com/mavlink/MAVSDK/issues/2584
+0,2741,closed,answered,True,False,0.2584,0.3778,0.3181,4,2,0,0,0,question,2025-12-22T10:50:59Z,What's the difference between telemetry.unix_epoch_time() and telemetry.subscribe_unix_epoch_time() ?,https://github.com/mavlink/MAVSDK/issues/2741
+0,1033,closed,fixed_merged_pr,True,False,0.4083,0.2271,0.3177,5,2,1,0,0,,2020-04-09T09:50:39Z,Timesync adjusting outgoing message timestamps,https://github.com/mavlink/MAVSDK/issues/1033
+0,1710,closed,answered,True,False,0.3247,0.3107,0.3177,3,2,0,0,0,feature,2022-03-03T08:22:13Z,mavsdk::System::has_camera()  return false for gazebo_typhoon_h480,https://github.com/mavlink/MAVSDK/issues/1710
+0,1421,closed,abandoned_no_response,False,False,0.3048,0.3295,0.3172,3,3,0,0,0,question,2021-04-27T03:10:25Z,import_qgroundcontrol_mission not working after moved to mission_raw,https://github.com/mavlink/MAVSDK/issues/1421
+0,43,closed,fixed_merged_pr,True,False,0.1629,0.4705,0.3167,0,1,2,0,0,bug|ci,2017-08-29T10:54:12Z,Intermittent CI fail,https://github.com/mavlink/MAVSDK/issues/43
+0,2096,closed,wontfix_out_of_scope,False,False,0.1746,0.4577,0.3161,1,2,0,0,0,,2023-07-06T12:28:33Z,Arducopter \ SITL - basic action functions,https://github.com/mavlink/MAVSDK/issues/2096
+0,994,closed,answered,True,False,0.353,0.2788,0.3159,4,4,0,0,0,enhancement|question,2020-02-22T21:40:12Z,Subscribing to multiple vehicles from a single udp port,https://github.com/mavlink/MAVSDK/issues/994
+0,2288,closed,self_resolved,True,False,0.3567,0.2747,0.3157,7,2,0,0,0,question,2024-04-24T10:23:59Z,"Why is takeoff called here? I saw that takeoff is set in the create_mission_raw function. For APM, do you need to set takeoff in the mission and also call takeoff outside? Why?",https://github.com/mavlink/MAVSDK/issues/2288
+0,216,closed,answered,True,False,0.179,0.452,0.3155,2,2,0,0,0,question,2018-01-04T09:32:20Z,Unable to run individual integration tests,https://github.com/mavlink/MAVSDK/issues/216
+0,2047,closed,answered,True,False,0.2967,0.3331,0.3149,4,2,0,1,0,question,2023-05-22T16:53:12Z,MavlinkPassthrough low frequency callbacks ,https://github.com/mavlink/MAVSDK/issues/2047
+0,1534,closed,unclear,,False,0.2545,0.3738,0.3142,3,3,0,0,0,,2021-09-07T11:16:59Z,Subscribe_position to Display Drone Position,https://github.com/mavlink/MAVSDK/issues/1534
+0,1701,closed,unclear,,False,0.2012,0.4272,0.3142,2,2,0,0,0,,2022-02-18T15:32:17Z,Failsafe enabled: Nomanual control stick input  ,https://github.com/mavlink/MAVSDK/issues/1701
+1,1532,open,open,,False,0.4637,0.164,0.3139,12,4,0,0,0,question,2021-09-06T03:21:10Z,offboard::set_position_velocity_ned,https://github.com/mavlink/MAVSDK/issues/1532
+0,1198,closed,answered,True,False,0.281,0.3448,0.3129,4,2,0,0,0,question,2020-09-27T23:31:13Z,Reading GPS RAW data other than fused one,https://github.com/mavlink/MAVSDK/issues/1198
+0,2892,closed,fixed_merged_pr,True,False,0.2947,0.3297,0.3122,2,2,1,0,0,,2026-06-05T23:10:34Z,Race condition bug,https://github.com/mavlink/MAVSDK/issues/2892
+3,1369,closed,fixed_merged_pr,True,True,0.4566,0.1666,0.3116,11,2,1,0,0,bug,2021-03-22T10:13:58Z,Windows release build not building,https://github.com/mavlink/MAVSDK/issues/1369
+0,1173,closed,fixed_merged_pr,True,False,0.3619,0.2561,0.309,3,3,2,0,0,beginner|feature,2020-08-24T09:57:55Z,Error message if no manual control is available,https://github.com/mavlink/MAVSDK/issues/1173
+3,65,closed,fixed_stated,True,False,0.4533,0.164,0.3086,8,2,0,0,0,enhancement|beginner,2017-09-13T05:31:43Z,Have a method in Action to check if vehicle is armable,https://github.com/mavlink/MAVSDK/issues/65
+3,712,closed,fixed_merged_pr,True,False,0.4787,0.1372,0.308,8,3,1,1,0,,2019-03-28T21:13:24Z,Camera crash in possibleSettingOptions,https://github.com/mavlink/MAVSDK/issues/712
+0,959,closed,fixed_stated,True,False,0.158,0.458,0.308,1,2,0,0,0,,2020-01-22T15:26:16Z,Error: get param busy timeout: CAL_GYRO0_ID/CAL_ACC0_ID/CAL_MAG0_ID,https://github.com/mavlink/MAVSDK/issues/959
+0,164,open,open,,False,0.1413,0.4727,0.307,1,2,0,0,0,enhancement|help wanted,2017-11-16T23:07:46Z,Local validation of PX4 parameter values,https://github.com/mavlink/MAVSDK/issues/164
+2,2580,closed,abandoned_no_response,False,False,0.3516,0.262,0.3068,6,2,0,0,0,,2025-05-20T07:58:00Z,Issue of Mission Execution and Manual Input Priority,https://github.com/mavlink/MAVSDK/issues/2580
+0,1318,closed,answered,True,False,0.4069,0.2056,0.3063,9,3,0,0,0,question,2021-02-11T13:47:06Z,Include MAVSDK in QtCreator CMAKE project,https://github.com/mavlink/MAVSDK/issues/1318
+0,2045,closed,answered,True,False,0.3871,0.2247,0.3059,7,3,0,0,0,,2023-05-22T13:37:45Z,"""-DHTTP_ONLY=ON"" in third_party/curl/CMakeLists.txt",https://github.com/mavlink/MAVSDK/issues/2045
+0,148,closed,fixed_stated,True,False,0.3003,0.3104,0.3054,4,3,0,0,0,enhancement|help wanted,2017-11-02T22:51:59Z,Add support for MAVLink communication faking/mocking,https://github.com/mavlink/MAVSDK/issues/148
+0,1748,closed,fixed_merged_pr,True,False,0.3345,0.2756,0.3051,1,2,4,0,0,feature,2022-04-20T11:40:43Z,Battery telemetry raw current values,https://github.com/mavlink/MAVSDK/issues/1748
+0,1903,closed,fixed_merged_pr,True,False,0.3142,0.2953,0.3047,2,2,2,0,0,feature,2022-09-21T08:11:41Z,How do you access the barometric altitude when GPS is lost?,https://github.com/mavlink/MAVSDK/issues/1903
+0,319,closed,fixed_merged_pr,True,False,0.3298,0.2773,0.3035,1,2,1,1,0,enhancement|core,2018-03-14T13:38:50Z,Return vectors by value in C++11,https://github.com/mavlink/MAVSDK/issues/319
+0,2209,closed,abandoned_no_response,False,False,0.2778,0.3293,0.3035,2,3,0,0,0,,2024-01-12T08:23:13Z,how to get Ardupilot Camera Trigger status?,https://github.com/mavlink/MAVSDK/issues/2209
+3,2019,closed,answered,True,False,0.4231,0.1824,0.3027,7,4,0,0,0,question,2023-04-07T22:29:49Z,Where can I access camera_action on the Pixhawk 6C?,https://github.com/mavlink/MAVSDK/issues/2019
+3,417,closed,answered,True,False,0.4207,0.1844,0.3025,6,5,0,0,0,,2018-06-05T05:59:29Z,v1.0.0 Changelog scratchpad,https://github.com/mavlink/MAVSDK/issues/417
+0,2262,closed,answered,True,False,0.2646,0.3403,0.3024,3,2,0,0,0,,2024-03-28T02:25:35Z,Unable to subscribe to Velocity Body Fields,https://github.com/mavlink/MAVSDK/issues/2262
+0,2727,closed,fixed_merged_pr,True,False,0.3591,0.2437,0.3014,4,2,1,0,0,,2025-12-03T01:54:11Z,mavsdk-server检测到频繁的心跳超时,https://github.com/mavlink/MAVSDK/issues/2727
+0,758,closed,fixed_merged_pr,True,False,0.1324,0.4697,0.301,0,1,1,0,0,bug,2019-06-04T18:37:24Z,Missing dependencies when linking SDK as shared libraries,https://github.com/mavlink/MAVSDK/issues/758
+0,1925,closed,unclear,,False,0.1691,0.4329,0.301,1,2,0,0,0,feature,2022-11-06T20:20:44Z,Latest QGC Fixed Wing Landing format will not parse using MAVSDK mission import,https://github.com/mavlink/MAVSDK/issues/1925
+0,912,closed,fixed_merged_pr,True,False,0.3857,0.216,0.3009,3,3,2,0,0,enhancement,2019-11-22T15:54:29Z,FlightMode options for MAVSDK limited to Auto mode and Offboard,https://github.com/mavlink/MAVSDK/issues/912
+0,2403,closed,fixed_merged_pr,True,False,0.3843,0.216,0.3001,2,2,3,0,0,feature,2024-09-20T09:25:53Z,missing function download_geofence,https://github.com/mavlink/MAVSDK/issues/2403
+0,2352,closed,answered,True,False,0.3064,0.2928,0.2996,3,2,0,0,0,,2024-07-16T21:35:53Z,"QUESTION: Forwarding RTK RTCM data to Flight Controller using the RTK Plugin with .sendRtcmData(), using MAVSDK-Java",https://github.com/mavlink/MAVSDK/issues/2352
+0,2514,closed,answered,True,False,0.2879,0.311,0.2994,4,2,0,0,0,,2025-02-19T14:30:56Z,How to set custom_mode in HEARTBEAT,https://github.com/mavlink/MAVSDK/issues/2514
+0,180,closed,fixed_merged_pr,True,False,0.3355,0.262,0.2988,4,2,1,0,0,docs,2017-11-28T14:36:59Z,Few useful doxygen tags in the source leads to Doc build error,https://github.com/mavlink/MAVSDK/issues/180
+3,122,closed,fixed_stated,True,False,0.423,0.174,0.2985,7,4,0,1,0,enhancement|help wanted,2017-10-19T15:42:39Z,Add position control to offboard,https://github.com/mavlink/MAVSDK/issues/122
+0,2486,closed,abandoned_no_response,False,False,0.2968,0.2983,0.2975,5,2,0,0,0,more_info_needed,2024-12-28T15:45:32Z,Disconnection Issue with Ardupilot Flight Controller on serial port,https://github.com/mavlink/MAVSDK/issues/2486
+0,1031,closed,fixed_merged_pr,True,False,0.3996,0.1935,0.2965,4,3,2,1,0,bug|plugins,2020-04-07T09:27:40Z,mavlink_mission_item_to_mission_item_indices never cleared,https://github.com/mavlink/MAVSDK/issues/1031
+0,259,closed,fixed_merged_pr,True,False,0.2598,0.332,0.2959,1,2,1,0,0,enhancement|docs,2018-02-09T13:42:56Z,Add support to include Doxygen tags \code and \endcode,https://github.com/mavlink/MAVSDK/issues/259
+0,2228,closed,abandoned_no_response,False,False,0.3215,0.2677,0.2946,3,3,0,0,0,more_info_needed,2024-02-22T07:21:18Z,problem in building mavsdk exmaple on raspbian os,https://github.com/mavlink/MAVSDK/issues/2228
+1,2652,open,open,,False,0.4463,0.1423,0.2943,5,6,0,0,0,,2025-09-13T04:55:34Z,Does Mavsdk support Ardupilot?,https://github.com/mavlink/MAVSDK/issues/2652
+0,952,closed,answered,True,False,0.4033,0.1851,0.2942,4,4,0,0,0,feature,2020-01-05T09:27:38Z,set a GPS location to a drone that doesn't use GPS,https://github.com/mavlink/MAVSDK/issues/952
+0,1572,closed,answered,True,False,0.2479,0.3384,0.2932,3,2,0,0,0,question,2021-10-12T20:36:14Z,MAVlink Forwarding - System not detected,https://github.com/mavlink/MAVSDK/issues/1572
+3,2397,closed,answered,True,False,0.4476,0.1384,0.293,9,2,0,0,1,question,2024-09-10T15:36:09Z,MAVSDK server example--not able to arm,https://github.com/mavlink/MAVSDK/issues/2397
+0,1386,closed,answered,True,False,0.1957,0.3885,0.2921,2,2,0,0,0,question,2021-03-26T19:14:56Z,"How does ""Pause action"" work during mission",https://github.com/mavlink/MAVSDK/issues/1386
+0,36,closed,unclear,,False,0.2741,0.309,0.2915,2,2,0,0,0,enhancement,2017-08-22T23:03:44Z,Example folder structure should be future proofed.,https://github.com/mavlink/MAVSDK/issues/36
+3,1978,closed,answered,True,False,0.5,0.082,0.291,7,3,0,0,0,,2023-02-04T10:16:04Z,Tag `v1.4.12` removed?,https://github.com/mavlink/MAVSDK/issues/1978
+0,2076,closed,fixed_merged_pr,True,False,0.278,0.3038,0.2909,2,2,1,0,0,,2023-06-09T05:11:29Z,UDP to remote port does not recognize disconnect,https://github.com/mavlink/MAVSDK/issues/2076
+0,1043,closed,invalid_misfiled,False,False,0.1901,0.3916,0.2908,2,2,0,0,0,bug,2020-04-16T18:53:45Z,Segmentation fault when request Euler angle,https://github.com/mavlink/MAVSDK/issues/1043
+0,1400,closed,fixed_merged_pr,True,False,0.2223,0.3585,0.2904,2,1,1,0,0,bug,2021-04-08T06:30:32Z,subscribe_mission_progress() of class MissionRaw provides more output than expected if vehicle stops at waypoint,https://github.com/mavlink/MAVSDK/issues/1400
+0,1881,closed,answered,True,False,0.2921,0.2883,0.2902,4,2,0,0,0,question,2022-08-17T13:15:10Z,PX4/MAVSDK failsafe test,https://github.com/mavlink/MAVSDK/issues/1881
+0,2232,closed,answered,True,False,0.3232,0.256,0.2896,4,2,0,1,0,bug,2024-02-26T17:45:10Z,Memory leak in logger,https://github.com/mavlink/MAVSDK/issues/2232
+2,1899,closed,wontfix_out_of_scope,False,True,0.3993,0.1792,0.2893,4,3,0,0,0,,2022-09-16T12:57:12Z,[Discussion] How to set a parameter and reboot the vehicle for PX4 MAVSDK SITL Test,https://github.com/mavlink/MAVSDK/issues/1899
+0,1744,closed,answered,True,False,0.2921,0.2863,0.2892,4,2,0,0,0,question,2022-04-19T09:22:58Z,Question: How can I get the value of channel 10 (1100 / 1900) ?,https://github.com/mavlink/MAVSDK/issues/1744
+0,980,closed,abandoned_no_response,False,False,0.2601,0.3175,0.2888,4,2,0,0,0,,2020-01-31T13:01:43Z,mavshell example is not starting shell,https://github.com/mavlink/MAVSDK/issues/980
+0,1413,closed,fixed_merged_pr,True,False,0.4036,0.174,0.2888,2,3,2,0,0,enhancement,2021-04-15T23:36:18Z,set_rate missing for rawGps,https://github.com/mavlink/MAVSDK/issues/1413
+0,672,closed,answered,True,False,0.3045,0.272,0.2883,4,2,0,0,0,question,2019-02-15T12:14:51Z,Command id 0,https://github.com/mavlink/MAVSDK/issues/672
+0,2001,closed,fixed_merged_pr,True,False,0.3197,0.2566,0.2882,2,2,1,0,0,bug,2023-03-12T14:21:57Z,MavFrame enum is not correct?,https://github.com/mavlink/MAVSDK/issues/2001
+0,806,closed,answered,True,False,0.2905,0.2832,0.2868,4,3,0,0,0,enhancement|beginner,2019-07-21T13:13:56Z,Vision Support?,https://github.com/mavlink/MAVSDK/issues/806
+0,2263,closed,unclear,,False,0.2352,0.3379,0.2865,3,2,0,0,0,,2024-03-28T09:09:33Z,Can I use mavsdk::MavlinkPassthrough::queue_message() to transmit the GPS_GLOBAL_ORIGIN message to PX4 to specify the ekf origin?,https://github.com/mavlink/MAVSDK/issues/2263
+0,1719,closed,answered,True,False,0.2535,0.3187,0.2861,3,2,0,0,0,question,2022-03-11T16:15:08Z,Mission::upload_mission_with_progress_async() ends with progress nan - correct?,https://github.com/mavlink/MAVSDK/issues/1719
+3,334,closed,fixed_merged_pr,True,True,0.4584,0.1136,0.286,2,2,6,0,0,grpc,2018-03-22T10:40:37Z,Implement backend for camera,https://github.com/mavlink/MAVSDK/issues/334
+0,2237,closed,unclear,,False,0.2418,0.33,0.2859,2,2,0,0,0,question,2024-03-04T05:12:32Z,question about OBSTACLE_DISTANCE message - collision avoidance,https://github.com/mavlink/MAVSDK/issues/2237
+0,132,closed,fixed_merged_pr,True,False,0.4095,0.162,0.2858,3,2,2,0,0,enhancement,2017-10-25T06:16:33Z,Info::is_complete() - does it only wait on Version to be complete?,https://github.com/mavlink/MAVSDK/issues/132
+0,1496,closed,fixed_merged_pr,True,False,0.2348,0.3356,0.2852,1,2,1,0,0,,2021-07-30T04:18:20Z,Error Running Example Mission.py,https://github.com/mavlink/MAVSDK/issues/1496
+0,54,closed,answered,True,False,0.2966,0.2707,0.2836,3,2,0,0,0,bug,2017-09-07T05:40:02Z,Dockerfile on dronecore/dronecore is out of date,https://github.com/mavlink/MAVSDK/issues/54
+0,2330,closed,abandoned_no_response,False,False,0.3215,0.2419,0.2817,3,3,0,0,0,,2024-06-03T10:56:07Z,How to connect mavsdk frontend?,https://github.com/mavlink/MAVSDK/issues/2330
+0,2456,closed,answered,True,False,0.3176,0.2456,0.2816,5,2,0,0,0,more_info_needed,2024-12-02T20:47:58Z,Having issues with installing mavsdk.,https://github.com/mavlink/MAVSDK/issues/2456
+0,835,closed,answered,True,False,0.2577,0.3041,0.2809,3,2,0,0,0,enhancement,2019-08-11T13:35:59Z,Deprecate embedded camera definition files,https://github.com/mavlink/MAVSDK/issues/835
+0,322,closed,answered,True,False,0.2444,0.3171,0.2807,2,3,0,0,0,question,2018-03-15T07:13:52Z,DroneCore Application template,https://github.com/mavlink/MAVSDK/issues/322
+0,2661,closed,fixed_merged_pr,True,False,0.3736,0.1873,0.2804,5,2,1,0,0,more_info_needed,2025-09-24T05:25:27Z,Windows tcp/udp reconnect,https://github.com/mavlink/MAVSDK/issues/2661
+0,2039,closed,answered,True,False,0.4049,0.1548,0.2798,4,3,0,0,0,question,2023-05-19T01:57:00Z,MissionRaw::Result MissionRaw::pause_mission(),https://github.com/mavlink/MAVSDK/issues/2039
+0,454,closed,answered,True,False,0.3487,0.2107,0.2797,6,3,0,0,0,feature,2018-07-18T10:37:42Z,Determine exact time fly,https://github.com/mavlink/MAVSDK/issues/454
+2,1714,closed,abandoned_no_response,False,False,0.371,0.188,0.2795,6,3,0,0,0,,2022-03-04T01:39:19Z,mavsdk::System::has_gimbal() return false on Windows10,https://github.com/mavlink/MAVSDK/issues/1714
+0,2178,closed,answered,True,False,0.3481,0.2109,0.2795,5,3,0,0,0,feature,2023-11-14T10:27:28Z,Reading additional messages,https://github.com/mavlink/MAVSDK/issues/2178
+1,2095,open,open,,False,0.418,0.1408,0.2794,9,3,0,0,0,question,2023-06-28T16:24:24Z,Different connections to the same system,https://github.com/mavlink/MAVSDK/issues/2095
+0,95,closed,answered,True,False,0.333,0.2257,0.2793,3,3,0,0,0,enhancement|help wanted,2017-09-26T15:58:36Z,gRPC: APIs expose through gRPC,https://github.com/mavlink/MAVSDK/issues/95
+0,2147,closed,answered,True,False,0.2068,0.3516,0.2792,2,2,0,0,0,,2023-09-27T09:32:13Z,ulpoad mission to piwhaxk 4 mini via serial in HITL,https://github.com/mavlink/MAVSDK/issues/2147
+0,408,closed,fixed_merged_pr,True,False,0.3297,0.2276,0.2787,2,2,1,0,0,bug,2018-05-24T05:01:55Z,Follow Me example behaviour has changed in latest firmware,https://github.com/mavlink/MAVSDK/issues/408
+3,691,closed,fixed_merged_pr,True,False,0.4149,0.1423,0.2786,3,3,1,0,0,bug,2019-03-07T14:14:07Z,Inconsistent documentation in Action class.,https://github.com/mavlink/MAVSDK/issues/691
+0,1039,closed,fixed_merged_pr,True,False,0.3313,0.2252,0.2782,4,2,1,0,0,enhancement|beginner,2020-04-14T19:38:37Z,Support for multi-part statustext messages,https://github.com/mavlink/MAVSDK/issues/1039
+0,1922,closed,unclear,,False,0.2012,0.3541,0.2777,2,2,0,0,0,question,2022-11-01T14:19:14Z,Set flight mode to HOLD after drone disarms,https://github.com/mavlink/MAVSDK/issues/1922
+0,1900,closed,answered,True,True,0.4087,0.1457,0.2772,14,2,0,0,0,,2022-09-17T18:22:30Z,Can't find CURLConfig.cmake for mavsdk-windows-x64-release,https://github.com/mavlink/MAVSDK/issues/1900
+0,2098,closed,answered,True,False,0.3498,0.2037,0.2767,4,3,0,0,0,feature,2023-07-11T17:02:28Z,Add make uninstall,https://github.com/mavlink/MAVSDK/issues/2098
+0,249,closed,fixed_merged_pr,True,False,0.2435,0.3096,0.2765,1,1,1,1,0,enhancement|plugins,2018-02-06T07:31:20Z,Rename `camera_action_delay_s` to `loiter_time_s` in MissionItem class,https://github.com/mavlink/MAVSDK/issues/249
+0,1605,closed,fixed_merged_pr,True,False,0.4036,0.1481,0.2759,2,3,1,0,0,enhancement|v3,2021-11-06T02:02:26Z,Camera plugin uses deprecated messages,https://github.com/mavlink/MAVSDK/issues/1605
+0,1629,closed,answered,True,False,0.1775,0.3737,0.2756,1,1,0,0,0,bug,2021-11-20T11:07:23Z,Mission progress not working with flyThrough = true,https://github.com/mavlink/MAVSDK/issues/1629
+0,2107,open,open,,False,0.2875,0.2625,0.275,1,2,0,0,0,feature,2023-08-08T05:38:53Z,Expand Shell Plugin Options,https://github.com/mavlink/MAVSDK/issues/2107
+0,754,closed,fixed_merged_pr,True,False,0.3146,0.234,0.2743,3,3,1,0,0,beginner,2019-05-30T07:10:11Z,Expose angular velocities and acceleration in telemetry,https://github.com/mavlink/MAVSDK/issues/754
+0,787,closed,answered,True,False,0.264,0.2838,0.2739,2,2,0,0,0,bug,2019-07-10T09:07:14Z,unit tests fail (curl),https://github.com/mavlink/MAVSDK/issues/787
+3,2799,closed,fixed_merged_pr,True,False,0.4117,0.1351,0.2734,3,2,2,0,0,,2026-03-15T20:01:42Z,Add action to be able to set the home,https://github.com/mavlink/MAVSDK/issues/2799
+0,2255,closed,answered,True,False,0.2646,0.2817,0.2732,3,2,0,0,0,,2024-03-23T21:09:59Z,Source file cmake gtest cannot find cmakelist.txt,https://github.com/mavlink/MAVSDK/issues/2255
+0,254,closed,fixed_merged_pr,True,False,0.2797,0.2647,0.2722,2,2,1,0,0,enhancement|help wanted,2018-02-08T07:55:22Z,Build in docker as user,https://github.com/mavlink/MAVSDK/issues/254
+0,2022,closed,answered,True,False,0.3481,0.1948,0.2715,5,3,0,0,0,question,2023-04-16T17:32:05Z,Serial connection error in UWP C++/CX,https://github.com/mavlink/MAVSDK/issues/2022
+0,309,closed,fixed_stated,True,False,0.2321,0.3098,0.271,1,1,0,0,0,bug,2018-03-06T18:53:10Z,Random crash in Yuneec SDK,https://github.com/mavlink/MAVSDK/issues/309
+1,1919,open,open,,False,0.3255,0.2152,0.2703,3,4,0,0,0,feature,2022-10-25T20:30:45Z,Make a vcpkg package for MAVSDK,https://github.com/mavlink/MAVSDK/issues/1919
+0,1872,closed,answered,True,False,0.3681,0.1706,0.2693,8,2,0,0,0,question,2022-07-28T16:13:29Z,set_acceleration_ned problem along down direction,https://github.com/mavlink/MAVSDK/issues/1872
+0,272,closed,fixed_merged_pr,True,True,0.3915,0.1459,0.2687,4,2,2,0,0,,2018-02-16T04:27:25Z,Missing sample plan for example,https://github.com/mavlink/MAVSDK/issues/272
+0,2572,closed,fixed_stated,True,False,0.1857,0.3503,0.268,1,2,0,0,0,enhancement,2025-05-13T18:04:13Z,ArduPilot: Set rate to receive SYS_STATUS telemetry,https://github.com/mavlink/MAVSDK/issues/2572
+0,210,closed,unclear,,False,0.1765,0.3592,0.2679,1,1,0,0,0,enhancement|help wanted|grpc,2017-12-28T01:28:37Z,Dynamically load plugins in dronecore_server,https://github.com/mavlink/MAVSDK/issues/210
+0,851,closed,unclear,,False,0.1846,0.3497,0.2671,2,2,0,0,0,question,2019-09-10T01:19:43Z,Building MavlinkPassthrough with cmake?,https://github.com/mavlink/MAVSDK/issues/851
+0,1755,closed,fixed_merged_pr,True,False,0.154,0.3797,0.2668,1,1,1,0,0,,2022-04-27T20:06:21Z,MAVSDK build can't clone MAVLINK,https://github.com/mavlink/MAVSDK/issues/1755
+0,373,closed,fixed_merged_pr,True,False,0.3393,0.194,0.2666,1,2,1,0,0,bug,2018-04-26T15:31:31Z,Mission subscribe blocked by mission pause,https://github.com/mavlink/MAVSDK/issues/373
+0,2445,closed,answered,True,False,0.3567,0.173,0.2649,7,2,0,0,0,question|more_info_needed,2024-11-20T14:23:52Z,Detecting button pressing in real radio command with MAVSDK,https://github.com/mavlink/MAVSDK/issues/2445
+0,953,closed,answered,True,False,0.3598,0.1695,0.2646,6,3,0,0,0,enhancement,2020-01-14T04:00:33Z,Naming clash with Windows API,https://github.com/mavlink/MAVSDK/issues/953
+2,1921,closed,abandoned_no_response,False,False,0.3281,0.2011,0.2646,4,3,0,0,0,,2022-10-29T07:16:13Z,can't get the mission item total,https://github.com/mavlink/MAVSDK/issues/1921
+0,2553,closed,answered,True,False,0.4067,0.1222,0.2645,6,2,0,0,0,question,2025-04-24T07:59:46Z,Timeout error while uploading and downloading mission ,https://github.com/mavlink/MAVSDK/issues/2553
+0,1866,closed,answered,True,False,0.2535,0.2753,0.2644,3,2,0,0,0,,2022-07-21T03:25:03Z,battery information not correct with sitl ,https://github.com/mavlink/MAVSDK/issues/1866
+0,1795,closed,answered,True,False,0.2191,0.3094,0.2642,1,2,0,0,0,,2022-05-31T12:24:48Z,Command sender seems to get in a weird bad loop,https://github.com/mavlink/MAVSDK/issues/1795
+0,2080,closed,fixed_merged_pr,True,False,0.2459,0.2825,0.2642,1,2,1,0,0,bug,2023-06-12T20:37:37Z,Mavsdk::remove_connection does not remove system,https://github.com/mavlink/MAVSDK/issues/2080
+0,1890,closed,answered,True,False,0.3425,0.1858,0.2641,5,3,0,0,0,question,2022-09-02T02:57:04Z,How can i use the function in the Telemetry::Battery,https://github.com/mavlink/MAVSDK/issues/1890
+0,15,closed,fixed_merged_pr,True,False,0.3658,0.162,0.2639,2,2,1,0,0,enhancement,2017-08-21T09:54:16Z,Clarify what happens when dc.device() is called with multiple devices,https://github.com/mavlink/MAVSDK/issues/15
+0,2346,closed,abandoned_no_response,False,False,0.2418,0.286,0.2639,2,2,0,0,0,question,2024-07-08T01:00:38Z,Disable automatically re-sending setpoints in offboard,https://github.com/mavlink/MAVSDK/issues/2346
+0,2247,closed,answered,True,False,0.1802,0.3464,0.2633,1,2,0,0,0,,2024-03-13T19:25:41Z,`set_rate` for AngularVelocityBody,https://github.com/mavlink/MAVSDK/issues/2247
+0,2278,closed,answered,True,False,0.3536,0.173,0.2633,5,3,0,0,0,,2024-04-11T11:10:22Z,QtCreator adding librrary,https://github.com/mavlink/MAVSDK/issues/2278
+0,1103,closed,fixed_merged_pr,True,False,0.3313,0.1946,0.263,4,2,1,0,0,enhancement,2020-05-20T09:48:14Z,Use std::unordered_map instead of std::map?,https://github.com/mavlink/MAVSDK/issues/1103
+0,1882,closed,answered,True,False,0.2895,0.2355,0.2625,3,3,0,0,0,,2022-08-18T12:48:38Z,gps time ,https://github.com/mavlink/MAVSDK/issues/1882
+0,2161,closed,duplicate,False,False,0.3159,0.209,0.2625,3,3,0,0,0,,2023-10-20T06:47:11Z,MavlinkPassthrough support in language wrappers,https://github.com/mavlink/MAVSDK/issues/2161
+0,1725,closed,unclear,,False,0.2012,0.3237,0.2624,2,2,0,0,0,,2022-03-21T16:36:04Z,Change libmavsdk third party libs installation path,https://github.com/mavlink/MAVSDK/issues/1725
+0,367,closed,answered,True,False,0.4093,0.1151,0.2622,7,3,0,0,0,question,2018-04-20T13:37:39Z,mavlink 1.0 is not supported?,https://github.com/mavlink/MAVSDK/issues/367
+0,1979,closed,unclear,,False,0.1746,0.3464,0.2605,1,2,0,0,0,,2023-02-06T15:58:16Z,Failure and Shell plugins work without true result,https://github.com/mavlink/MAVSDK/issues/1979
+0,1139,closed,fixed_merged_pr,True,False,0.3268,0.1938,0.2603,2,3,1,0,0,,2020-07-08T04:21:09Z,Problem running tools/generate_from_protos.sh,https://github.com/mavlink/MAVSDK/issues/1139
+0,1320,closed,fixed_stated,True,False,0.4014,0.1177,0.2596,6,4,0,0,0,,2021-02-17T11:41:40Z,"Fail to build OpenSSL on macOS: ""fatal error: 'stdio.h' file not found""",https://github.com/mavlink/MAVSDK/issues/1320
+0,231,closed,answered,True,False,0.3911,0.1266,0.2589,4,2,0,0,0,,2018-01-19T09:01:11Z,Unable to establish serial connection to PC,https://github.com/mavlink/MAVSDK/issues/231
+0,2764,closed,answered,True,False,0.3143,0.2025,0.2584,4,2,0,0,0,question,2026-02-06T17:51:18Z,Log file download resume after a partial download?,https://github.com/mavlink/MAVSDK/issues/2764
+0,2450,closed,abandoned_no_response,False,False,0.2418,0.2737,0.2577,2,2,0,0,0,,2024-11-25T09:17:30Z,Timed out waiting for system,https://github.com/mavlink/MAVSDK/issues/2450
+0,2402,closed,unclear,,True,0.3328,0.181,0.2569,5,3,0,0,0,,2024-09-17T09:03:05Z,MAVSDK Ubuntu Release deb contains old file,https://github.com/mavlink/MAVSDK/issues/2402
+0,2336,closed,abandoned_no_response,False,False,0.2418,0.2694,0.2556,2,2,0,0,0,question,2024-06-06T11:03:23Z,mavsdk_server can't discover system ,https://github.com/mavlink/MAVSDK/issues/2336
+0,2880,closed,fixed_merged_pr,True,False,0.2122,0.2978,0.255,1,2,1,0,0,,2026-05-15T15:49:29Z,operator<< for MavlinkPassthrough::Result missing MAVSDK_PUBLIC,https://github.com/mavlink/MAVSDK/issues/2880
+0,1202,closed,unclear,,False,0.2395,0.2695,0.2545,2,2,0,1,0,feature,2020-10-05T15:11:43Z,Camera triggering in QGC survey missions not supported.,https://github.com/mavlink/MAVSDK/issues/1202
+0,1724,closed,unclear,,False,0.1691,0.3399,0.2545,1,2,0,0,0,,2022-03-18T14:27:54Z,Building MAVSDK v1.0.8 with gcc-4.9,https://github.com/mavlink/MAVSDK/issues/1724
+0,1056,closed,fixed_merged_pr,True,False,0.3818,0.1263,0.254,5,3,1,0,0,enhancement|beginner,2020-04-23T11:37:58Z,"Rename all leftover `dc`, `dcsdk` etc. to `mavsdk`",https://github.com/mavlink/MAVSDK/issues/1056
+0,1383,closed,self_resolved,True,False,0.2656,0.2408,0.2532,4,2,0,0,0,,2021-03-25T20:12:14Z,Build failure on macOS 10.14 (Mojave),https://github.com/mavlink/MAVSDK/issues/1383
+0,2422,closed,self_resolved,True,False,0.2823,0.224,0.2531,4,2,0,0,0,question,2024-10-10T10:01:05Z,what should I do if I want to apply some changes to plugins like action?,https://github.com/mavlink/MAVSDK/issues/2422
+3,73,closed,fixed_stated,True,False,0.4382,0.0675,0.2529,7,3,0,0,0,enhancement,2017-09-15T11:21:03Z,Make system-wide install default,https://github.com/mavlink/MAVSDK/issues/73
+0,1454,closed,fixed_merged_pr,True,False,0.2348,0.2705,0.2527,1,2,1,0,0,bug,2021-06-03T16:16:08Z,Should we assume that a UDP packet contains messages from only one system?,https://github.com/mavlink/MAVSDK/issues/1454
+0,533,closed,answered,True,False,0.3933,0.112,0.2526,4,3,0,0,0,help wanted|feature,2018-09-05T17:13:50Z,How to change PWM output signal?,https://github.com/mavlink/MAVSDK/issues/533
+0,141,closed,fixed_merged_pr,True,False,0.3338,0.1706,0.2522,1,2,1,0,0,enhancement|plugins,2017-10-26T22:39:59Z,Add Gimbal telemetry,https://github.com/mavlink/MAVSDK/issues/141
+2,853,closed,abandoned_no_response,False,False,0.3781,0.1263,0.2522,5,4,0,0,0,question,2019-09-11T17:59:15Z,Can't manage to run on ARM,https://github.com/mavlink/MAVSDK/issues/853
+0,1379,closed,self_resolved,True,False,0.301,0.2023,0.2516,5,2,0,0,0,bug,2021-03-25T09:27:03Z,Unable to connect to Serial COM port on Windows 10 (64 bit),https://github.com/mavlink/MAVSDK/issues/1379
+0,156,closed,fixed_merged_pr,True,False,0.2682,0.2343,0.2512,1,1,1,0,0,question,2017-11-09T02:12:57Z,Install on ubuntu requires sudo after #130,https://github.com/mavlink/MAVSDK/issues/156
+0,2108,closed,fixed_merged_pr,True,False,0.2875,0.2145,0.251,1,2,1,0,0,bug,2023-08-09T04:53:12Z,FTP Server file descriptor leak,https://github.com/mavlink/MAVSDK/issues/2108
+0,1472,closed,self_resolved,True,False,0.2656,0.2359,0.2508,4,2,0,0,0,,2021-07-01T02:32:18Z,"Looks like RC loss, but RC is connected",https://github.com/mavlink/MAVSDK/issues/1472
+0,133,closed,no_maintainer_reply,False,False,0.055,0.4463,0.2506,1,1,0,0,0,question|plugins,2017-10-25T12:19:04Z,[Plugin] FollowMe mode Validation,https://github.com/mavlink/MAVSDK/issues/133
+0,2849,closed,fixed_merged_pr,True,False,0.1212,0.38,0.2506,0,1,1,0,0,bug,2026-04-06T21:29:33Z,DownloadBigFile test fails on macOS,https://github.com/mavlink/MAVSDK/issues/2849
+0,2041,closed,answered,True,False,0.2068,0.2918,0.2493,2,2,0,0,0,question,2023-05-19T14:54:35Z,Including the sdk via FetchContent to the project errors on build,https://github.com/mavlink/MAVSDK/issues/2041
+3,340,closed,fixed_merged_pr,True,False,0.4479,0.05,0.249,4,3,1,0,0,enhancement,2018-03-25T23:52:21Z,Rename DroneCore class to dronecode::SDKCore,https://github.com/mavlink/MAVSDK/issues/340
+0,1008,closed,fixed_merged_pr,True,False,0.0879,0.4092,0.2485,0,1,1,0,0,bug|ci,2020-03-06T08:06:43Z,Style check not working,https://github.com/mavlink/MAVSDK/issues/1008
+0,2302,closed,fixed_merged_pr,True,False,0.2931,0.2015,0.2473,1,2,1,0,0,bug|v3,2024-05-17T02:18:10Z,Why MAVSDK doesnt create a new system for telemetry radios?,https://github.com/mavlink/MAVSDK/issues/2302
+0,1434,closed,fixed_merged_pr,True,False,0.4082,0.0863,0.2472,5,3,1,0,0,bug,2021-05-12T18:19:18Z,Broken links,https://github.com/mavlink/MAVSDK/issues/1434
+3,345,closed,answered,True,False,0.4603,0.0338,0.247,9,3,0,1,0,marketing|docs,2018-04-04T00:03:51Z,Create Appropriate DNS URL/redirects for Dronecode SDK,https://github.com/mavlink/MAVSDK/issues/345
+0,240,closed,answered,True,False,0.3857,0.1067,0.2462,5,4,0,0,0,help wanted|docs,2018-02-01T16:16:40Z,Internal team process,https://github.com/mavlink/MAVSDK/issues/240
+0,1975,closed,answered,True,False,0.2656,0.2269,0.2462,3,3,0,0,0,question,2023-02-01T00:08:24Z,get the current mission data,https://github.com/mavlink/MAVSDK/issues/1975
+0,389,closed,fixed_stated,True,False,0.1108,0.3813,0.246,1,1,0,0,0,enhancement,2018-05-08T15:46:38Z,Implement thread pooling for user callbacks,https://github.com/mavlink/MAVSDK/issues/389
+0,1977,closed,answered,True,False,0.3127,0.1757,0.2442,4,3,0,0,0,,2023-02-03T15:36:59Z,Blanket blacklist/whitelist MAVlink msgids,https://github.com/mavlink/MAVSDK/issues/1977
+0,1698,open,open,,False,0.2712,0.216,0.2436,4,2,0,0,0,feature,2022-02-14T16:13:04Z,Tips on to make a drone follow a virtual line in the air?,https://github.com/mavlink/MAVSDK/issues/1698
+0,286,closed,fixed_merged_pr,True,False,0.2598,0.2263,0.243,1,2,2,0,0,enhancement|help wanted,2018-02-26T03:12:29Z,"Support MissionItems for LAND, TAKEOFF",https://github.com/mavlink/MAVSDK/issues/286
+0,13,closed,fixed_merged_pr,True,False,0.3658,0.1169,0.2414,2,2,1,0,0,enhancement,2017-08-21T07:15:37Z,Add docs for public headers,https://github.com/mavlink/MAVSDK/issues/13
+0,1161,closed,answered,True,False,0.1901,0.2926,0.2414,2,2,0,0,0,,2020-08-11T13:03:11Z,Undefined reference to custom plugin,https://github.com/mavlink/MAVSDK/issues/1161
+0,348,closed,fixed_merged_pr,True,False,0.1685,0.3128,0.2407,0,1,1,0,0,bug,2018-04-05T05:15:18Z,Mission items are not cleared before building them up,https://github.com/mavlink/MAVSDK/issues/348
+0,2389,closed,unclear,,False,0.2124,0.2677,0.24,2,2,0,0,0,,2024-09-02T20:50:38Z,error building for ARM,https://github.com/mavlink/MAVSDK/issues/2389
+0,1879,closed,answered,True,False,0.2535,0.2251,0.2393,3,2,0,0,0,enhancement,2022-08-05T00:42:18Z,MAVSDK v1.4.4 with PX4 v1.13.0,https://github.com/mavlink/MAVSDK/issues/1879
+0,1055,closed,fixed_merged_pr,True,False,0.3402,0.1378,0.239,3,3,1,1,0,enhancement,2020-04-23T11:36:00Z,Rename everything `backend` to `mavsdk_server`,https://github.com/mavlink/MAVSDK/issues/1055
+0,2365,closed,fixed_merged_pr,True,False,0.3547,0.123,0.2389,2,2,1,0,0,feature|v3,2024-08-04T21:48:28Z,Camera: support more than one camera with one plugin instantiation,https://github.com/mavlink/MAVSDK/issues/2365
+2,534,closed,duplicate,False,False,0.3916,0.0848,0.2382,5,3,0,0,0,question,2018-09-07T08:14:58Z,Could Dronecode send a RTK message?,https://github.com/mavlink/MAVSDK/issues/534
+0,347,closed,unclear,,False,0.2084,0.266,0.2372,2,2,0,0,0,feature,2018-04-04T13:43:16Z,Improving logging,https://github.com/mavlink/MAVSDK/issues/347
+0,200,closed,answered,True,False,0.2617,0.2124,0.237,3,3,0,0,0,question,2017-12-14T15:25:06Z,"Name change proposal for ""Device"" class to ""Drone"" or ""Vehicle""",https://github.com/mavlink/MAVSDK/issues/200
+0,221,closed,fixed_merged_pr,True,False,0.2556,0.2155,0.2355,2,1,1,0,0,enhancement|plugins,2018-01-10T10:31:23Z,FollowMeImpl::set_config() returns immediately though Device didn't confirm,https://github.com/mavlink/MAVSDK/issues/221
+0,169,closed,fixed_merged_pr,True,False,0.1212,0.3487,0.2349,0,1,1,0,0,,2017-11-21T06:41:51Z,API ref being built for some protected docs,https://github.com/mavlink/MAVSDK/issues/169
+0,464,closed,fixed_merged_pr,True,False,0.2681,0.1985,0.2333,1,2,1,0,0,bug|core,2018-07-24T08:10:01Z,Unregister all mavlink message handlers,https://github.com/mavlink/MAVSDK/issues/464
+0,2517,closed,abandoned_no_response,False,False,0.2833,0.1823,0.2328,2,3,0,0,0,,2025-03-05T03:01:22Z,cmakelists对交叉编译的支持有问题,https://github.com/mavlink/MAVSDK/issues/2517
+0,339,closed,answered,True,False,0.3847,0.0807,0.2327,6,4,0,0,0,question,2018-03-25T00:05:23Z,DroneCore will not build on new Raspberry Pi 3 B+,https://github.com/mavlink/MAVSDK/issues/339
+0,1891,closed,unclear,,False,0.2012,0.2625,0.2319,2,2,0,0,0,question,2022-09-02T03:40:23Z,in MAVSDK/examples/fly_mission/fly_mission.cpp,https://github.com/mavlink/MAVSDK/issues/1891
+0,2474,closed,answered,True,False,0.3699,0.0931,0.2315,7,2,0,0,0,,2024-12-17T11:52:09Z,Missing Chunks and Payload Offset Errors During Download. Cannot download any files completely using MAVSDK Java in android studio.,https://github.com/mavlink/MAVSDK/issues/2474
+0,1973,closed,unclear,,False,0.1746,0.2883,0.2314,1,2,0,0,0,,2023-01-31T06:35:26Z,when sending mavlink command MAV_CMD_USER_4  with dronekit . i'm getting command acknowledgment result 3 i.e. unsupported command.,https://github.com/mavlink/MAVSDK/issues/1973
+0,1576,closed,answered,True,False,0.1957,0.2663,0.231,2,2,0,0,0,,2021-10-20T14:05:01Z,mavsdk_server_linux-arm64-musl binary did not work on the actual drone,https://github.com/mavlink/MAVSDK/issues/1576
+0,2121,closed,abandoned_no_response,False,False,0.2976,0.162,0.2298,4,2,0,0,0,question,2023-08-24T03:03:14Z,mission_raw missionitem,https://github.com/mavlink/MAVSDK/issues/2121
+0,2540,closed,answered,True,False,0.2179,0.241,0.2294,2,2,0,0,0,question,2025-04-15T02:43:45Z,Doubts about the print messages,https://github.com/mavlink/MAVSDK/issues/2540
+0,541,closed,fixed_merged_pr,True,False,0.3098,0.1473,0.2286,1,2,2,0,0,ci,2018-09-17T07:16:42Z,Automatically create git tag when version changes,https://github.com/mavlink/MAVSDK/issues/541
+0,594,closed,fixed_merged_pr,True,False,0.3573,0.0999,0.2286,4,2,1,0,0,question,2018-11-16T18:09:10Z,Can't test the calibration successfully,https://github.com/mavlink/MAVSDK/issues/594
+0,2701,closed,answered,True,False,0.2179,0.2367,0.2273,2,2,0,0,0,,2025-11-03T23:11:55Z,Difference between CompanionComputer and  GroundStation,https://github.com/mavlink/MAVSDK/issues/2701
+0,2347,closed,self_resolved,True,False,0.2124,0.2417,0.2271,2,2,0,0,0,question,2024-07-09T05:41:29Z, MAVSDK SERVO_OUTPUT_RAW(36) DATA Receive,https://github.com/mavlink/MAVSDK/issues/2347
+0,1961,closed,unclear,,False,0.295,0.1585,0.2268,3,3,0,0,0,,2023-01-25T03:20:59Z,Distance messages doesn't work,https://github.com/mavlink/MAVSDK/issues/1961
+0,55,closed,answered,True,False,0.1735,0.2779,0.2257,2,2,0,0,0,question,2017-09-07T09:06:45Z,A picture is captured always during a mission execution though its not requested by application,https://github.com/mavlink/MAVSDK/issues/55
+0,278,closed,answered,True,False,0.2944,0.1562,0.2253,2,3,0,0,0,question,2018-02-20T01:27:13Z,How do I capture images being in offboard mode,https://github.com/mavlink/MAVSDK/issues/278
+0,1499,closed,fixed_merged_pr,True,False,0.1647,0.286,0.2253,0,1,2,0,0,bug,2021-08-03T21:10:49Z,"Sequence number wrong, per message instead of per channel",https://github.com/mavlink/MAVSDK/issues/1499
+0,2897,closed,answered,True,False,0.2235,0.2263,0.2249,2,2,0,0,0,question,2026-06-10T10:07:16Z,Is there an API to control an omnicopter (3D thrust vectoring)?,https://github.com/mavlink/MAVSDK/issues/2897
+0,87,closed,fixed_stated,True,False,0.2029,0.2463,0.2246,2,2,0,0,0,enhancement|question,2017-09-25T10:33:29Z,Should we have Airspeed telemetry,https://github.com/mavlink/MAVSDK/issues/87
+0,262,closed,unclear,,False,0.1808,0.2677,0.2243,1,1,0,1,0,enhancement,2018-02-12T07:19:21Z,Create a FindDronecodeSDK.cmake module,https://github.com/mavlink/MAVSDK/issues/262
+0,1952,closed,unclear,,False,0.2068,0.2413,0.224,2,2,0,0,0,,2023-01-06T14:52:00Z,Prefer MISSION_ITEM_INT over MISSION_ITEM,https://github.com/mavlink/MAVSDK/issues/1952
+0,440,closed,fixed_merged_pr,True,False,0.2738,0.174,0.2239,1,1,2,0,0,enhancement,2018-07-06T09:25:19Z,"MAVLink parameter implementation should handle retrying, buffering",https://github.com/mavlink/MAVSDK/issues/440
+0,897,closed,self_resolved,True,False,0.3381,0.1082,0.2232,6,3,0,0,0,question,2019-11-05T07:02:05Z,traceMode feature like DJI,https://github.com/mavlink/MAVSDK/issues/897
+0,19,closed,unclear,,False,0.2265,0.2197,0.2231,1,1,0,0,0,enhancement|ci,2017-08-21T13:40:28Z,Push docker image to docker hub,https://github.com/mavlink/MAVSDK/issues/19
+0,61,closed,answered,True,False,0.3963,0.05,0.2231,8,3,0,1,0,enhancement,2017-09-12T00:24:23Z,add_XXX_connection() could be better named,https://github.com/mavlink/MAVSDK/issues/61
+0,1561,closed,fixed_merged_pr,True,True,0.3578,0.0881,0.223,4,2,1,0,0,question,2021-09-21T13:56:07Z,Why is mavlink included twice in mavsdk-windows-x64-release.zip,https://github.com/mavlink/MAVSDK/issues/1561
+0,127,closed,fixed_merged_pr,True,False,0.3101,0.1354,0.2228,2,3,1,0,0,enhancement,2017-10-22T23:51:04Z,Research MAVLink statustexts,https://github.com/mavlink/MAVSDK/issues/127
+0,126,closed,unclear,,False,0.2265,0.2187,0.2226,1,1,0,0,0,enhancement|help wanted|plugins,2017-10-20T19:42:47Z,Implement mavlink camera definition,https://github.com/mavlink/MAVSDK/issues/126
+0,1137,closed,unclear,,False,0.2709,0.1739,0.2224,1,2,0,0,0,enhancement,2020-07-06T04:41:50Z,Rebooting autopilot alone,https://github.com/mavlink/MAVSDK/issues/1137
+2,630,closed,moved_elsewhere,False,False,0.3437,0.0999,0.2218,3,3,0,0,0,enhancement,2019-01-09T08:23:29Z,Feature: pip package for SDK,https://github.com/mavlink/MAVSDK/issues/630
+0,2853,closed,fixed_merged_pr,True,False,0.2154,0.2263,0.2208,0,1,2,0,0,,2026-04-07T18:32:42Z,Augment goto_location action for planes,https://github.com/mavlink/MAVSDK/issues/2853
+1,1874,open,open,,False,0.3904,0.05,0.2202,3,3,0,4,0,,2022-07-31T16:11:10Z,MAVSDK rocks.  Kudos to the developers.,https://github.com/mavlink/MAVSDK/issues/1874
+0,2378,closed,answered,True,False,0.3032,0.1367,0.22,4,2,0,0,0,question,2024-08-19T00:39:54Z,Connecting to Ardusub system ,https://github.com/mavlink/MAVSDK/issues/2378
+0,1525,closed,unclear,,False,0.1957,0.244,0.2198,2,2,0,0,0,question,2021-09-03T08:30:13Z,How to get PositionNed from MAVSDK?,https://github.com/mavlink/MAVSDK/issues/1525
+0,1511,closed,answered,True,False,0.2839,0.1549,0.2194,3,3,0,0,0,question,2021-08-16T05:51:08Z,How to get lidar data with mavsdk,https://github.com/mavlink/MAVSDK/issues/1511
+0,2814,closed,answered,True,False,0.2529,0.1819,0.2174,2,2,0,0,0,,2026-03-28T21:58:10Z,Expose io_context for external event loop integration,https://github.com/mavlink/MAVSDK/issues/2814
+0,1842,closed,self_resolved,True,False,0.2012,0.2334,0.2173,2,2,0,0,0,,2022-07-05T23:40:38Z,Outdated code in takeoff_and_land.cpp example.,https://github.com/mavlink/MAVSDK/issues/1842
+0,1513,closed,unclear,,False,0.2611,0.1733,0.2172,2,3,0,0,0,question,2021-08-20T09:58:17Z,Not able to access camera ,https://github.com/mavlink/MAVSDK/issues/1513
+0,2086,closed,answered,True,False,0.348,0.0862,0.2171,4,2,0,0,0,question,2023-06-14T15:55:37Z,Manual control while rc control connected ,https://github.com/mavlink/MAVSDK/issues/2086
+0,2505,closed,unclear,,False,0.2179,0.216,0.217,2,2,0,0,0,more_info_needed,2025-02-10T16:04:09Z,Offboard::VelocityBodyYawspeed not responding,https://github.com/mavlink/MAVSDK/issues/2505
+2,1994,closed,abandoned_no_response,False,False,0.3336,0.0989,0.2162,4,3,0,0,0,,2023-02-27T13:03:33Z,How to do calibration of  quadcopter using MAVSDK,https://github.com/mavlink/MAVSDK/issues/1994
+0,238,closed,fixed_merged_pr,True,False,0.221,0.2093,0.2152,0,1,2,0,0,grpc,2018-01-26T15:54:15Z,Update dronecore_server to use newly-defined action protocol,https://github.com/mavlink/MAVSDK/issues/238
+0,301,closed,answered,True,False,0.2863,0.144,0.2152,2,3,0,0,0,,2018-03-04T03:40:00Z,Run Takeoff Example Fail,https://github.com/mavlink/MAVSDK/issues/301
+0,160,closed,fixed_merged_pr,True,False,0.2682,0.162,0.2151,1,1,1,0,0,,2017-11-09T04:24:54Z,Correct way to build external library after 130,https://github.com/mavlink/MAVSDK/issues/160
+0,1018,closed,answered,True,False,0.3314,0.0982,0.2148,5,3,0,0,0,enhancement|docs,2020-03-22T07:25:52Z,Instructions how to add functionality,https://github.com/mavlink/MAVSDK/issues/1018
+0,995,closed,answered,True,False,0.3352,0.0927,0.214,3,4,0,0,0,,2020-02-24T07:44:56Z,Request to add interface message to get gimbal angle in mavsdk,https://github.com/mavlink/MAVSDK/issues/995
+0,103,closed,fixed_merged_pr,True,False,0.2625,0.1643,0.2134,1,2,1,0,0,enhancement,2017-09-27T02:20:41Z,"Make ""Debug"" output coloured",https://github.com/mavlink/MAVSDK/issues/103
+0,457,closed,no_maintainer_reply,False,False,0.0606,0.3661,0.2133,1,1,0,0,0,,2018-07-20T16:44:57Z,"attitude_euler_angle() returns ""NaN"" for Pixhawk 2.1 Cube",https://github.com/mavlink/MAVSDK/issues/457
+0,2492,closed,answered,True,False,0.2179,0.2086,0.2132,2,2,0,0,0,,2025-01-15T13:07:18Z,Sending Vision Estimate to PX4 results in InvalidRequestData,https://github.com/mavlink/MAVSDK/issues/2492
+0,478,closed,answered,True,False,0.3685,0.0572,0.2128,6,4,0,0,0,question,2018-08-01T07:17:20Z,Photo/Video saved location,https://github.com/mavlink/MAVSDK/issues/478
+0,341,closed,unclear,,False,0.2503,0.174,0.2122,2,2,0,0,0,,2018-03-29T04:09:08Z,[Mission]Set speed function is not available,https://github.com/mavlink/MAVSDK/issues/341
+0,267,closed,fixed_merged_pr,True,False,0.198,0.2248,0.2114,0,1,1,0,0,grpc,2018-02-15T11:57:49Z,Update backend to new telemetry proto file,https://github.com/mavlink/MAVSDK/issues/267
+0,1547,closed,unclear,,False,0.1957,0.2254,0.2106,2,2,0,0,0,question,2021-09-14T03:23:56Z,How to control velocity or fly time when using offboard::set_position_ned?,https://github.com/mavlink/MAVSDK/issues/1547
+0,842,closed,answered,True,False,0.214,0.2066,0.2103,2,2,0,0,0,question,2019-08-14T11:48:14Z,Recover optical flow camera video using mavsdk,https://github.com/mavlink/MAVSDK/issues/842
+0,1957,closed,answered,True,False,0.2767,0.1432,0.2099,4,2,0,0,0,,2023-01-20T06:56:32Z,How to know if offboard.set_position_global completed sucessfully,https://github.com/mavlink/MAVSDK/issues/1957
+0,2030,closed,self_resolved,True,False,0.0883,0.3303,0.2093,1,1,0,0,0,,2023-05-05T10:19:18Z,Crash on disconnection (v1.4.13),https://github.com/mavlink/MAVSDK/issues/2030
+0,209,closed,unclear,,False,0.1765,0.241,0.2087,1,1,0,0,0,enhancement|help wanted|grpc,2017-12-28T01:26:20Z,device.h should become a library,https://github.com/mavlink/MAVSDK/issues/209
+1,2668,open,open,,False,0.3774,0.0401,0.2087,3,3,0,0,0,feature,2025-09-30T12:03:14Z,Compass and Accel Calibration for ArduPilot,https://github.com/mavlink/MAVSDK/issues/2668
+0,16,closed,unclear,,False,0.2125,0.204,0.2082,1,2,0,0,0,question,2017-08-21T10:04:18Z,No permission to push changes,https://github.com/mavlink/MAVSDK/issues/16
+0,1280,closed,answered,True,False,0.2424,0.174,0.2082,3,2,0,0,0,question,2020-12-04T23:33:10Z,Pass from Mission mode to Offboard mode,https://github.com/mavlink/MAVSDK/issues/1280
+0,2391,closed,fixed_merged_pr,True,False,0.2931,0.1223,0.2077,1,2,2,0,0,feature,2024-09-03T15:46:04Z,Could you please add the timestamps to Altitude or GroundTruth structs?,https://github.com/mavlink/MAVSDK/issues/2391
+0,1141,closed,unclear,,False,0.213,0.2002,0.2066,3,2,0,0,0,,2020-07-12T15:20:25Z,"Serial connection error with mavsdk_server: ""No such file or directory (serial_connection.cpp:86"")",https://github.com/mavlink/MAVSDK/issues/1141
+0,1845,closed,fixed_merged_pr,True,False,0.19,0.2225,0.2062,1,2,1,0,0,,2022-07-07T16:47:36Z,FollowMe integration tests,https://github.com/mavlink/MAVSDK/issues/1845
+0,703,closed,fixed_merged_pr,True,False,0.2852,0.127,0.2061,2,2,1,0,0,enhancement,2019-03-21T04:16:26Z,Automate dependencies for Linux and Windows,https://github.com/mavlink/MAVSDK/issues/703
+3,344,closed,answered,True,False,0.412,0.0,0.206,6,3,0,0,0,marketing|docs,2018-04-03T23:53:45Z,Create a Dronecode SDK logo,https://github.com/mavlink/MAVSDK/issues/344
+0,149,closed,unclear,,False,0.1963,0.2153,0.2058,3,2,0,0,0,question,2017-11-03T12:21:09Z,Asynchronus usage of `CallEveryHandler` ,https://github.com/mavlink/MAVSDK/issues/149
+0,3046,open,open,,False,0.05,0.3607,0.2054,0,1,0,0,0,,2026-08-27T10:52:27Z,Set_Acceleration_Ned not working as expected,https://github.com/mavlink/MAVSDK/issues/3046
+0,350,closed,fixed_merged_pr,True,True,0.331,0.0796,0.2053,1,2,4,0,0,enhancement|grpc,2018-04-05T14:40:35Z,Implement mission features in backend,https://github.com/mavlink/MAVSDK/issues/350
+0,380,closed,fixed_merged_pr,True,False,0.3593,0.05,0.2046,1,2,1,1,0,enhancement,2018-05-03T00:09:39Z,Examples should use consistent connection startup semantics,https://github.com/mavlink/MAVSDK/issues/380
+0,2239,closed,fixed_merged_pr,True,False,0.2514,0.1578,0.2046,1,2,1,0,0,bug,2024-03-06T11:48:18Z,set_system_status() is not implemented,https://github.com/mavlink/MAVSDK/issues/2239
+0,502,closed,fixed_commit,True,False,0.2644,0.1446,0.2045,2,3,0,1,0,help wanted,2018-08-20T08:50:20Z,System Reboot,https://github.com/mavlink/MAVSDK/issues/502
+0,2168,closed,answered,True,False,0.259,0.15,0.2045,3,2,0,0,0,docs,2023-10-28T05:28:51Z,MAVSDK introduction page is out of date,https://github.com/mavlink/MAVSDK/issues/2168
+0,1873,closed,unclear,,False,0.2012,0.2072,0.2042,2,2,0,0,0,,2022-07-30T02:42:19Z,Timeout errors when downloading mission to autopilot,https://github.com/mavlink/MAVSDK/issues/1873
+0,2315,closed,fixed_merged_pr,True,False,0.1718,0.2357,0.2037,0,1,1,1,0,v3,2024-05-27T06:47:23Z,Switch to clearer API for UDP and TCP,https://github.com/mavlink/MAVSDK/issues/2315
+0,67,closed,fixed_stated,True,False,0.1413,0.266,0.2036,1,2,0,0,0,enhancement,2017-09-13T08:45:49Z,Plugins should not try resending on disconnected devices,https://github.com/mavlink/MAVSDK/issues/67
+0,2754,closed,answered,True,False,0.2235,0.1838,0.2036,2,2,0,0,0,question,2026-01-28T01:54:26Z,"rasbian os 64bit ""DEBIAN 13"" binary,",https://github.com/mavlink/MAVSDK/issues/2754
+0,2759,closed,fixed_merged_pr,True,False,0.2947,0.112,0.2034,2,2,1,0,0,bug,2026-02-02T17:52:43Z,Sequence number handled per message instead of per channel,https://github.com/mavlink/MAVSDK/issues/2759
+0,1940,closed,abandoned_no_response,False,False,0.2307,0.174,0.2023,2,2,0,0,0,question,2022-12-05T11:20:34Z,How can i get HIGH_LATENCY2 message using Mavsdk?,https://github.com/mavlink/MAVSDK/issues/1940
+0,2436,closed,abandoned_no_response,False,False,0.2823,0.1191,0.2007,4,2,0,0,0,,2024-11-05T09:56:51Z,"When sending motion capture data to two drones using set-visionposition estimate, both drones obtained the same position data regardless of whether their sysids were the same.",https://github.com/mavlink/MAVSDK/issues/2436
+0,2686,closed,fixed_merged_pr,True,False,0.2891,0.1115,0.2003,2,2,1,0,0,feature,2025-10-17T15:22:03Z,Gimbal device tester may fail if system under test consist of several components,https://github.com/mavlink/MAVSDK/issues/2686
+0,740,closed,fixed_merged_pr,True,False,0.1324,0.2663,0.1993,0,1,1,0,0,bug,2019-05-08T06:24:21Z,MAVLink Passthrough unsubscription not working,https://github.com/mavlink/MAVSDK/issues/740
+0,2354,closed,fixed_merged_pr,True,False,0.2714,0.126,0.1987,1,2,1,1,0,bug,2024-07-21T19:00:16Z,Since v2.10.1 notify_on_discover() invoked every second after a system has already been discovered,https://github.com/mavlink/MAVSDK/issues/2354
+0,1292,closed,unclear,,False,0.2185,0.1783,0.1984,3,2,0,0,0,,2021-01-10T21:46:22Z,"""Cannot open source file plugin_base.h"" error",https://github.com/mavlink/MAVSDK/issues/1292
+0,1364,closed,fixed_merged_pr,True,False,0.2964,0.1004,0.1984,1,2,1,1,0,enhancement,2021-03-18T17:25:20Z,Prebuild libraries for Windows,https://github.com/mavlink/MAVSDK/issues/1364
+0,155,closed,fixed_merged_pr,True,False,0.2125,0.1834,0.198,1,2,1,0,0,help wanted,2017-11-07T16:49:31Z,Windows install not working,https://github.com/mavlink/MAVSDK/issues/155
+0,677,closed,fixed_merged_pr,True,False,0.2736,0.1223,0.198,1,2,1,0,0,enhancement,2019-02-20T09:19:43Z,Build examples in CI,https://github.com/mavlink/MAVSDK/issues/677
+0,20,closed,fixed_stated,True,False,0.2978,0.0965,0.1971,1,1,0,0,0,enhancement|help wanted,2017-08-21T13:57:02Z,Add support for serial connections,https://github.com/mavlink/MAVSDK/issues/20
+0,368,closed,fixed_merged_pr,True,False,0.1268,0.267,0.1969,0,1,1,0,0,enhancement,2018-04-20T17:30:05Z,Intermittent CI/unit test fails when curl downloads files,https://github.com/mavlink/MAVSDK/issues/368
+0,268,closed,fixed_merged_pr,True,False,0.1685,0.2248,0.1966,0,1,1,0,0,grpc,2018-02-15T11:58:24Z,Update backend to new mission proto file,https://github.com/mavlink/MAVSDK/issues/268
+1,205,open,open,,False,0.3407,0.05,0.1953,2,3,0,3,0,enhancement|help wanted,2017-12-19T17:41:30Z,ArduPilot/other mavlink autopilot compatiblity/support,https://github.com/mavlink/MAVSDK/issues/205
+0,1475,closed,answered,True,False,0.1635,0.2263,0.1949,1,2,0,0,0,,2021-07-08T09:45:25Z,Connect DJI Mavic 2 to PyCharm,https://github.com/mavlink/MAVSDK/issues/1475
+0,326,closed,fixed_merged_pr,True,False,0.3148,0.0717,0.1933,3,2,1,0,0,enhancement,2018-03-16T12:36:32Z,Support for `COMMAND_INT`,https://github.com/mavlink/MAVSDK/issues/326
+0,318,closed,fixed_merged_pr,True,False,0.273,0.112,0.1925,1,1,2,1,0,enhancement|core,2018-03-14T06:58:39Z,Class name change: Device to System,https://github.com/mavlink/MAVSDK/issues/318
+0,852,closed,unclear,,False,0.2368,0.1477,0.1923,3,2,0,0,0,,2019-09-10T01:37:37Z,Support for incoming connections (ex from GCS),https://github.com/mavlink/MAVSDK/issues/852
+0,1928,closed,fixed_merged_pr,True,False,0.2639,0.12,0.192,2,2,2,0,0,,2022-11-14T23:54:04Z,bottom_clearance not added to ALTITUDE message.,https://github.com/mavlink/MAVSDK/issues/1928
+0,269,closed,fixed_merged_pr,True,False,0.221,0.1628,0.1919,0,1,2,0,0,grpc,2018-02-15T11:58:57Z,Update backend to new core proto,https://github.com/mavlink/MAVSDK/issues/269
+0,1360,closed,self_resolved,True,False,0.2479,0.1347,0.1913,3,2,0,0,0,,2021-03-17T14:01:37Z,Error connecting RasPi & Pixhawk 4 Mini using mavsdk_server (running Px4),https://github.com/mavlink/MAVSDK/issues/1360
+0,2318,closed,fixed_merged_pr,True,False,0.1518,0.2305,0.1911,0,1,1,0,0,enhancement|v3,2024-05-27T09:33:11Z,Remove old calibration params,https://github.com/mavlink/MAVSDK/issues/2318
+0,2479,closed,fixed_merged_pr,True,False,0.1101,0.2722,0.1911,0,1,1,0,0,enhancement,2024-12-19T00:18:28Z,Make mavsdk_server API consistent,https://github.com/mavlink/MAVSDK/issues/2479
+0,468,closed,unclear,,False,0.1608,0.2197,0.1903,1,1,0,0,0,enhancement|ci,2018-07-24T08:58:32Z,Move package generation from travis-ci to Jenkins,https://github.com/mavlink/MAVSDK/issues/468
+0,140,closed,fixed_stated,True,False,0.2029,0.174,0.1885,2,2,0,0,0,enhancement|help wanted,2017-10-26T22:38:46Z,Add explicit support for VTOL,https://github.com/mavlink/MAVSDK/issues/140
+0,101,closed,fixed_merged_pr,True,False,0.2125,0.1643,0.1884,1,2,1,0,0,enhancement,2017-09-27T01:30:45Z,Add frame conversion distance libraries,https://github.com/mavlink/MAVSDK/issues/101
+0,335,closed,answered,True,False,0.2521,0.1222,0.1871,3,2,0,0,0,plugins|feature,2018-03-22T10:56:23Z,Implement media download,https://github.com/mavlink/MAVSDK/issues/335
+0,2292,closed,fixed_merged_pr,True,False,0.2514,0.1223,0.1869,1,2,1,0,0,question,2024-04-30T14:17:47Z,How to disable all Debug messages on COUT ?,https://github.com/mavlink/MAVSDK/issues/2292
+0,2578,closed,answered,True,False,0.2179,0.1558,0.1869,2,2,0,0,0,question,2025-05-18T06:48:45Z,how to control the motor directly?,https://github.com/mavlink/MAVSDK/issues/2578
+0,751,closed,answered,True,False,0.1524,0.2205,0.1865,1,2,0,0,0,,2019-05-22T20:55:49Z,Modifying PX4 parameters using DronecodeSDK,https://github.com/mavlink/MAVSDK/issues/751
+0,2547,closed,unclear,,False,0.2179,0.1548,0.1864,2,2,0,0,0,,2025-04-17T19:29:43Z,System: expose vehicle type?,https://github.com/mavlink/MAVSDK/issues/2547
+0,1106,closed,answered,True,False,0.2992,0.0717,0.1855,3,3,0,0,0,question,2020-05-23T12:00:53Z,[C++] how to stream position information from UAV?,https://github.com/mavlink/MAVSDK/issues/1106
+0,1636,closed,answered,True,False,0.1957,0.1744,0.185,2,2,0,0,0,question,2021-11-25T20:18:33Z,CPU load too high when downloading logs,https://github.com/mavlink/MAVSDK/issues/1636
+0,1554,closed,answered,True,False,0.1957,0.174,0.1849,2,2,0,0,0,,2021-09-17T06:26:20Z,How to set vehicle's flight mode?,https://github.com/mavlink/MAVSDK/issues/1554
+2,2793,closed,abandoned_no_response,False,False,0.3326,0.0367,0.1847,3,3,0,0,0,,2026-03-11T15:56:57Z,incompatibility issue between OpenSSL and the Windows,https://github.com/mavlink/MAVSDK/issues/2793
+0,2264,closed,unclear,,False,0.2418,0.1272,0.1845,2,2,0,0,0,,2024-03-28T11:39:45Z,GCC7.5.0 build failed,https://github.com/mavlink/MAVSDK/issues/2264
+0,294,closed,fixed_merged_pr,True,False,0.198,0.1707,0.1844,0,1,2,0,0,grpc,2018-02-28T16:04:47Z,Compile backend to a Framework on iOS,https://github.com/mavlink/MAVSDK/issues/294
+0,2259,closed,abandoned_no_response,False,False,0.3176,0.05,0.1838,5,2,0,0,0,more_info_needed,2024-03-27T20:58:49Z,"Is MAVSDK able to accept multiple drones connections from one UDP port? If it is posible, is add_udp_connection blocking or non blocking?",https://github.com/mavlink/MAVSDK/issues/2259
+0,94,closed,fixed_stated,True,False,0.1413,0.2257,0.1835,1,2,0,0,0,enhancement,2017-09-26T15:55:14Z,gRPC: Basic environment to work on gRPC APIs,https://github.com/mavlink/MAVSDK/issues/94
+0,96,closed,unclear,,False,0.1413,0.2257,0.1835,1,2,0,0,0,enhancement|help wanted,2017-09-26T16:00:34Z,gRPC: Language bindings and Samples,https://github.com/mavlink/MAVSDK/issues/96
+0,120,closed,fixed_stated,True,False,0.1413,0.2254,0.1834,1,2,0,0,0,enhancement|help wanted,2017-10-18T01:01:15Z,Inconsistent naming in Action API,https://github.com/mavlink/MAVSDK/issues/120
+0,21,closed,fixed_stated,True,False,0.2682,0.0965,0.1824,1,1,0,0,0,enhancement|help wanted,2017-08-21T13:57:57Z,Add support for TCP connections,https://github.com/mavlink/MAVSDK/issues/21
+0,474,closed,fixed_stated,True,False,0.2584,0.1062,0.1823,2,2,0,0,0,bug,2018-07-27T11:44:07Z,health ok returns false,https://github.com/mavlink/MAVSDK/issues/474
+0,158,closed,answered,True,False,0.2529,0.1115,0.1822,2,2,0,0,0,question,2017-11-09T03:35:44Z,Should we provide a build option to remove a system-wide installation?,https://github.com/mavlink/MAVSDK/issues/158
+0,637,closed,fixed_merged_pr,True,False,0.0824,0.2801,0.1813,0,1,1,0,0,bug,2019-01-11T08:41:41Z,Install directory structure wrong,https://github.com/mavlink/MAVSDK/issues/637
+0,737,closed,duplicate,False,False,0.25,0.112,0.181,2,3,0,0,0,,2019-04-30T00:43:02Z,Health not clearing cache,https://github.com/mavlink/MAVSDK/issues/737
+0,2866,closed,no_maintainer_reply,False,False,0.105,0.255,0.18,1,1,0,0,0,,2026-04-15T18:51:57Z,Udpout connection bind error,https://github.com/mavlink/MAVSDK/issues/2866
+0,639,closed,fixed_merged_pr,True,False,0.2376,0.1223,0.1799,1,1,1,0,0,enhancement,2019-01-11T10:46:54Z,Some integration tests are failing,https://github.com/mavlink/MAVSDK/issues/639
+0,2214,closed,closed_silently,False,False,0.0389,0.321,0.1799,0,1,0,0,0,,2024-02-02T06:58:11Z,Build failing while adding temetry component or action component ,https://github.com/mavlink/MAVSDK/issues/2214
+0,2145,open,open,,False,0.1746,0.1843,0.1794,1,2,0,0,0,feature,2023-09-21T20:40:35Z,Cannot determine method to control individual thrusters on Ardusub,https://github.com/mavlink/MAVSDK/issues/2145
+0,2841,open,open,,False,0.1412,0.216,0.1786,0,1,1,1,0,feature,2026-04-03T19:30:08Z,Feature Request: Upload mission raw with progress,https://github.com/mavlink/MAVSDK/issues/2841
+0,154,closed,fixed_merged_pr,True,False,0.2154,0.1401,0.1778,0,1,1,0,0,enhancement,2017-11-07T04:29:34Z,Add public API to control camera outside of missions,https://github.com/mavlink/MAVSDK/issues/154
+0,332,closed,unclear,,False,0.1821,0.1726,0.1774,1,1,0,0,0,core|grpc,2018-03-22T10:18:06Z,Implement frontend core,https://github.com/mavlink/MAVSDK/issues/332
+0,540,closed,fixed_stated,True,False,0.2321,0.1223,0.1772,1,1,0,0,0,enhancement,2018-09-17T06:54:21Z,Integration tests need to run in CI,https://github.com/mavlink/MAVSDK/issues/540
+0,1505,closed,abandoned_no_response,False,False,0.3199,0.0323,0.1761,3,4,0,0,0,question,2021-08-11T08:16:43Z,Question about Pixhawk Cube Orange & Pixhawk Cube Black,https://github.com/mavlink/MAVSDK/issues/1505
+0,71,closed,fixed_merged_pr,True,False,0.1129,0.2352,0.174,0,1,2,0,0,enhancement|ci,2017-09-14T07:39:59Z,Set up github releases via travis,https://github.com/mavlink/MAVSDK/issues/71
+0,305,closed,fixed_merged_pr,True,False,0.1685,0.1785,0.1735,0,1,1,0,0,bug|core,2018-03-06T06:49:53Z,Autoupilot type used for GCS is wrong,https://github.com/mavlink/MAVSDK/issues/305
+0,99,closed,fixed_merged_pr,True,False,0.2125,0.1293,0.1709,1,2,1,0,0,enhancement|help wanted,2017-09-27T00:42:27Z,Example showing best-practise for handling device disconnection and reconnection,https://github.com/mavlink/MAVSDK/issues/99
+0,207,closed,closed_silently,False,False,0.1425,0.199,0.1708,0,1,0,0,0,enhancement|help wanted|grpc,2017-12-28T01:21:39Z,Build each plugin in its own library,https://github.com/mavlink/MAVSDK/issues/207
+0,1587,closed,fixed_merged_pr,True,False,0.0935,0.2479,0.1707,0,1,1,0,0,,2021-10-29T16:58:39Z,Build error compiling for arm64 on Windows,https://github.com/mavlink/MAVSDK/issues/1587
+0,1135,closed,unclear,,False,0.1901,0.1507,0.1704,2,2,0,0,0,,2020-06-26T20:37:33Z,UDP Bind Error After First Run v0.28,https://github.com/mavlink/MAVSDK/issues/1135
+0,2484,closed,abandoned_no_response,False,False,0.2418,0.0965,0.1691,2,2,0,0,0,more_info_needed,2024-12-23T11:48:46Z,"sending again after 0.502566 s, retries to do: 3  (511). (mavlink_command_sender.cpp:320)",https://github.com/mavlink/MAVSDK/issues/2484
+0,2324,closed,fixed_merged_pr,True,False,0.1518,0.184,0.1679,0,1,1,0,0,feature|v3,2024-06-02T01:29:48Z,Support opaque mission ID,https://github.com/mavlink/MAVSDK/issues/2324
+0,846,closed,fixed_merged_pr,True,False,0.2236,0.112,0.1678,1,2,1,0,0,,2019-08-24T00:39:38Z,mavsdk::MavlinkPassthrough instructions out of date?,https://github.com/mavlink/MAVSDK/issues/846
+0,212,closed,fixed_merged_pr,True,False,0.1629,0.1707,0.1668,0,1,1,0,0,enhancement|help wanted|grpc,2017-12-28T01:31:52Z,Cross-compile the backend for Android,https://github.com/mavlink/MAVSDK/issues/212
+0,213,closed,fixed_merged_pr,True,False,0.1629,0.1707,0.1668,0,1,1,0,0,enhancement|help wanted|grpc,2017-12-28T01:32:34Z,Cross-compile the backend for iOS,https://github.com/mavlink/MAVSDK/issues/213
+0,315,closed,fixed_merged_pr,True,True,0.1685,0.1646,0.1666,0,1,1,0,0,help wanted|grpc,2018-03-12T23:16:17Z,Implement remaining actions in backend,https://github.com/mavlink/MAVSDK/issues/315
+0,1035,closed,fixed_stated,True,False,0.2632,0.07,0.1666,3,2,0,0,0,bug,2020-04-10T10:13:03Z,Is tune example working?,https://github.com/mavlink/MAVSDK/issues/1035
+0,144,closed,answered,True,False,0.1413,0.1903,0.1658,1,2,0,0,0,enhancement|help wanted,2017-10-30T01:40:34Z,Method to return string for Telemetry::GPSinfo::fix_type ?,https://github.com/mavlink/MAVSDK/issues/144
+0,1512,closed,unclear,,False,0.1957,0.1337,0.1647,2,2,0,0,0,question,2021-08-18T20:13:19Z,mission vs mission_raw?,https://github.com/mavlink/MAVSDK/issues/1512
+0,1284,closed,fixed_merged_pr,True,False,0.2792,0.05,0.1646,1,2,1,0,0,,2020-12-10T14:44:16Z,MavlinkCommandReceiver public access to private elements,https://github.com/mavlink/MAVSDK/issues/1284
+0,2497,open,open,,False,0.1907,0.1378,0.1643,1,1,1,1,0,feature,2025-01-19T18:30:24Z,Add support for VISION_SPEED_ESTIMATE MAVLink message,https://github.com/mavlink/MAVSDK/issues/2497
+0,31,closed,unclear,,True,0.2113,0.1171,0.1642,1,2,0,1,0,,2017-08-21T15:42:49Z,[core] Python binding with swig,https://github.com/mavlink/MAVSDK/issues/31
+0,702,closed,fixed_merged_pr,True,False,0.1524,0.174,0.1632,0,1,1,1,0,enhancement,2019-03-20T06:58:59Z,Add offboard plugin to backend and language wrappers,https://github.com/mavlink/MAVSDK/issues/702
+0,2153,closed,unclear,,False,0.2362,0.0891,0.1626,2,2,0,0,0,,2023-10-12T08:34:59Z,Result vs. ack,https://github.com/mavlink/MAVSDK/issues/2153
+0,29,closed,unclear,,False,0.1913,0.1328,0.162,1,2,0,0,0,core,2017-08-21T15:42:17Z,[core] Java binding,https://github.com/mavlink/MAVSDK/issues/29
+0,1389,closed,unclear,,False,0.2656,0.0562,0.1609,4,2,0,0,0,question,2021-03-30T12:37:22Z,Using multiple UDP remotes with system id - mavsdk android ,https://github.com/mavlink/MAVSDK/issues/1389
+0,1870,closed,no_maintainer_reply,False,False,0.0828,0.2367,0.1598,1,1,0,0,0,,2022-07-24T20:39:11Z,Support multiple architectures for Docker and provide image tags,https://github.com/mavlink/MAVSDK/issues/1870
+0,365,closed,answered,True,True,0.3021,0.0168,0.1594,3,2,0,0,0,marketing,2018-04-17T07:45:29Z,Create dronecode SDK website page,https://github.com/mavlink/MAVSDK/issues/365
+0,1966,closed,fixed_stated,True,False,0.2362,0.0825,0.1593,2,2,0,0,0,feature,2023-01-26T18:27:53Z,implementation of the MAV_CMD_LOGGING_START and STOP messages,https://github.com/mavlink/MAVSDK/issues/1966
+0,81,open,open,,False,0.0712,0.247,0.1591,0,1,1,0,0,enhancement,2017-09-19T10:27:43Z,Flag sysid conflicts,https://github.com/mavlink/MAVSDK/issues/81
+0,2317,closed,fixed_merged_pr,True,False,0.1518,0.165,0.1584,0,1,1,0,0,enhancement,2024-05-27T09:11:47Z,Remove gimbal v1,https://github.com/mavlink/MAVSDK/issues/2317
+0,1728,closed,fixed_merged_pr,True,False,0.2403,0.0741,0.1572,1,2,1,0,0,,2022-04-03T14:05:25Z,Camera::set_setting_async send request only to the first camera,https://github.com/mavlink/MAVSDK/issues/1728
+0,1818,closed,unclear,,False,0.1691,0.1452,0.1572,1,2,0,0,0,,2022-06-25T08:39:26Z,"Lack of a ""streaming_server""",https://github.com/mavlink/MAVSDK/issues/1818
+0,1762,closed,self_resolved,True,False,0.2012,0.112,0.1566,2,2,0,0,0,,2022-05-05T03:50:14Z,How to use plugins as a class member,https://github.com/mavlink/MAVSDK/issues/1762
+0,1372,closed,fixed_merged_pr,True,True,0.1988,0.114,0.1564,1,1,1,0,0,bug,2021-03-22T19:03:19Z,Windows release build is broken,https://github.com/mavlink/MAVSDK/issues/1372
+0,2812,closed,fixed_merged_pr,True,False,0.1629,0.143,0.1529,0,1,1,0,0,enhancement,2026-03-27T23:51:16Z,Switch to C++20,https://github.com/mavlink/MAVSDK/issues/2812
+0,1178,closed,fixed_merged_pr,True,False,0.2528,0.05,0.1514,2,2,2,0,0,,2020-08-27T07:10:35Z,Fix examples following MAVLink update,https://github.com/mavlink/MAVSDK/issues/1178
+0,1833,closed,answered,True,True,0.1691,0.1297,0.1494,1,2,0,0,0,,2022-07-01T16:10:32Z,Add .proto files to release archives,https://github.com/mavlink/MAVSDK/issues/1833
+0,2476,closed,no_maintainer_reply,False,False,0.0939,0.2047,0.1493,1,1,0,0,0,,2024-12-18T07:43:21Z,quote-include should probably be arrow-include or relative-include,https://github.com/mavlink/MAVSDK/issues/2476
+0,2677,closed,unclear,,False,0.1857,0.112,0.1489,1,2,0,0,0,,2025-10-05T18:08:49Z,Add some Arduplane flight modes and VTOL support,https://github.com/mavlink/MAVSDK/issues/2677
+0,1037,closed,no_maintainer_reply,False,False,0.0717,0.2257,0.1487,1,1,0,0,0,,2020-04-13T14:43:11Z,LibreSSL download is broken?,https://github.com/mavlink/MAVSDK/issues/1037
+0,1753,closed,self_resolved,True,False,0.0828,0.2145,0.1487,1,1,0,0,0,,2022-04-22T17:29:40Z,Get GPS_GLOBAL_ORIGIN,https://github.com/mavlink/MAVSDK/issues/1753
+0,2101,closed,unclear,,False,0.2473,0.05,0.1487,4,2,0,0,0,,2023-07-19T05:10:35Z,Disable system and component filtering,https://github.com/mavlink/MAVSDK/issues/2101
+0,1806,closed,abandoned_no_response,False,False,0.1331,0.1613,0.1472,1,1,0,0,0,,2022-06-15T08:25:59Z,Supporting SMART_BATTERY_INFO,https://github.com/mavlink/MAVSDK/issues/1806
+0,56,closed,fixed_merged_pr,True,False,0.1765,0.112,0.1442,1,1,1,0,0,enhancement|help wanted,2017-09-11T07:30:50Z,We should be able to track connection status of Device objects other than by callback,https://github.com/mavlink/MAVSDK/issues/56
+0,1884,closed,unclear,,False,0.1691,0.1182,0.1436,1,2,0,0,0,feature,2022-08-22T20:52:46Z,fwLandingPattern added by QGC but unsupported by MAVSDK,https://github.com/mavlink/MAVSDK/issues/1884
+0,307,closed,fixed_merged_pr,True,False,0.1685,0.1165,0.1425,0,1,1,0,0,bug,2018-03-06T07:01:00Z,Takeoff example exits before vehicle is ready,https://github.com/mavlink/MAVSDK/issues/307
+0,1147,closed,fixed_stated,True,False,0.122,0.163,0.1425,1,1,0,0,0,bug,2020-07-17T15:52:26Z,Address sanitizer triggered in integration test,https://github.com/mavlink/MAVSDK/issues/1147
+0,484,closed,fixed_stated,True,False,0.1468,0.1378,0.1423,1,2,0,0,0,,2018-08-08T18:15:38Z,[Update Docs] Action::Result is moved to ActionResult,https://github.com/mavlink/MAVSDK/issues/484
+0,713,closed,fixed_merged_pr,True,False,0.1024,0.179,0.1407,0,1,1,1,0,enhancement|plugins|beginner,2019-04-01T07:40:54Z,Add setting for mission item acceptance radius,https://github.com/mavlink/MAVSDK/issues/713
+0,984,closed,fixed_merged_pr,True,False,0.2291,0.05,0.1396,0,1,2,1,0,enhancement,2020-02-12T10:12:45Z,Switch to uid2,https://github.com/mavlink/MAVSDK/issues/984
+0,2410,closed,unclear,,False,0.1802,0.0965,0.1384,1,2,0,0,0,question,2024-10-01T17:26:15Z,QUESTION: I noticed MavSDK initiates 4 MavlinkMessageHandler when connecting using MavSDK-JAVA. Why does MavSDK initiates 4 handlers to handle MavLink messages? Are there any reasons for this approach?,https://github.com/mavlink/MAVSDK/issues/2410
+0,1025,closed,fixed_merged_pr,True,False,0.0879,0.184,0.136,0,1,1,0,0,bug|beginner,2020-04-01T10:11:15Z,Cover remaining statustext levels,https://github.com/mavlink/MAVSDK/issues/1025
+0,1015,closed,fixed_stated,True,False,0.2195,0.05,0.1348,2,2,0,0,0,question,2020-03-20T09:40:56Z,Does DISTANCE_SENSOR is currently implemented?,https://github.com/mavlink/MAVSDK/issues/1015
+0,41,closed,unclear,,False,0.1613,0.1074,0.1343,1,2,0,1,0,enhancement|docs,2017-08-29T10:01:13Z,Guide/example for creating plugins,https://github.com/mavlink/MAVSDK/issues/41
+0,243,closed,fixed_merged_pr,True,False,0.2181,0.05,0.1341,1,2,1,0,0,enhancement,2018-02-05T02:45:37Z,Device API needs documentation,https://github.com/mavlink/MAVSDK/issues/243
+0,366,closed,unclear,,False,0.2181,0.05,0.1341,1,2,0,0,0,help wanted,2018-04-17T23:17:25Z,Add test code to validate multi-vehicle support ,https://github.com/mavlink/MAVSDK/issues/366
+0,968,closed,abandoned_no_response,False,False,0.158,0.1095,0.1338,1,2,0,0,0,,2020-01-28T11:05:09Z,Install PX4,https://github.com/mavlink/MAVSDK/issues/968
+0,27,closed,unclear,,False,0.1913,0.0753,0.1333,1,2,0,0,0,enhancement|plugins,2017-08-21T15:41:55Z,[plugins] Camera trigger control with video,https://github.com/mavlink/MAVSDK/issues/27
+0,732,closed,fixed_merged_pr,True,False,0.1024,0.164,0.1332,0,1,1,1,0,help wanted|beginner,2019-04-26T16:36:55Z,Add `NO_SETPOINT_SET` To Offboard Results,https://github.com/mavlink/MAVSDK/issues/732
+0,1044,closed,closed_silently,False,True,0.0867,0.1794,0.1331,0,1,0,1,0,enhancement,2020-04-17T19:01:45Z,Various issues/notes while changing to auto-generation,https://github.com/mavlink/MAVSDK/issues/1044
+0,1798,closed,answered,True,False,0.1691,0.0934,0.1313,1,2,0,0,0,question,2022-06-02T11:53:07Z,Disable logs,https://github.com/mavlink/MAVSDK/issues/1798
+0,697,closed,fixed_stated,True,False,0.1664,0.0943,0.1303,1,1,0,0,0,bug,2019-03-15T20:11:04Z,Camera settings not returning callback,https://github.com/mavlink/MAVSDK/issues/697
+0,2314,closed,fixed_merged_pr,True,False,0.1518,0.1089,0.1303,0,1,1,0,0,enhancement|v3,2024-05-27T06:39:13Z,Change RTK to base64,https://github.com/mavlink/MAVSDK/issues/2314
+0,538,closed,unclear,,False,0.1468,0.112,0.1294,1,2,0,0,0,,2018-09-12T16:33:45Z,How Can I fly without GPS at indoor ?,https://github.com/mavlink/MAVSDK/issues/538
+0,631,closed,fixed_stated,True,False,0.2064,0.05,0.1282,1,1,0,2,0,enhancement,2019-01-09T09:18:17Z,"Releases, version numbers broken",https://github.com/mavlink/MAVSDK/issues/631
+0,333,closed,fixed_merged_pr,True,False,0.1185,0.137,0.1278,0,1,1,0,0,grpc,2018-03-22T10:31:02Z,Implement telemetry health in backend,https://github.com/mavlink/MAVSDK/issues/333
+0,28,closed,answered,True,False,0.2529,0.0,0.1265,2,2,0,0,0,marketing,2017-08-21T15:42:05Z,[marketing] Branding and Design (mvp logo and color palette),https://github.com/mavlink/MAVSDK/issues/28
+0,60,closed,answered,True,False,0.2029,0.05,0.1265,2,2,0,0,0,,2017-09-12T00:18:30Z,DroneCore::ConnectionResult enum inconsistent name,https://github.com/mavlink/MAVSDK/issues/60
+0,467,closed,fixed_stated,True,False,0.1968,0.0551,0.126,1,2,0,0,0,enhancement|ci,2018-07-24T08:54:48Z,Add macOS build to Jenkins,https://github.com/mavlink/MAVSDK/issues/467
+0,915,closed,unclear,,False,0.1846,0.0663,0.1255,2,2,0,0,0,question,2019-12-01T09:59:16Z,How to program multiple vehicles in C++?,https://github.com/mavlink/MAVSDK/issues/915
+0,473,closed,fixed_merged_pr,True,False,0.0768,0.174,0.1254,0,1,1,0,0,enhancement|help wanted,2018-07-26T13:34:47Z,Support attitude offboard control,https://github.com/mavlink/MAVSDK/issues/473
+0,620,closed,fixed_merged_pr,True,False,0.0768,0.174,0.1254,0,1,1,0,0,enhancement,2018-12-07T19:44:54Z,Feature: be able to cancel mission upload and mission download while in progress,https://github.com/mavlink/MAVSDK/issues/620
+0,2124,closed,unclear,,False,0.1386,0.1115,0.125,1,1,0,0,0,enhancement,2023-08-28T22:53:57Z,Add Action::InvalidArgument,https://github.com/mavlink/MAVSDK/issues/2124
+0,1802,closed,answered,True,True,0.2307,0.0161,0.1234,2,2,0,0,0,,2022-06-09T12:51:45Z,Why no mavsdk-windows-x64-release.zip in latest version?,https://github.com/mavlink/MAVSDK/issues/1802
+0,2693,closed,fixed_merged_pr,True,False,0.1157,0.1223,0.119,0,1,1,0,0,feature,2025-10-26T00:54:16Z,Add euler quaternion conversion functions,https://github.com/mavlink/MAVSDK/issues/2693
+0,422,closed,fixed_merged_pr,True,True,0.1268,0.1107,0.1187,0,1,1,0,0,bug|help wanted,2018-06-08T12:06:08Z,Check how mission plan import handles `null`,https://github.com/mavlink/MAVSDK/issues/422
+0,2072,closed,no_maintainer_reply,False,False,0.0883,0.148,0.1182,1,1,0,0,0,,2023-06-02T19:28:00Z,Setting timestamp for Mocap/visual odometry message,https://github.com/mavlink/MAVSDK/issues/2072
+0,1493,closed,unclear,,False,0.1835,0.05,0.1167,1,2,0,1,0,enhancement,2021-07-29T09:44:35Z,Add tests for *_server plugins,https://github.com/mavlink/MAVSDK/issues/1493
+0,542,closed,fixed_merged_pr,True,False,0.1821,0.05,0.1161,1,1,1,0,0,enhancement,2018-09-17T07:17:45Z,Print version when library is loaded,https://github.com/mavlink/MAVSDK/issues/542
+0,2227,closed,abandoned_no_response,False,False,0.1802,0.05,0.1151,1,2,0,0,0,,2024-02-22T07:10:22Z,problem in builidng mavsdk samples ,https://github.com/mavlink/MAVSDK/issues/2227
+0,2485,closed,unclear,,False,0.1802,0.05,0.1151,1,2,0,0,0,,2024-12-24T06:16:51Z,"continue is exec , then shoudn't the log line  be delete?",https://github.com/mavlink/MAVSDK/issues/2485
+0,451,closed,unclear,,False,0.179,0.05,0.1145,2,2,0,0,0,,2018-07-13T03:28:06Z,Trace-coordinated mode,https://github.com/mavlink/MAVSDK/issues/451
+0,1348,closed,fixed_stated,True,False,0.1275,0.1007,0.1141,1,1,0,0,0,bug,2021-03-05T11:03:53Z,Multiple storage IDs are not supported,https://github.com/mavlink/MAVSDK/issues/1348
+0,1991,closed,no_maintainer_reply,False,False,0.0883,0.1385,0.1134,1,1,0,0,0,,2023-02-21T00:19:16Z,We need help integrating MAVSDK with Rosetta,https://github.com/mavlink/MAVSDK/issues/1991
+0,1564,closed,no_maintainer_reply,False,False,0.0772,0.148,0.1126,1,1,0,0,0,question,2021-09-23T07:35:05Z,PR #1291 with current code not working?,https://github.com/mavlink/MAVSDK/issues/1564
+0,1980,closed,duplicate,False,False,0.1746,0.05,0.1123,1,2,0,0,0,,2023-02-07T01:16:27Z,When can MAVSDK-Go be used for production?,https://github.com/mavlink/MAVSDK/issues/1980
+0,2040,closed,unclear,,False,0.1746,0.05,0.1123,1,2,0,0,0,,2023-05-19T02:05:49Z,"mission_raw，speed ,start_mission",https://github.com/mavlink/MAVSDK/issues/2040
+0,2131,open,open,,False,0.1746,0.05,0.1123,1,2,0,0,0,feature,2023-09-08T07:36:20Z,How to cancel download_log_async function ,https://github.com/mavlink/MAVSDK/issues/2131
+0,2341,closed,self_resolved,True,False,0.0939,0.1275,0.1107,1,1,0,0,0,,2024-06-19T18:13:21Z,Camera server issue,https://github.com/mavlink/MAVSDK/issues/2341
+0,14,closed,fixed_merged_pr,True,False,0.1629,0.05,0.1064,0,1,1,0,0,enhancement,2017-08-21T07:34:01Z,Device API should be linked from Readme,https://github.com/mavlink/MAVSDK/issues/14
+0,2308,closed,fixed_merged_pr,True,False,0.1518,0.06,0.1059,0,1,1,0,0,enhancement|v3,2024-05-21T02:48:03Z,Improve list_directory API,https://github.com/mavlink/MAVSDK/issues/2308
+0,553,closed,fixed_stated,True,False,0.1608,0.05,0.1054,1,1,0,0,0,enhancement,2018-09-20T14:01:44Z,Add setter/getter for absolute yaw angle setting,https://github.com/mavlink/MAVSDK/issues/553
+0,1060,closed,wontfix_out_of_scope,False,False,0.158,0.05,0.104,1,2,0,0,0,question,2020-04-26T09:27:17Z,MAVLink v2 signing example?,https://github.com/mavlink/MAVSDK/issues/1060
+0,849,closed,closed_silently,False,False,0.0111,0.1947,0.1029,0,1,0,0,0,,2019-08-29T20:18:02Z,MAV_CMD_NAV_LOITER_TIME not inporting via import_qgroundcontrol_mission,https://github.com/mavlink/MAVSDK/issues/849
+0,1825,closed,fixed_merged_pr,True,False,0.154,0.05,0.102,1,1,1,0,0,,2022-06-28T20:36:49Z,"Fedora 36, please.",https://github.com/mavlink/MAVSDK/issues/1825
+0,236,closed,fixed_merged_pr,True,False,0.1685,0.035,0.1018,0,1,1,0,0,bug|docs,2018-01-24T07:05:26Z,Script generate_docs.sh doesn't identify whether build directory is empty,https://github.com/mavlink/MAVSDK/issues/236
+0,577,closed,fixed_merged_pr,True,False,0.1268,0.07,0.0984,0,1,1,0,0,bug,2018-10-26T09:49:26Z,Version needs clean build to update,https://github.com/mavlink/MAVSDK/issues/577
+0,602,closed,duplicate,False,False,0.1468,0.05,0.0984,1,2,0,0,0,,2018-11-21T19:45:01Z,Trouble installing backend,https://github.com/mavlink/MAVSDK/issues/602
+0,1007,closed,self_resolved,True,False,0.122,0.07,0.096,1,1,0,0,0,bug,2020-03-06T07:41:54Z,Dependencies for .deb and .rpm not specified,https://github.com/mavlink/MAVSDK/issues/1007
+0,63,closed,unclear,,False,0.1413,0.05,0.0957,1,2,0,0,0,enhancement,2017-09-13T04:22:57Z,Only report change information in appropriate callbacks,https://github.com/mavlink/MAVSDK/issues/63
+0,128,closed,fixed_stated,True,False,0.1413,0.05,0.0957,1,2,0,0,0,enhancement|help wanted,2017-10-23T03:36:46Z,Need to be able to set the System ID of Dronecore itself,https://github.com/mavlink/MAVSDK/issues/128
+0,1365,closed,fixed_merged_pr,True,False,0.1351,0.0544,0.0948,0,1,1,0,0,feature,2021-03-18T19:23:27Z,Support multiple batteries,https://github.com/mavlink/MAVSDK/issues/1365
+0,563,closed,fixed_merged_pr,True,False,0.1268,0.0613,0.094,0,1,1,0,0,bug,2018-09-30T05:43:10Z,Serial communication at 921600 not working,https://github.com/mavlink/MAVSDK/issues/563
+0,990,closed,unclear,,False,0.122,0.06,0.091,1,1,0,0,0,bug|beginner,2020-02-14T16:46:10Z,VTOL integration test not actually taking off,https://github.com/mavlink/MAVSDK/issues/990
+0,337,closed,answered,True,False,0.1108,0.0698,0.0903,1,1,0,0,0,plugins,2018-03-22T11:04:27Z,Camera live stream helper,https://github.com/mavlink/MAVSDK/issues/337
+0,44,closed,fixed_merged_pr,True,False,0.0712,0.1082,0.0897,0,1,1,0,0,enhancement|ci,2017-08-29T12:19:45Z,Build for Windows in CI,https://github.com/mavlink/MAVSDK/issues/44
+0,336,closed,answered,True,False,0.1108,0.0673,0.089,1,1,0,0,0,grpc,2018-03-22T10:57:20Z,Implement media download backend,https://github.com/mavlink/MAVSDK/issues/336
+0,755,closed,fixed_merged_pr,True,False,0.1324,0.0403,0.0863,0,1,1,0,0,enhancement,2019-06-04T13:40:23Z,Adapt to new video stream information settings messages,https://github.com/mavlink/MAVSDK/issues/755
+0,690,closed,unclear,,False,0.1164,0.05,0.0832,1,1,0,0,0,,2019-03-07T10:26:04Z,Project naming,https://github.com/mavlink/MAVSDK/issues/690
+0,2724,closed,fixed_merged_pr,True,False,0.1157,0.05,0.0829,0,1,1,0,0,feature,2025-12-01T20:51:31Z,Support ArduPilot REMOTE_LOG_DATA protocol,https://github.com/mavlink/MAVSDK/issues/2724
+0,1256,closed,no_maintainer_reply,False,False,0.0717,0.0934,0.0825,1,1,0,0,0,,2020-11-14T16:42:17Z,set_takeoff_altitude_async is not working,https://github.com/mavlink/MAVSDK/issues/1256
+0,547,closed,fixed_commit,True,False,0.0056,0.157,0.0813,0,1,0,0,0,enhancement,2018-09-18T07:50:32Z,Add callbacks for components discovered,https://github.com/mavlink/MAVSDK/issues/547
+0,92,closed,fixed_merged_pr,True,True,0.0712,0.0879,0.0796,0,1,1,0,0,enhancement|ci,2017-09-26T12:14:20Z,Add release builds to CI,https://github.com/mavlink/MAVSDK/issues/92
+0,998,closed,unclear,,False,0.122,0.0367,0.0794,1,1,0,0,0,enhancement,2020-03-02T11:33:47Z,Build libraries for Windows,https://github.com/mavlink/MAVSDK/issues/998
+0,30,closed,answered,True,False,0.1553,0.0,0.0776,1,1,0,0,0,marketing,2017-08-21T15:42:41Z,[marketing] Website / Design,https://github.com/mavlink/MAVSDK/issues/30
+0,427,closed,unclear,,False,0.1108,0.0403,0.0756,1,1,0,0,0,enhancement,2018-06-13T11:20:13Z,Camera: video stream integration tests missing,https://github.com/mavlink/MAVSDK/issues/427
+0,208,closed,closed_silently,False,False,0.0712,0.075,0.0731,0,1,0,0,0,enhancement|help wanted|grpc,2017-12-28T01:22:51Z,Build core as a library,https://github.com/mavlink/MAVSDK/issues/208
+0,2242,open,open,,False,0.0389,0.092,0.0654,0,1,0,0,0,enhancement,2024-03-12T02:52:30Z,Position mode takeoff goes into altitude hold on ArduPilot,https://github.com/mavlink/MAVSDK/issues/2242
+0,848,closed,closed_silently,False,False,0.0111,0.1103,0.0607,0,1,0,0,0,,2019-08-29T08:19:30Z,XCTest framework causing app crash,https://github.com/mavlink/MAVSDK/issues/848
+0,25,closed,closed_silently,False,False,0.1212,0.0,0.0606,0,1,0,0,0,marketing,2017-08-21T15:41:40Z,[marketing] after launch/demo campaign,https://github.com/mavlink/MAVSDK/issues/25
+0,529,closed,fixed_merged_pr,True,False,0.0768,0.035,0.0559,0,1,1,0,0,bug|help wanted|docs,2018-09-03T15:54:29Z,Readme links broken,https://github.com/mavlink/MAVSDK/issues/529
+0,3045,closed,closed_silently,False,False,0.05,0.05,0.05,0,1,0,0,0,,2026-08-27T10:48:12Z,Set_Acceleration_NED not working as expected,https://github.com/mavlink/MAVSDK/issues/3045
+0,2546,closed,closed_silently,False,False,0.0444,0.05,0.0472,0,1,0,0,0,,2025-04-17T18:55:31Z,Print autopilot's name,https://github.com/mavlink/MAVSDK/issues/2546
+0,1172,closed,no_maintainer_reply,False,True,0.0717,0.02,0.0459,1,1,0,0,0,,2020-08-21T16:09:32Z,Release build fails on OSX,https://github.com/mavlink/MAVSDK/issues/1172
+0,2243,open,open,,False,0.0389,0.05,0.0445,0,1,0,0,0,feature,2024-03-12T02:53:42Z,Auto-configure timeout time using ping,https://github.com/mavlink/MAVSDK/issues/2243
+0,293,closed,closed_silently,False,False,0.0056,0.05,0.0278,0,1,0,0,0,enhancement|help wanted,2018-02-27T14:45:29Z,Rename to Dronecode SDK,https://github.com/mavlink/MAVSDK/issues/293
+0,450,closed,closed_silently,False,False,0.0056,0.05,0.0278,0,1,0,0,0,,2018-07-13T03:25:41Z,Trace-Coordinated mode,https://github.com/mavlink/MAVSDK/issues/450
+0,26,closed,closed_silently,False,False,0.05,0.0,0.025,0,1,0,0,0,marketing,2017-08-21T15:41:48Z,[marketing] flow and coordination,https://github.com/mavlink/MAVSDK/issues/26

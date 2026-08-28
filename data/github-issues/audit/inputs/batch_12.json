@@ -1,0 +1,2019 @@
+[
+ {
+  "number": 63,
+  "url": "https://github.com/mavlink/MAVSDK/issues/63",
+  "title": "Only report change information in appropriate callbacks",
+  "state": "closed",
+  "labels": [
+   "enhancement"
+  ],
+  "created_at": "2017-09-13",
+  "body": "For arming, landing, flight mode etc it is likely that you will only want to get callbacks notified when the values change. The suggestion is to allow clients of the API to specify whether notification should happen on every message, or just when the value changes.",
+  "n_comments_total": 1,
+  "comments": [
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "I feel like leaving this to the user would complicate the API quite a bit. Also no one has asked for this in 8 years, so I'm closing."
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 0,
+   "resolution_class": "unclear",
+   "solved": null,
+   "resolution_evidence": [
+    "closed by maintainer, no clear resolution marker"
+   ],
+   "relevancy_score": 0.05,
+   "relevancy_hits": {
+    "pos": {},
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.1413
+  }
+ },
+ {
+  "number": 151,
+  "url": "https://github.com/mavlink/MAVSDK/issues/151",
+  "title": "External library may not work and is not providing errors",
+  "state": "closed",
+  "labels": [
+   "bug"
+  ],
+  "created_at": "2017-11-05",
+  "body": "I tried to build the external library on linux (develop branch) but there is no way to tell if it worked, and I think it needs some more error checking.\r\n\r\n```\t\t\r\nmake EXTERNAL_DIR=external_example\t\t\r\n```\r\n- Did install, but the example plugin header is not exported\r\n- Tried to run the external hello world integration test as per:\r\n   ```\t\t\r\n   build/default/integration_tests_runner --gtest_filter=\"ExternalExampleHello\"\t\t\r\n   ```\r\n   But got no tests run.\r\n- Tried to list all tests using the gtest tricks instructions. The above test was not listed.\r\n- Tired to build using an invalid directory - build \"succeeded\"\r\n```\t\t\r\nmake EXTERNAL_DIR=impossible_external_example\t\t\r\n```\r\n\r\nSo, some fixes needed:\r\n1. Should tell you if you try to build a directory that does not exist (and fail build)\r\n2. Should tell you if you try to run a test that is not defined\r\n3. Above should work :-)\r\n4. If I moved external_example directory to same level as DroneCore folder, would it be added like this (as you would expect)\r\n```\r\nmake EXTERNAL_DIR=../external_example\r\n```\r\n",
+  "n_comments_total": 6,
+  "comments": [
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "This is a disadvantage of the `Makefile` wrapping helper functionality around cmake.\r\n\r\nIn order for the `EXTERNAL_DIR` argument to be used, you need to do `make clean` first.\r\n\r\nThen, you get feedback:\r\n```\r\nExternal plugin folder: external_example\r\nFound plugin /home/julianoes/src/DroneCore/plugins/action\r\nFound plugin /home/julianoes/src/DroneCore/plugins/gimbal\r\nFound plugin /home/julianoes/src/DroneCore/plugins/info\r\nFound plugin /home/julianoes/src/DroneCore/plugins/logging\r\nFound plugin /home/julianoes/src/DroneCore/plugins/mission\r\nFound plugin /home/julianoes/src/DroneCore/plugins/offboard\r\nFound plugin /home/julianoes/src/DroneCore/plugins/telemetry\r\nFound external plugin /home/julianoes/src/DroneCore/external_example/plugins/example\r\n```\r\n\r\nI don't know how to fix this without some serious Makefile hackery or by removing all of the Makefile magic and just supporting straight cmake build commands.\r\n\r\n> 4. If I moved external_example directory to same level as DroneCore folder, would it be added like this (as you would expect)\r\n> `make EXTERNAL_DIR=../external_example`\r\n\r\nCorrect."
+   },
+   {
+    "user": "hamishwillee",
+    "assoc": "COLLABORATOR",
+    "body": "OK, so I 'll update docs with `make clean`. FYI, I tried this (latest develop branch) and got the error on `make`:\r\n```\r\nExternal plugin folder: \r\nFound plugin /home/ubuntu/DroneCore/plugins/action\r\nFound plugin /home/ubuntu/DroneCore/plugins/gimbal\r\nFound plugin /home/ubuntu/DroneCore/plugins/info\r\nFound plugin /home/ubuntu/DroneCore/plugins/logging\r\nFound plugin /home/ubuntu/DroneCore/plugins/mission\r\nFound plugin /home/ubuntu/DroneCore/plugins/offboard\r\nFound plugin /home/ubuntu/DroneCore/plugins/telemetry\r\ndone: \r\nCMake Error at CMakeLists.txt:158 (add_subdirectory):\r\n  The source directory\r\n\r\n    /home/ubuntu/DroneCore/libs/tinyxml2\r\n\r\n  does not contain a CMakeLists.txt file.\r\n\r\n\r\n-- Found PythonInterp: /usr/bin/python (found version \"2.7.12\") \r\n-- GRPC_DIR not set, checking automatically for gRPC\r\n-- gRPC not found, skipping gRPC build\r\n-- Configuring incomplete, errors occurred!\r\nSee also \"/home/ubuntu/DroneCore/build/default/CMakeFiles/CMakeOutput.log\".\r\nSee also \"/home/ubuntu/DroneCore/build/default/CMakeFiles/CMakeError.log\".\r\nBuild dir: build/default\r\n/bin/sh: 1: cd: can't cd to build/default\r\nMakefile:71: recipe for target 'default' failed\r\nmake: *** [default] Error 2\r\n```"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Yer, that's leftover folders. You can clean it up doing `git clean -dfx` but make sure to check first with `git clean -dfxn` what you're about to delete."
+   },
+   {
+    "user": "hamishwillee",
+    "assoc": "COLLABORATOR",
+    "body": "It may be that all the fixes needed are not yet in develop. After syncing to develop and running above I still get errors:\r\n```\r\n[ 62%] Linking CXX shared library libdronecore.so\r\n/usr/bin/ld: cannot find -ltinyxml2\r\ncollect2: error: ld returned 1 exit status\r\nCMakeFiles/dronecore.dir/build.make:1004: recipe for target 'libdronecore.so' failed\r\nmake[3]: *** [libdronecore.so] Error 1\r\nCMakeFiles/Makefile2:179: recipe for target 'CMakeFiles/dronecore.dir/all' failed\r\nmake[2]: *** [CMakeFiles/dronecore.dir/all] Error 2\r\nMakefile:138: recipe for target 'all' failed\r\nmake[1]: *** [all] Error 2\r\nMakefile:71: recipe for target 'default' failed\r\nmake: *** [default] Error 2\r\n```"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Ok, there is a new dependency. On linux you need libtinyxml2.\r\n\r\nTherefore, on Ubuntu: `sudo apt-get install libtinyxml2-dev`"
+   },
+   {
+    "user": "hamishwillee",
+    "assoc": "COLLABORATOR",
+    "body": "Thanks. Agree fixed. Closing now. "
+   }
+  ],
+  "linked_prs": [
+   {
+    "number": 153,
+    "merged": true,
+    "title": "external_example: fix compile errors"
+   },
+   {
+    "number": 61,
+    "merged": true,
+    "title": "Add libtinyxml2-dev dependency to build instructions"
+   }
+  ],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 3,
+   "resolution_class": "fixed_merged_pr",
+   "solved": true,
+   "resolution_evidence": [
+    "merged PR xref: [153, 61]"
+   ],
+   "relevancy_score": 0.789,
+   "relevancy_hits": {
+    "pos": {
+     "build": 2.8,
+     "server_rpc": 1.0,
+     "docker_ci": 4.2,
+     "api_logic": 9.0,
+     "lang": 0.3
+    },
+    "neg": {
+     "av_hw": 0.7
+    }
+   },
+   "is_meta": false,
+   "signal_score": 0.4833
+  }
+ },
+ {
+  "number": 229,
+  "url": "https://github.com/mavlink/MAVSDK/issues/229",
+  "title": "Maintaining Plugin list",
+  "state": "closed",
+  "labels": [
+   "enhancement",
+   "question",
+   "plugins"
+  ],
+  "created_at": "2018-01-18",
+  "body": "Its very useful to keep track of existing plugins may be in an xml. It can be used by gRPC too to load them.\nCurrently[ plugins.conf](https://github.com/dronecore/DroneCore/blob/develop/grpc/proto/plugins.conf) only holds name of the plugin. I think its more meaningful if it has brief description of each of them as below:\n\n```\n<plugin name=\"action\" filename=\"libaction.so\">\n    <desc> Enables enables simple actions for a drone such as arming, taking off, and landing. </desc>\n</plugin>\n<plugin name=\"mission\" filename=\"libmission.so\">\n    <desc> Enables waypoint missions with upload, download, etc capabilities </desc>\n</plugin>\n<plugin name=\"follow_me\" filename=\"libfollow_me.so\">\n    <desc> Enables vehicle tracking of a specified target (typically a ground station carried by a user) </desc>\n</plugin>\n...\n```\nThis list also serves as a technical advertisement of all supported features at once!",
+  "n_comments_total": 1,
+  "comments": [
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "I believe that the [DroneCore-Proto](https://github.com/dronecore/dronecore-proto) repo is now doing that, and I don't feel like we need to keep this as an open issue."
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 0,
+   "resolution_class": "unclear",
+   "solved": null,
+   "resolution_evidence": [
+    "closed by maintainer, no clear resolution marker"
+   ],
+   "relevancy_score": 0.6943,
+   "relevancy_hits": {
+    "pos": {
+     "build": 3.0,
+     "server_rpc": 3.7,
+     "api_logic": 9.0
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.1468
+  }
+ },
+ {
+  "number": 321,
+  "url": "https://github.com/mavlink/MAVSDK/issues/321",
+  "title": "Rendering of reference and pointer parameters in markdown script",
+  "state": "closed",
+  "labels": [
+   "enhancement"
+  ],
+  "created_at": "2018-03-15",
+  "body": "Currently a parameter with a ref or pointer renders with a space after the ref like this: `Device & somedevice` or `Device * somedevice` (rendering is fine value parameters).\n\nThe question is, should this render as `Device& somedevice` or `Device &somedevice`\n\n(as an aside, the second format is slightly harder, because for pointers, care needs to be taken to make sure the * is not interpreted as \"make text italic\".\n\nThis originates here: https://github.com/dronecore/docs/pull/107#discussion_r174682278",
+  "n_comments_total": 9,
+  "comments": [
+   {
+    "user": "hamishwillee",
+    "assoc": "COLLABORATOR",
+    "body": "Which is best is a matter of style - have we standardized on this in source code?"
+   },
+   {
+    "user": "shakthi-prashanth-m",
+    "assoc": "CONTRIBUTOR",
+    "body": "So far we've used this format in source code: `Device &somedevice`.\r\n\r\n```cpp\r\nplugins/follow_me/follow_me.h:    const Config &get_config() const;\r\nplugins/follow_me/follow_me.h:    const TargetLocation &get_last_location() const;\r\nplugins/follow_me/follow_me_impl.h:    const FollowMe::Config &get_config() const;\r\nplugins/follow_me/follow_me_impl.h:    const FollowMe::TargetLocation &get_last_location() const;core/device.h:    Time &get_time() { return _time; };\r\ncore/device.h:    DroneCoreImpl &_parent;\r\ncore/dronecore_impl.h:    Device &get_device();\r\ncore/dronecore_impl.h:    Device &get_device(uint64_t uuid);\r\ncore/dronecore_impl.h:    const std::vector<uint64_t> &get_device_uuids() const;\r\ncore/dronecore.h:    const std::vector<uint64_t> &device_uuids() const;\r\ncore/mavlink_receiver.h:    mavlink_message_t &get_last_message()\r\ncore/mavlink_receiver.h:    mavlink_status_t &get_status()\r\n...\r\n```\r\nI think, even `Device& somedevice` also fine: It says `somedevice` is of type `Device&`.\r\nBut `Device & somedevice` is hard to read. Isn't it ?\r\n\r\n\r\n"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "This has been set with #410 in:\r\n\r\nhttps://github.com/dronecore/DroneCore/blob/develop/.clang-format#L55 \r\n\r\nto `Device &somedevice`.\r\n\r\nThere are [pros and cons](https://stackoverflow.com/questions/398395/why-is-the-asterisk-before-the-variable-name-rather-than-after-the-type), however, the [CppCoreGuidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#nl18-use-c-style-declarator-layout ) suggest to use `Device& somedevice`.\r\n\r\nGiven that I would suggest we switch it. It's as easy as changing `.clang-format` and doing `make fix_style`.\r\n\r\n\r\n"
+   },
+   {
+    "user": "hamishwillee",
+    "assoc": "COLLABORATOR",
+    "body": "@julianoes In above, `Device &somedevice` = `Device &somedevice` :-)\r\n\r\nWhatever alignment is used is fine as long as we're consistent."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "@hamishwillee thanks fixed above."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "We should change it to `Device& somedevice` according to [CppCoreGuidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#nl18-use-c-style-declarator-layout)."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "I can do the change after the rename."
+   },
+   {
+    "user": "hamishwillee",
+    "assoc": "COLLABORATOR",
+    "body": "Cool. So when the code is all \"right\" I'll have another look and see if I can match it in markdown. Note though, that this sort of thing is fiddly, and as long as the code is readable in markdown I do not see this as my highest priority."
+   }
+  ],
+  "linked_prs": [
+   {
+    "number": 107,
+    "merged": true,
+    "title": "Fix - Choose reference over pointer"
+   },
+   {
+    "number": 324,
+    "merged": true,
+    "title": "Function parameter reference/pointer types fix"
+   },
+   {
+    "number": 790,
+    "merged": true,
+    "title": "Change clang-format style"
+   }
+  ],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 3,
+   "resolution_class": "fixed_merged_pr",
+   "solved": true,
+   "resolution_evidence": [
+    "merged PR xref: [107, 324, 790]"
+   ],
+   "relevancy_score": 0.4198,
+   "relevancy_hits": {
+    "pos": {
+     "build": 0.7,
+     "api_logic": 3.4,
+     "lang": 0.3
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.5827
+  }
+ },
+ {
+  "number": 366,
+  "url": "https://github.com/mavlink/MAVSDK/issues/366",
+  "title": "Add test code to validate multi-vehicle support ",
+  "state": "closed",
+  "labels": [
+   "help wanted"
+  ],
+  "created_at": "2018-04-17",
+  "body": "See https://github.com/dronecore/DroneCore/issues/353#issuecomment-382021819",
+  "n_comments_total": 1,
+  "comments": [
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "There is this example: https://github.com/mavlink/MAVSDK/tree/develop/examples/fly_multiple_drones"
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 0,
+   "resolution_class": "unclear",
+   "solved": null,
+   "resolution_evidence": [
+    "closed by maintainer, no clear resolution marker"
+   ],
+   "relevancy_score": 0.05,
+   "relevancy_hits": {
+    "pos": {},
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.2181
+  }
+ },
+ {
+  "number": 486,
+  "url": "https://github.com/mavlink/MAVSDK/issues/486",
+  "title": "Get a vector of systems",
+  "state": "closed",
+  "labels": [
+   "question"
+  ],
+  "created_at": "2018-08-11",
+  "body": "Hi.\r\n\r\nI am working with multiple vehicles. [In the docs](https://sdk.dronecode.org/en/guide/connections.html), it's mentioned how to access a system by\r\n```c++\r\nDronecodeSDK dc;\r\n//... \r\n//Use UUID named uuid to get the associated System\r\nSystem &system = dc.system(uuid);\r\n```\r\n\r\nWhat is a correct way to create a variable number of multiple systems?\r\n\r\nThanks.",
+  "n_comments_total": 9,
+  "comments": [
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "You should be able to get all system like described here:\r\nhttps://sdk.dronecode.org/en/guide/connections.html#iterating-all-systems\r\n\r\nHowever, for now you need to make sure yourself that all vehicles have different system IDs."
+   },
+   {
+    "user": "mzahana",
+    "assoc": "CONTRIBUTOR",
+    "body": "@julianoes so, I am looking into how to get `system_id` instead of uuid. I found this: https://github.com/Dronecode/DronecodeSDK/blob/develop/core/system_impl.cpp#L518\r\n\r\nWould do that do the job?\r\n\r\nbut it is not exposed in [system.cpp](https://github.com/Dronecode/DronecodeSDK/blob/develop/core/system.cpp)\r\n"
+   },
+   {
+    "user": "mzahana",
+    "assoc": "CONTRIBUTOR",
+    "body": "@julianoes Of course it is possible. It is not about possibility, it's about convenience.\r\n\r\nAssume there is a set of 50 drones (maybe more!), which are labeled from 1 to 50. How you would you tell the user that drone 19 and 47 have some issues and require some checking?\r\n\r\nI guess it's harder for the user to look for drones that have UUID 5345213345 and 6968987123 than just 19 and 47, no?"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "If something is automated in software UUID is more \"convenient\" because you it's unique.\r\n\r\nI suggest you implement the method to get all system IDs yourself since you're already changed the API to work with system IDs instead of UUIDs."
+   },
+   {
+    "user": "mzahana",
+    "assoc": "CONTRIBUTOR",
+    "body": "@julianoes Would exposing [get_system_id](https://github.com/Dronecode/DronecodeSDK/blob/develop/core/system_impl.cpp#L518) in [system.cpp](https://github.com/Dronecode/DronecodeSDK/blob/develop/core/system.cpp) do any harm?"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "> @julianoes Would exposing get_system_id in system.cpp do any harm?\r\n\r\nI guess it doesn't :smile:, so we might as well add it."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Work in progress here: #694."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "This has been added, see: https://mavsdk.mavlink.io/develop/en/cpp/api_changes.html#v0330"
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 3,
+   "resolution_class": "answered",
+   "solved": true,
+   "resolution_evidence": [
+    "thread converges on a working answer"
+   ],
+   "relevancy_score": 0.325,
+   "relevancy_hits": {
+    "pos": {
+     "lang": 2.8
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.4755
+  }
+ },
+ {
+  "number": 630,
+  "url": "https://github.com/mavlink/MAVSDK/issues/630",
+  "title": "Feature: pip package for SDK",
+  "state": "closed",
+  "labels": [
+   "enhancement"
+  ],
+  "created_at": "2019-01-09",
+  "body": "Status: @JonasVautherin currently working on windows support",
+  "n_comments_total": 3,
+  "comments": [
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Also tracked in https://github.com/Dronecode/DronecodeSDK-Python/issues/20."
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "Just got to build `backend_bin` with `manylinux1`. May have a PoC soon!"
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "We have the first package out on pip: `pip3 install mavsdk` works on macOS, Linux and Windows.\r\n\r\nThe release process is currently quite manual, but good enough to close this issue. More automation will come later."
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 2,
+   "resolution_class": "moved_elsewhere",
+   "solved": false,
+   "resolution_evidence": [
+    "moved/tracked elsewhere"
+   ],
+   "relevancy_score": 0.1115,
+   "relevancy_hits": {
+    "pos": {
+     "lang": 1.7
+    },
+    "neg": {
+     "nonlinux": 1.7
+    }
+   },
+   "is_meta": false,
+   "signal_score": 0.3437
+  }
+ },
+ {
+  "number": 727,
+  "url": "https://github.com/mavlink/MAVSDK/issues/727",
+  "title": "Arming not working HITL in Python example",
+  "state": "closed",
+  "labels": [
+   "bug"
+  ],
+  "created_at": "2019-04-23",
+  "body": "It seems like we can't arm (or we can't arm immediately) in HITL simulation due to the error `COMMAND_DENIED_LANDED_STATE_UNKNOWN`.\r\n\r\nThe question is if it's a timing issue or if our request to send `EXTENDED_SYS_STATE` at 1 Hz fails or is not supported.\r\n\r\nFYI @JonasVautherin \r\n\r\nThis works with C++ but seems to fail with this Python example:\r\n```\r\n#!/usr/bin/env python3\r\n\r\nimport asyncio\r\n\r\nfrom dronecode_sdk import connect as dronecode_sdk_connect\r\nfrom dronecode_sdk import start_mavlink\r\n\r\nstart_mavlink()\r\ndrone = dronecode_sdk_connect(host=\"127.0.0.1\")\r\n\r\n\r\nasync def run():\r\n    print(\"-- Arming\")\r\n    await drone.action.arm()\r\n    print(\"-- Taking off\")\r\n    await drone.action.takeoff()\r\n    await asyncio.sleep(5)\r\n    print(\"-- Landing\")\r\n    await drone.action.land()\r\n\r\nloop = asyncio.get_event_loop()\r\nloop.run_until_complete(run())\r\n\r\n```",
+  "n_comments_total": 4,
+  "comments": [
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "I can reproduce the problem:\r\n```\r\npython3 takeoff_and_land.py \r\n-- Arming\r\nTraceback (most recent call last):\r\n  File \"takeoff_and_land.py\", line 21, in <module>\r\n    loop.run_until_complete(run())\r\n  File \"/usr/lib64/python3.7/asyncio/base_events.py\", line 584, in run_until_complete\r\n    return future.result()\r\n  File \"takeoff_and_land.py\", line 13, in run\r\n    await drone.action.arm()\r\n  File \"/home/julianoes/.local/lib/python3.7/site-packages/dronecode_sdk/plugins/action.py\", line 167, in arm\r\n    raise ActionError(result, \"arm()\")\r\ndronecode_sdk.plugins.action.ActionError: COMMAND_DENIED_LANDED_STATE_UNKNOWN: 'Command denied, landed state is unknown'; origin: arm(); params: ()\r\n```"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "`time.sleep(3)` before arming does not seem to help."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Presumably the problem is that we have no connection in HITL because we're connecting to UDP port 14540 by default but for HITL we need to use 14550."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "This issue is already tracked in #587!"
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 2,
+   "resolution_class": "moved_elsewhere",
+   "solved": false,
+   "resolution_evidence": [
+    "moved/tracked elsewhere"
+   ],
+   "relevancy_score": 0.7633,
+   "relevancy_hits": {
+    "pos": {
+     "sitl_sim": 3.7,
+     "api_logic": 6.0,
+     "lang": 5.3,
+     "crash_repro": 0.3,
+     "steps": 0.3
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.3256
+  }
+ },
+ {
+  "number": 830,
+  "url": "https://github.com/mavlink/MAVSDK/issues/830",
+  "title": "Add option to build without curl",
+  "state": "closed",
+  "labels": [
+   "enhancement"
+  ],
+  "created_at": "2019-08-07",
+  "body": "For slow compilation (e.g. on embedded boards) it would be nice to be able to build without curl. ",
+  "n_comments_total": 5,
+  "comments": [
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "Isn't it good enough to cross-compile for those boards? If we make it optional in the code, we will also need to make it optional in the superbuild (because I guess we don't expect people to figure out that by themselves), and that adds complexity and corner cases everywhere..."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Sometimes you're in a debugging situation where you just need to rebuild on the device."
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "Right. But I don't think that adding options in CMakeLists and ifdefs in the code is the right solution for debugging on the device.\r\n\r\nIf you are debugging curl on the device, then you need to compile it. If you are debugging MAVSDK, then you don't have to recompile curl. Yes, that implies that you may need to not use our superbuild and to learn how to do that (e.g. cross-compile the dependencies separately, copy that on your device and build mavsdk on the device without SUPERBUILD=ON). But that's \"basic\" dependency management in cmake. I'm happy to write a superbuild to make that easier for most use-cases, but for specific use-cases, I believe that developers should learn how to deal with that.\r\n\r\nTo me it would be the same as saying \"we should make it such that cmake checks if the submodules are correctly synced, because we don't want our developers to have to know about git submodules\", and then \"cmake should show a warning when people push to their fork without having an 'upstream' branch, because not everyone knows how to work with a fork\".\r\n\r\nWe can do all that, but it results in more code that we need to maintain, and it forces devs to learn about our custom wrappers instead of learning to use the actual tools.\r\n\r\nAm I too much of a purist? :laughing:"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "I agree with your examples but this is more a request that the MAVSDK should be able to build and run with minimal dependencies if required."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "For the record: it still requires curl but you can now also use libcurl from the system instead of getting it via git and building it. The way to do so is to use the configure option `cmake -DSUPERBUILD=OFF` for the configure step. Note this is supported as of Ubuntu 18.04 but not 16.04."
+   }
+  ],
+  "linked_prs": [
+   {
+    "number": 838,
+    "merged": false,
+    "title": "Enable cmake build option to build without cURL"
+   },
+   {
+    "number": 865,
+    "merged": true,
+    "title": "Move to jsoncpp and make non-superbuild work with jsoncpp and tinyxml2"
+   },
+   {
+    "number": 1955,
+    "merged": true,
+    "title": "Add option to build without cURL"
+   }
+  ],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 3,
+   "resolution_class": "fixed_merged_pr",
+   "solved": true,
+   "resolution_evidence": [
+    "merged PR xref: [865, 1955]"
+   ],
+   "relevancy_score": 0.251,
+   "relevancy_hits": {
+    "pos": {
+     "build": 5.5,
+     "docker_ci": 0.3
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.4618
+  }
+ },
+ {
+  "number": 931,
+  "url": "https://github.com/mavlink/MAVSDK/issues/931",
+  "title": "How to connect mavsdk-server to multiple devices?",
+  "state": "closed",
+  "labels": [],
+  "created_at": "2019-12-15",
+  "body": "Hey,\r\n\r\nI simulate 3 drones on ports 14541,14542 and 14543. How to connect all of them to mavsdk-server?\r\nI tried to use mavlink-routerd with argument\r\n`-e 127.0.0.1:14544 0.0.0.0.14540`\r\nbut it blocks port with bind error :(",
+  "n_comments_total": 14,
+  "comments": [
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "For now, `mavsdk_server` does not support multiple drones (i.e. multiple drones running on the same MAVLink port, here 14540). Only MAVSDK-C++ does.\r\n\r\nHowever, you can run multiple instances of `mavsdk_server`, each listenning to a different mavlink port, by using the latest `develop` branch of MAVSDK.\r\n\r\nThat would be something like:\r\n\r\n```sh\r\n./mavsdk_server -p 50040 udp://:14540\r\n./mavsdk_server -p 50041 udp://:14541\r\n./mavsdk_server -p 50042 udp://:14542\r\n```\r\n\r\nAnd then you could instantiate multiple instances of a wrapper. For instance in Python:\r\n\r\n```python\r\nfrom mavsdk import System\r\n\r\n...\r\n\r\ndrone1 = System(mavsdk_server_address=\"localhost\", port=50040)\r\nawait drone1.connect()\r\ndrone2 = System(mavsdk_server_address=\"localhost\", port=50041)\r\nawait drone2.connect()\r\ndrone3 = System(mavsdk_server_address=\"localhost\", port=50042)\r\nawait drone3.connect()\r\n\r\n...\r\n```\r\n\r\nAnd then you could use your drone objects (`drone1`, `drone2` and `drone3` separately):\r\n\r\n```\r\nawait drone1.action.arm()\r\nawait drone2.action.arm()\r\nawait drone3.action.arm()\r\n```"
+   },
+   {
+    "user": "hamishwillee",
+    "assoc": "COLLABORATOR",
+    "body": "Might be nice to add a FAQ on this in https://github.com/mavlink/MAVSDK-Python#mavsdk-python - since we get quite a lot of questions. Depends on how soon you think this will be done \"properly\"."
+   },
+   {
+    "user": "KrisRadowski",
+    "assoc": "NONE",
+    "body": "> May I ask which command you use to run multiple instances in gazebo?\r\n\r\nI wrote bash file for that:\r\n```\r\n#!/bin/bash\r\n\r\ncd ~/Pobrane/src/Firmware\r\nsource Tools/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl_default\r\nexport ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd):$(pwd)/Tools/sitl_gazebo\r\nroslaunch px4 3drones.launch\r\n```\r\nlisting of launchfile:\r\n```\r\n<?xml version=\"1.0\"?>\r\n<launch>\r\n    <!-- MAVROS posix SITL environment launch script -->\r\n    <!-- launches Gazebo environment and 2x: MAVROS, PX4 SITL, and spawns vehicle -->\r\n    <!-- vehicle model and world -->\r\n    <arg name=\"est\" default=\"ekf2\"/>\r\n    <arg name=\"vehicle\" default=\"iris\"/>\r\n    <arg name=\"world\" default=\"$(find mavlink_sitl_gazebo)/worlds/empty.world\"/>\r\n    <!-- gazebo configs -->\r\n    <arg name=\"gui\" default=\"false\"/>\r\n    <arg name=\"debug\" default=\"false\"/>\r\n    <arg name=\"verbose\" default=\"false\"/>\r\n    <arg name=\"paused\" default=\"false\"/>\r\n    <!-- Gazebo sim -->\r\n    <include file=\"$(find gazebo_ros)/launch/empty_world.launch\">\r\n        <arg name=\"gui\" value=\"$(arg gui)\"/>\r\n        <arg name=\"world_name\" value=\"$(arg world)\"/>\r\n        <arg name=\"debug\" value=\"$(arg debug)\"/>\r\n        <arg name=\"verbose\" value=\"$(arg verbose)\"/>\r\n        <arg name=\"paused\" value=\"$(arg paused)\"/>\r\n    </include>\r\n    <!-- UAV0 -->\r\n    <group ns=\"uav1\">\r\n        <!-- MAVROS and vehicle configs -->\r\n        <arg name=\"ID\" value=\"1\"/>\r\n        <arg name=\"fcu_url\" default=\"udp://:14541@localhost:14581\"/>\r\n        <!--\n...[truncated]"
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "It seems to me that MAVROS is the one binding to those ports:\r\n\r\n```\r\n<!-- MAVROS and vehicle configs -->\r\n        <arg name=\"ID\" value=\"1\"/>\r\n        <arg name=\"fcu_url\" default=\"udp://:14541@localhost:14581\"/>\r\n```\r\n\r\nYou can't bind both MAVROS and MAVSDK to the same port at the same time. So if you need both MAVROS and MAVSDK, you need to add new mavlink interfaces for MAVSDK.\r\n\r\nDo you need MAVROS at all?"
+   },
+   {
+    "user": "KrisRadowski",
+    "assoc": "NONE",
+    "body": "> Do you need MAVROS at all?\r\n\r\nI think I don't need it, because I will be steering drones by MAVSDK; MAVROS was installed from PX4 stack though..."
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "Right. Have a look at this PR, then: https://github.com/PX4/Firmware/pull/13729. I believe this is what you want!"
+   },
+   {
+    "user": "thomasgauvin",
+    "assoc": "NONE",
+    "body": "I don't know if this helps anyone, but I spent a shameful couple of hours trying to debug the `bind error: 10048` issue. In my case, I wasn't specifying the port properly. I was writing `./mavsdk_server udp://14541 -p 50051` when I should have been writing `./mavsdk_server udp://:14541 -p 50051`. Live and learn I guess!\r\n\r\nThis link helps to understand how mavsdk_server communicates with simulators and mavsdk_clients and helped me figure out my bug: https://github.com/mavlink/MAVSDK/issues/1130#issuecomment-644386229"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Thanks for the note @thomasgauvin. I have realized this subtle difference before, and I'm not quite sure where it comes from.\r\n\r\nI've created an issue: https://github.com/mavlink/MAVSDK/issues/1299"
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 3,
+   "resolution_class": "answered",
+   "solved": true,
+   "resolution_evidence": [
+    "substantive maintainer answer (2329 chars)"
+   ],
+   "relevancy_score": 0.8313,
+   "relevancy_hits": {
+    "pos": {
+     "sitl_sim": 7.6,
+     "server_rpc": 13.2,
+     "api_logic": 2.1,
+     "lang": 3.1
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.6129
+  }
+ },
+ {
+  "number": 996,
+  "url": "https://github.com/mavlink/MAVSDK/issues/996",
+  "title": "Promise already satisfied",
+  "state": "closed",
+  "labels": [],
+  "created_at": "2020-02-24",
+  "body": "I installed MAVSDK using the debian package of the last release (mavsdk_0.24.0_ubuntu16.04_amd64.deb)\r\n\r\nI would like to work with promise/future to manage my applicaiton but I got an error when I try using it. I took a simple example of [takeoff_and_land](https://mavsdk.mavlink.io/develop/en/examples/takeoff_and_land.html)\r\n\r\nand I changed this line: \r\n\r\n```\r\n    // Check if vehicle is ready to arm\r\n    while (telemetry->health_all_ok() != true) {\r\n        std::cout << \"Vehicle is getting ready to arm\" << std::endl;\r\n        sleep_for(seconds(1));\r\n    }\r\n\r\n```\r\nby this line (proposed in the [doc](https://mavsdk.mavlink.io/develop/en/guide/telemetry.html)):\r\n\r\n```\r\n{\r\n    std::cout << \"Waiting for system to be ready\" << std::endl;\r\n    auto prom = std::make_shared<std::promise<void>>();\r\n    auto future_result = prom->get_future();\r\n    telemetry->health_all_ok_async(\r\n    [prom](bool result) {\r\n        //fulfill promise if health is OK\r\n        if (result) {// health OK\r\n            prom->set_value();\r\n        }\r\n    });\r\n\r\n    future_result.get(); //Block until promise is fulfilled.\r\n    // Now ready to arm\r\n}\r\n```\r\n\r\nbut I finished with this error:\r\n\r\n```\r\nterminate called after throwing an instance of 'std::future_error'\r\n  what():  std::future_error: Promise already satisfied\r\nAborted (core dumped)\r\n```\r\n\r\nAm I doing something wrong or this is an known/unknown error ?\r\n",
+  "n_comments_total": 4,
+  "comments": [
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "\"Promise already satisfied\" says that `prom->set_value();` is called more than once. And this happens the second time your callback (the lambda you give to `health_all_ok_async(...)`) is called (because this callback will be called multiple times, possibly with the updated \"health\" status).\r\n\r\nSo you need to make sure that `prom->set_value();` is called only the first time, and possibly unregister the health callback if you don't need it after that :+1:."
+   },
+   {
+    "user": "Katawann",
+    "assoc": "CONTRIBUTOR",
+    "body": "@JonasVautherin  It's working when I unregistered the callback with:\r\n`telemetry->health_all_ok_async(nullptr);`\r\n\r\n@hamishwillee  Not sure if it is the \"prettiest\" solution but it would be nice to add a note or something in the doc to say we should unregister to avoid to call the promise twice... \r\n"
+   },
+   {
+    "user": "hamishwillee",
+    "assoc": "COLLABORATOR",
+    "body": "Hi @Katawann \r\nSounds good to me. Probably should make sure that the documentation and example are updated with a comment.\r\n\r\nCan you add a section that you think would have solved this for you? (PR easy to create by clicking button at top of page). \r\n\r\n![image](https://user-images.githubusercontent.com/5368500/75266015-0b35d180-57f2-11ea-96e5-c262bc37d79f.png)\r\n\r\nPerhaps in here https://mavsdk.mavlink.io/develop/en/guide/telemetry.html#blocking-telemetry-requests-state-management\r\n"
+   },
+   {
+    "user": "Katawann",
+    "assoc": "CONTRIBUTOR",
+    "body": "Sure!\r\n\r\nI close this issue and update the doc according to this"
+   }
+  ],
+  "linked_prs": [
+   {
+    "number": 182,
+    "merged": true,
+    "title": "add note to avoid Promise already satisfied"
+   }
+  ],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 3,
+   "resolution_class": "fixed_merged_pr",
+   "solved": true,
+   "resolution_evidence": [
+    "merged PR xref: [182]"
+   ],
+   "relevancy_score": 0.5863,
+   "relevancy_hits": {
+    "pos": {
+     "docker_ci": 1.0,
+     "api_logic": 13.2,
+     "crash_repro": 2.0
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.4173
+  }
+ },
+ {
+  "number": 1137,
+  "url": "https://github.com/mavlink/MAVSDK/issues/1137",
+  "title": "Rebooting autopilot alone",
+  "state": "closed",
+  "labels": [
+   "enhancement"
+  ],
+  "created_at": "2020-07-06",
+  "body": "I'm intending to reboot the PX4 autopilot using MAVSDK. I could find 'reboot' function inside the 'action' plugin which reboots the autopilot, camera, gimbal and the companion computer. To reboot the autopilot alone, I assume that 'reboot_async' function needs to be modified to turn off all parameters except the one corresponding to the autopilot. If that's correct and there is no other existing function to do that, can I send a pull request to make this function more generic by including arguments with default values to this function?",
+  "n_comments_total": 1,
+  "comments": [
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Yes I think that would make sense, and see my review comments."
+   }
+  ],
+  "linked_prs": [
+   {
+    "number": 1138,
+    "merged": false,
+    "title": "Added support to reboot/shutdown seperate components"
+   },
+   {
+    "number": 164,
+    "merged": false,
+    "title": "Added support to reboot/shutdown seperate components"
+   }
+  ],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 0,
+   "resolution_class": "unclear",
+   "solved": null,
+   "resolution_evidence": [
+    "closed by maintainer, no clear resolution marker"
+   ],
+   "relevancy_score": 0.1739,
+   "relevancy_hits": {
+    "pos": {
+     "api_logic": 2.0
+    },
+    "neg": {
+     "av_hw": 2.0
+    }
+   },
+   "is_meta": false,
+   "signal_score": 0.2709
+  }
+ },
+ {
+  "number": 1282,
+  "url": "https://github.com/mavlink/MAVSDK/issues/1282",
+  "title": "mavsdk_server does not clean mission state after flight",
+  "state": "closed",
+  "labels": [
+   "bug"
+  ],
+  "created_at": "2020-12-05",
+  "body": "If I want to start a second mission after a successful first mission - without restarting mavsdk_server -\r\nthe previous state persists.\r\n\r\nResulting in things like: is_mission_finished being true.\r\nThis happens even after clear_mission() and reuploading a new mission.\r\n\r\nIs there any \"cleanup\" action I have to do that I am not aware about?",
+  "n_comments_total": 7,
+  "comments": [
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Thanks for the issue. That doesn't sound like the correct behaviour. Which PX4 version are you using? And can you reproduce this against SITL?"
+   },
+   {
+    "user": "petergerten",
+    "assoc": "CONTRIBUTOR",
+    "body": "I am currently experiencing this with a customized PX4 firmware on the Yuneec H520 (in HITL). Will try in SITL with standard firmware now."
+   },
+   {
+    "user": "petergerten",
+    "assoc": "CONTRIBUTOR",
+    "body": "I can reproduce it in SITL using PX4 Release 1.10.1"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "@petergerten does it still happen with 1.11?"
+   },
+   {
+    "user": "L4ncelot",
+    "assoc": "NONE",
+    "body": "@julianoes, I can confirm the same behavior with 1.11 in the SITL configuration."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "@L4ncelot would be great if you could test #1304."
+   },
+   {
+    "user": "L4ncelot",
+    "assoc": "NONE",
+    "body": "@julianoes #1304 works great, thank you for the support."
+   }
+  ],
+  "linked_prs": [
+   {
+    "number": 1304,
+    "merged": true,
+    "title": "Reset mission progress on clear and mission upload"
+   }
+  ],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 3,
+   "resolution_class": "fixed_merged_pr",
+   "solved": true,
+   "resolution_evidence": [
+    "merged PR xref: [1304]"
+   ],
+   "relevancy_score": 0.6048,
+   "relevancy_hits": {
+    "pos": {
+     "sitl_sim": 1.8,
+     "server_rpc": 2.0,
+     "api_logic": 4.0,
+     "steps": 0.7
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.4255
+  }
+ },
+ {
+  "number": 1458,
+  "url": "https://github.com/mavlink/MAVSDK/issues/1458",
+  "title": "Best way to work with qtcreator?",
+  "state": "closed",
+  "labels": [
+   "question"
+  ],
+  "created_at": "2021-06-07",
+  "body": "Hi,\r\nI would like to build all with qtcreator on Ubuntu (desktop) and I was wondering if someone can recommend a preferred way. At the moment I only see cmd line build instructions. The cmd line instructions are fine for building end user applications but now I would like to dive into the MAVSDK itself.\r\nthanks!",
+  "n_comments_total": 9,
+  "comments": [
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "The command line build instructions are just plain cmake and make commands. So if QtCreator supports cmake/make projects it should \"just work\".\r\n\r\nHave you tried this? https://doc-snapshots.qt.io/qtcreator-4.0/creator-project-cmake.html"
+   },
+   {
+    "user": "reedev",
+    "assoc": "CONTRIBUTOR",
+    "body": "Sure, I have tried it and I don't see an install target or so. This question was merely to ask for handy do's and don't's. Maybe others have suggestions and in the mean time I will make it work."
+   },
+   {
+    "user": "reedev",
+    "assoc": "CONTRIBUTOR",
+    "body": "I don't see the target in qtcreator. Working from the cmd line works out-of-the-box (including the install prefix) so it's just a matter of finding a best way with qtcreator."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "I tried this and did: Open Project -> Select CMakeLists.txt\r\n\r\nThen it does the configure and build, and in the Projects tab you can add more configure options such as `BUILD_MAVSDK_SERVER` if required:\r\n![Screenshot from 2021-06-07 08-51-09](https://user-images.githubusercontent.com/1419688/120972019-98920080-c76d-11eb-8b59-99af7d4a0f2a.png)\r\n"
+   },
+   {
+    "user": "reedev",
+    "assoc": "CONTRIBUTOR",
+    "body": "yes, such things indeed. I am just not yet familiar with MAVSDK since the cmd line build 'just works' right away."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "I'm going to close this. Please comment again if there are more questions."
+   },
+   {
+    "user": "Leduvanh44",
+    "assoc": "NONE",
+    "body": "Hi,\r\nI would like to build a qt app and use mavsdk to connect my AGV. How can i include mavsdk into my qt5 project ?\r\nThanks!"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "If you're using cmake, then use the way mavsdk is used in any of the [examples](https://github.com/mavlink/MAVSDK/tree/main/examples)."
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 2,
+   "resolution_class": "abandoned_no_response",
+   "solved": false,
+   "resolution_evidence": [
+    "abandonment language in closing comments"
+   ],
+   "relevancy_score": 0.3768,
+   "relevancy_hits": {
+    "pos": {
+     "build": 1.8,
+     "server_rpc": 0.3,
+     "docker_ci": 1.0
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.4069
+  }
+ },
+ {
+  "number": 1531,
+  "url": "https://github.com/mavlink/MAVSDK/issues/1531",
+  "title": "Can MAVSDK support set ekf origin?",
+  "state": "open",
+  "labels": [
+   "feature"
+  ],
+  "created_at": "2021-09-06",
+  "body": "Hello, I have a homework which needs to fly multiple UAVs, So I plan to build a global NED Coordinate. \r\nBut when a vehicle starts to takeoff, It's current ned postion is ( 0, 0, 0 ).\r\n\r\nI want to modify the current NED position by setting ekf_origin. \r\n\r\n",
+  "n_comments_total": 11,
+  "comments": [
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "Is there a mavlink message that is implemented in PX4 and that does that?"
+   },
+   {
+    "user": "ucas-zihaowang",
+    "assoc": "NONE",
+    "body": "> Is there a mavlink message that is implemented in PX4 and that does that?\r\n\r\nArrording to \r\nhttps://github.com/ArduPilot/MissionPlanner/issues/1901, \r\n\r\nI guess Mavlink should have this message."
+   },
+   {
+    "user": "ucas-zihaowang",
+    "assoc": "NONE",
+    "body": "@julianoes @JonasVautherin , thanks for your help. Now I think mavlink message SET_GPS_GLOBAL_ORIGIN or mavsdk api TelemetryImpl::get_gps_global_origin_async may be used to set ekf_origin. \r\n\r\nNext, I will test this api( get_gps_global_origin_async ), and write my result.\r\n\r\nThanks your help."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "The setter needs to be implemented.\r\n\r\nSee here, how a feature can be added: https://mavsdk.mavlink.io/main/en/cpp/contributing/plugins.html#add-api-to-proto"
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "@julianoes  Would that go into the action plugin?"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Yes. I'd say so."
+   },
+   {
+    "user": "zekemyapp",
+    "assoc": "NONE",
+    "body": "Hello! I'm trying to implement this change request for some personal test.\r\nI wonder if this message should be in mocap instead of actions... also, should it be a sync method?"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "I think action is ok. I'd do both if both are useful."
+   }
+  ],
+  "linked_prs": [
+   {
+    "number": 342,
+    "merged": true,
+    "title": "action: add set_gps_origin"
+   }
+  ],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 1,
+   "resolution_class": "open",
+   "solved": null,
+   "resolution_evidence": [],
+   "relevancy_score": 0.243,
+   "relevancy_hits": {
+    "pos": {
+     "server_rpc": 0.3,
+     "api_logic": 0.7,
+     "lang": 1.0
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.5286
+  }
+ },
+ {
+  "number": 1665,
+  "url": "https://github.com/mavlink/MAVSDK/issues/1665",
+  "title": "MAVSDK collision avoidance",
+  "state": "open",
+  "labels": [
+   "question"
+  ],
+  "created_at": "2022-01-11",
+  "body": "Hi,\r\nDoes MAVSDK have obstacle avoidance feature? If yes, how can we activate it?\r\nIf no, can we use MAVROS besides MAVSDK to activate this feature?\r\nMany Thanks.",
+  "n_comments_total": 22,
+  "comments": [
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "It does not in itself. MAVSDK is just an interface to vehicle supporting mavlink, so it depends on what the drone can do.\r\n\r\nWhat exactly are you trying to do?\r\n\r\nAlso have a look at https://github.com/PX4/PX4-Avoidance."
+   },
+   {
+    "user": "PeymanAmirii",
+    "assoc": "NONE",
+    "body": "Thanks for your quick reply. On https://github.com/PX4/PX4-Avoidance , it is mentioned that \"PX4 computer vision algorithms packaged as **ROS nodes** for depth sensor fusion and obstacle avoidance\". So avoidance feature just can be used by MAVROS not MAVSDK, am I right?"
+   },
+   {
+    "user": "AzeemMuzammil",
+    "assoc": "NONE",
+    "body": "Hi @julianoes \r\n\r\nthank you so much for your responses. BTW, as of your suggestion, I amended the file https://github.com/PX4/PX4-Autopilot/blob/master/ROMFS/px4fmu_common/init.d-posix/px4-rc.mavlink\r\n\r\nwhat I did was, I added below lines,\r\n\r\n```\r\nudp_custom_offboard_port_local=$((14680+px4_instance))\r\nudp_custom_offboard_port_remote=$((14640+px4_instance))\r\n\r\nmavlink start -x -u $udp_custom_offboard_port_local -r 4000000 -f -m onboard -o $udp_custom_offboard_port_remote\r\n```\r\n\r\nand did run the command to make the PX4_Autopiolet.\r\n\r\nBut the issue is, in the multi-drone simulation scenario, (I have initiated two drones)\r\n\r\nwhen I run the command `./mavsdk_server -p 50040 udp://:14640`, it discovers a drone. But when I run the command `./mavsdk_server -p 50041 udp://:14641` while the initial command is on run, the second command fails with the error \r\n```\r\n[03:24:49|Error] bind error: Address in use (udp_connection.cpp:86)\r\n[03:24:49|Error] Connection failed: Bind error (connection_initiator.h:47)\r\n```\r\nbut if I terminate the first command and run the second one it works, and the first command fails with the same bind error.\r\n\r\nYou got any idea why this happens? (Thanks in advance)"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "I tried to reproduce this and it works for me, exactly as you described it:\r\n![Screenshot from 2022-02-11 12-01-54](https://user-images.githubusercontent.com/1419688/153580691-80ee5b6b-0503-4dd5-84bc-dbe70b51a018.png)\r\n"
+   },
+   {
+    "user": "TSC21",
+    "assoc": "MEMBER",
+    "body": "> @julianoes thanks and, it works :). BTW do you have any idea why obstacle avoidance doesn't work with off-board mode?\r\n\r\nBecause Avoidance is only aimed to function in Auto modes in PX4."
+   },
+   {
+    "user": "AzeemMuzammil",
+    "assoc": "NONE",
+    "body": "Hi @julianoes \r\nI was in a process of spawning two drones in a single gazebo where the gazebo is in the host machine with a px4 instance running, and in the remote machine in the same network, I initiated a px4 instance. (Two drones are spawning in the host machine). But when I try to take off and land it works only in the host machine.\r\n\r\nBashrc configs(Host)\r\n```\r\n#set ROS Network\r\nexport ROS_MASTER_URI=http://192.168.8.101:11311\r\nexport ROS_HOSTNAME=192.168.8.101\r\n\r\nexport GAZEBO_MASTER_URI=http://192.168.8.101:11345\r\n```\r\n\r\nBashrc configs(Remote)\r\n```\r\n#set ROS Network\r\nexport ROS_MASTER_URI=http://192.168.8.101:11311\r\nexport ROS_HOSTNAME=1192.168.8.102\r\n\r\nexport GAZEBO_MASTER_URI=http://192.168.8.101:11345\r\n```\r\n\r\nLaunch File (Host)\r\n```\r\n<?xml version=\"1.0\"?>\r\n<launch>\r\n    <!-- MAVROS posix SITL environment launch script -->\r\n    <!-- launches Gazebo environment and 2x: MAVROS, PX4 SITL, and spawns vehicle -->\r\n    <!-- vehicle model and world -->\r\n    <arg name=\"est\" default=\"ekf2\"/>\r\n    <arg name=\"vehicle\" default=\"iris\"/>\r\n    <arg name=\"uav_number\" default=\"uav0\"/>\r\n    <arg name=\"world\" default=\"$(find mavlink_sitl_gazebo)/worlds/empty.world\"/>\r\n    <!-- gazebo configs -->\r\n    <arg name=\"gui\" default=\"true\"/>\r\n    <arg name=\"debug\" default=\"false\"/>\r\n    <arg name=\"verbose\" default=\"false\"/>\r\n    <arg name=\"paused\" default=\"false\"/>\r\n    <!-- Gazebo sim -->\r\n    <include file=\"$(find gazebo_ros)/launch/empty_world.launch\">\r\n        <arg name=\"gui\" value=\"$(arg g\n...[truncated]"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "> When I run the same script from the remote machine with the system_address being set to:\r\n> await drone.connect(system_address=\"udp://:14641\")\r\n> nothing happens. Could you please clarify this?\r\n\r\n`udp://:14641` will bind to the port locally, so the drone on the remote system needs to talk to the \"local\" IP to reach MAVSDK.\r\n\r\nTo do that you need to tell the remote one where to send the traffic like so:\r\n- https://docs.px4.io/master/en/simulation/#enable-udp-broadcasting, or:\r\n- https://docs.px4.io/master/en/simulation/#enable-streaming-to-specific-address"
+   },
+   {
+    "user": "tpaluavio",
+    "assoc": "NONE",
+    "body": "Hi, I am trying to perform collision prevention with px4 offboard mode with mavros/mavsdk. Can anyone point me to a spacefic link for that?"
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 1,
+   "resolution_class": "open",
+   "solved": null,
+   "resolution_evidence": [],
+   "relevancy_score": 0.7583,
+   "relevancy_hits": {
+    "pos": {
+     "sitl_sim": 8.4,
+     "server_rpc": 4.2,
+     "api_logic": 4.5,
+     "lang": 1.0,
+     "steps": 0.3
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.629
+  }
+ },
+ {
+  "number": 1724,
+  "url": "https://github.com/mavlink/MAVSDK/issues/1724",
+  "title": "Building MAVSDK v1.0.8 with gcc-4.9",
+  "state": "closed",
+  "labels": [],
+  "created_at": "2022-03-18",
+  "body": "Hey, \r\ni'm currently trying to build libmavsdk with gcc-4.9. It seems that some test requires CXX17. Is it possible to build it cc-4.9?\r\n\r\nError Output Log:\r\nCMake Error in src/CMakeLists.txt:\r\n  Target \"unit_tests_runner\" requires the language dialect \"CXX17\" (with\r\n  compiler extensions), but CMake does not know the compile flags to use to\r\n  enable it.\r\n\r\n\r\nCMake Error in src/mavsdk/CMakeLists.txt:\r\n  Target \"mavsdk\" requires the language dialect \"CXX17\" (with compiler\r\n  extensions), but CMake does not know the compile flags to use to enable it.\r\n\r\n\r\nCMake Error in src/third_party/gtest/googlemock/CMakeLists.txt:\r\n  Target \"gmock\" requires the language dialect \"CXX17\" , but CMake does not\r\n  know the compile flags to use to enable it.\r\n\r\n\r\nCMake Error in src/third_party/gtest/googlemock/CMakeLists.txt:\r\n  Target \"gmock_main\" requires the language dialect \"CXX17\" , but CMake does\r\n  not know the compile flags to use to enable it.\r\n\r\n\r\nCMake Error in src/third_party/gtest/googletest/CMakeLists.txt:\r\n  Target \"gtest\" requires the language dialect \"CXX17\" , but CMake does not\r\n  know the compile flags to use to enable it.\r\n\r\n\r\nCMake Error in src/third_party/gtest/googletest/CMakeLists.txt:\r\n  Target \"gtest_main\" requires the language dialect \"CXX17\" , but CMake does\r\n  not know the compile flags to use to enable it.\r\n\r\n\r\nCMake Error in src/integration_tests/CMakeLists.txt:\r\n  Target \"integration_tests_runner\" requires the language dialect \"CXX17\"\r\n  (with compiler extensions), but CMake does not know the compile flags to\r\n  use to enable it.\r\n\r\n\r\n-- Generating done\r\nCMake Generate step failed.  Build files cannot be regenerated correctly.\r\n[ERROR]: build failed with error Code: 1\r\n",
+  "n_comments_total": 1,
+  "comments": [
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "MAVSDK C++ is using C++17 features, so you need a compiler that supports these. GCC 4.9 is definitely too old, sorry."
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 0,
+   "resolution_class": "unclear",
+   "solved": null,
+   "resolution_evidence": [
+    "closed by maintainer, no clear resolution marker"
+   ],
+   "relevancy_score": 0.3399,
+   "relevancy_hits": {
+    "pos": {
+     "build": 34.7,
+     "lang": 0.3
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.1691
+  }
+ },
+ {
+  "number": 1822,
+  "url": "https://github.com/mavlink/MAVSDK/issues/1822",
+  "title": "libmavsdk.so.1: cannot open shared object file for armv7",
+  "state": "closed",
+  "labels": [],
+  "created_at": "2022-06-27",
+  "body": "I need to build locally .deb package for armv7 as the v1.4.3 does not include some fix\r\n\r\nWhen I build my code in a docker using the online debian package from release v1.3.1 everything works fine. But  when I generate locally the deb package of v1.3.1 or v1.4.3 if fails with error:\r\n```\r\nerror while loading shared libraries: libmavsdk.so.1: cannot open shared object file: No such file or directory\r\n```\r\n\r\nWhat need to be changed in my commands to make it works as if I was downloading the deb package ?\r\n```\r\n./dockcross-linux-armv7-custom /bin/bash -c \"cmake $superbuild $cmake_prefix_path -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=build/linux-armv7/install -DBUILD_MAVSDK_SERVER=OFF -DBUILD_SHARED_LIBS=ON -DWERROR=OFF -DMAVLINK_HEADERS=mavlink-headers/include -Bbuild/linux-armv7 -H.\"\r\n./dockcross-linux-armv7-custom cmake --build build/linux-armv7 -j8 --target install\r\n./dockcross-linux-armv7-custom tools/create_packages.sh ./build/linux-armv7/install . armv7 libmavsdk-dev\r\n```\r\n\r\nThank you for your help !\r\n",
+  "n_comments_total": 3,
+  "comments": [
+   {
+    "user": "Katawann",
+    "assoc": "CONTRIBUTOR",
+    "body": "Arf I forgot I need to work with armv6 for RPi 3b+ for I don't remember the reason. It works fine if I use the armv6 package. \r\n\r\n```\r\n  ./dockcross-linux-armv6-custom /bin/bash -c \"cmake $superbuild $cmake_prefix_path -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=build/linux-armv6/install -DBUILD_MAVSDK_SERVER=OFF -DBUILD_SHARED_LIBS=ON -DWERROR=OFF -DMAVLINK_HEADERS=mavlink-headers/include -Bbuild/linux-armv6 -H.\"\r\n  ./dockcross-linux-armv6-custom cmake --build build/linux-armv6 -j2 --target install\r\n  ./dockcross-linux-armv6-custom tools/create_packages.sh ./build/linux-armv6/install . armv6 libmavsdk-dev\r\n```\r\n"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "That's odd. Presumably you're using a Raspbian 32bit compatible with armv6?"
+   },
+   {
+    "user": "Katawann",
+    "assoc": "CONTRIBUTOR",
+    "body": "@julianoes you answer to it long time ago :) #1684\r\n\r\n> It looks like the 32bit images of Raspberry Pi OS are made backwards compatible for RPi 1, so armv6.\r\n\r\n"
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 0,
+   "resolution_class": "unclear",
+   "solved": null,
+   "resolution_evidence": [
+    "closed by maintainer, no clear resolution marker"
+   ],
+   "relevancy_score": 0.7689,
+   "relevancy_hits": {
+    "pos": {
+     "build": 6.0,
+     "server_rpc": 1.4,
+     "docker_ci": 2.0
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.2241
+  }
+ },
+ {
+  "number": 1899,
+  "url": "https://github.com/mavlink/MAVSDK/issues/1899",
+  "title": "[Discussion] How to set a parameter and reboot the vehicle for PX4 MAVSDK SITL Test",
+  "state": "closed",
+  "labels": [],
+  "created_at": "2022-09-16",
+  "body": "## What I want to do\r\nI wanted to have the following feature on [MAVSDK Test](https://github.com/PX4/PX4-Autopilot/tree/main/test/mavsdk_tests) in PX4 SITL:\r\n1. Set the parameter in PX4 (to set it to a non-default value)\r\n2. Reboot the vehicle (Or start the vehicle directly with the modified parameter from the beginning)\r\n3. Perform a SITL MAVSDK test with the vehicle that had the modified parameter when it booted up\r\n\r\nThe reason for this was for the [Payload delivery SITL test PR](https://github.com/PX4/PX4-Autopilot/pull/20230), I needed a way to set the parameter and reboot the vehicle, in order to have the startup script recognize the non-default parameter to enable the `payload_deliverer` module, and start the module, which is necessary for payload delivery feature.\r\n\r\n## Problem\r\nCurrently it seems like we can't arbitrarily set the parameter before booting up, neither can we reboot the vehicle in the SITL test function.\r\n\r\n### Proposed Solutions\r\n1. Have a way to reboot the vehicle after setting the parameter in the mavsdk sitl test pipeline\r\n2. Have a way to load an arbitrary / modified parameter through MAVSDK interface for the drone\r\n\r\n## Discussion \r\nIf we want to support such feature, what would be the best way to implement it? Are there any other solutions? Would this be possible without modifying MAVSDK?",
+  "n_comments_total": 4,
+  "comments": [
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "So the goal of the test is to check that the parameter is set correctly after reboot, but SITL resets the params when it boots, right?\r\n\r\nI don't really see how this is related to MAVSDK, though :thinking:. It feels like you need SITL to persist the params (instead of resetting after reboot), and that's not how SITL does it, right?"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "1. From what I know there is not yet a way to reboot/restart PX4 from within PX4 in SITL but only externally via helper scripts. So for the PX4 mavsdk_tests you would have to script it there.\r\n2. You can always load/get an arbitrary param from PX4. I think that part is not a problem.\r\n\r\nRegarding your question: to me it sounds like a test script issue around PX4, and not a MAVSDK issue as such."
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "But then if it requires custom code to make it work in SITL, is it really a test? It feels like params persistence after reboot is just not a SITL feature. We can simulate it with external scripts, and then we can test that those external scripts simulate it correctly, but at the end of the day it's not testing the actual feature :sweat_smile: "
+   },
+   {
+    "user": "junwoo091400",
+    "assoc": "CONTRIBUTOR",
+    "body": "I think I found the solution :thinking:, which is using a custom model with the airframe file specifying the parameters that needs to be changed on startup. It is of course not scalable, but for a SITL test for a specific feature, I think this can be tolerated."
+   }
+  ],
+  "linked_prs": [
+   {
+    "number": 20230,
+    "merged": false,
+    "title": "[WIP] Payload delivery MAVSDK SITL Test"
+   }
+  ],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 2,
+   "resolution_class": "wontfix_out_of_scope",
+   "solved": false,
+   "resolution_evidence": [
+    "wontfix / out-of-scope language"
+   ],
+   "relevancy_score": 0.1691,
+   "relevancy_hits": {
+    "pos": {
+     "sitl_sim": 9.2,
+     "api_logic": 11.1
+    },
+    "neg": {}
+   },
+   "is_meta": true,
+   "signal_score": 0.3993
+  }
+ },
+ {
+  "number": 1956,
+  "url": "https://github.com/mavlink/MAVSDK/issues/1956",
+  "title": "mavsdk_server build fail ",
+  "state": "closed",
+  "labels": [],
+  "created_at": "2023-01-12",
+  "body": "I want build mavsdk_server, but there had some problems.. \r\n\r\n\r\nI have already installed this one \r\n```\r\nsudo apt-get install build-essential cmake git\r\n```\r\n\r\n\r\nI used this command There was a no problem\r\n```\r\ncmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DBUILD_MAVSDK_SERVER=ON -Bbuild/default -H.\r\n```\r\n\r\nBut this one had problems\r\n```\r\ncmake --build build/default -j8\r\n```\r\n\r\n![image](https://user-images.githubusercontent.com/63579963/211960030-f1ddc3e7-9c99-4042-be8a-50e72dbd3cf0.png)\r\n\r\nLooks like grpc library error.. So I have installed grpc with this guide\r\nhttps://grpc.io/docs/languages/cpp/quickstart/\r\nBut still error occured.\r\n\r\n\r\nMy Ubunt environment \r\n\r\ncmake version 3.16.3\r\n\r\nOpenSSL 1.1.1i  8 Dec 2020\r\n\r\nDistributor ID: Ubuntu\r\nDescription:    Ubuntu 20.04.3 LTS\r\nRelease:        20.04\r\nCodename:       focal\r\n\r\n",
+  "n_comments_total": 15,
+  "comments": [
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "Is it a clean build? Looks like an issue with OpenSSL. Did OpenSSL build successfully above?"
+   },
+   {
+    "user": "dayleMG",
+    "assoc": "NONE",
+    "body": "Thank you for comment @JonasVautherin \r\n\r\n![image](https://user-images.githubusercontent.com/63579963/212009746-74c3b826-4e60-4795-b8ac-56a815084698.png)\r\n![image](https://user-images.githubusercontent.com/63579963/212010138-7aec7fe7-de9b-4436-8e6f-0ea7dc9e6058.png)\r\nUmm I'm not sure about that this one is end point of OpeenSSL.\r\n\r\nAnd there has warnings.\r\nIt looks like there has some problems.\r\n![image](https://user-images.githubusercontent.com/63579963/212010474-8008ba7a-0dc4-4286-b9fa-c61210a982f8.png)\r\n![image](https://user-images.githubusercontent.com/63579963/212010523-67f0a022-8631-4ff3-b22d-b9b411293a31.png)\r\n![image](https://user-images.githubusercontent.com/63579963/212010586-ec9e6ece-2902-4bdd-9129-c6fda665bc94.png)\r\n"
+   },
+   {
+    "user": "dayleMG",
+    "assoc": "NONE",
+    "body": "@julianoes \r\nHere you are~ 444d6b693b2d76cd594b1df074f28f468cc78f47 \r\n![image](https://user-images.githubusercontent.com/63579963/212620873-354f7940-7139-470a-a587-669b82e36d1a.png)\r\n"
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "> Do you mean this one??\r\n\r\nYes. I don't see libcrypto and libssl there, it feels like OpenSSL failed to build/install :thinking:. Though one of your screenshots above (partly) shows OpenSSL being installed there :thinking: :thinking: :thinking: "
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "So what was the fix? Sorry I missed it."
+   },
+   {
+    "user": "dayleMG",
+    "assoc": "NONE",
+    "body": "@julianoes that's okay thank you\r\nI found mavsdkserver releases artifacts. so I have just used that one. \r\nThanks for helping me. "
+   },
+   {
+    "user": "tbago",
+    "assoc": "CONTRIBUTOR",
+    "body": "I use ubuntu 22.04 to build the mavsdk server. And also cannot found the openssl library. \r\nFirst the openssl library in ubuntu 22.04 is output at **build/third_party/install/lib64** dir.\r\nAnd the openssl seems only generate pkg-config file and no cmake config file."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "@tbago please create a new separate issue and describe the steps you do and what goes wrong, thank you."
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 3,
+   "resolution_class": "self_resolved",
+   "solved": true,
+   "resolution_evidence": [
+    "author states own resolution"
+   ],
+   "relevancy_score": 0.8725,
+   "relevancy_hits": {
+    "pos": {
+     "build": 5.0,
+     "server_rpc": 6.0,
+     "docker_ci": 5.1,
+     "lang": 1.0
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.4913
+  }
+ },
+ {
+  "number": 1994,
+  "url": "https://github.com/mavlink/MAVSDK/issues/1994",
+  "title": "How to do calibration of  quadcopter using MAVSDK",
+  "state": "closed",
+  "labels": [],
+  "created_at": "2023-02-27",
+  "body": "Hi,\r\n\r\nQGC/MP have a process of calibrating ESC/Magnetometer/Accelerator etc \r\nFor an application we have to provide this functionality so we cant use QGC etc.\r\nMAVSDK offers a limited functionality and there is a single api with limited progress data.\r\nMavlink offers MAV_CMD_PREFLIGHT_CALIBRATION and MAG_CAL_REPORT etc.\r\n\r\nI am stuck how to do it with MAVSDK, is it implemented ? or I will have to use MAVLINK messages, in that case is there a sample?",
+  "n_comments_total": 4,
+  "comments": [
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "Did you try the [example](https://github.com/mavlink/MAVSDK/blob/main/examples/calibrate/calibrate.cpp)?"
+   },
+   {
+    "user": "mjemv",
+    "assoc": "NONE",
+    "body": "No, I am a bit confused, how to do calibration, where we have to do something similar to https://i.ytimg.com/vi/91VGmdSlbo4/maxresdefault.jpg.\r\nWe have to create a similar interface.\r\n\r\nI am not sure how to call Mavsdk single calibration function without any parameters to perform this."
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "Did you try running the example to see what happens? :see_no_evil:\r\n\r\nThe example will print steps (\"now please put the pixhawk on the side\") and instructions. You would then just need to connect that to a UI, I think."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "No follow up, closing."
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 2,
+   "resolution_class": "abandoned_no_response",
+   "solved": false,
+   "resolution_evidence": [
+    "abandonment language in closing comments"
+   ],
+   "relevancy_score": 0.0989,
+   "relevancy_hits": {
+    "pos": {
+     "api_logic": 0.3,
+     "lang": 0.3
+    },
+    "neg": {
+     "flight_hw": 1.4
+    }
+   },
+   "is_meta": false,
+   "signal_score": 0.3336
+  }
+ },
+ {
+  "number": 2050,
+  "url": "https://github.com/mavlink/MAVSDK/issues/2050",
+  "title": "Linking Error Compiling On RPI4 with Atomic",
+  "state": "closed",
+  "labels": [],
+  "created_at": "2023-05-23",
+  "body": "Hi all !\r\n\r\nI just updated my local MAVSDK folder with the master branch and the project is no more compiling. In fact mavsdk compiles but `system_tests_runner` `unit_tests_runner` `integration_tests_runner` dont and return two errors :\r\n\r\n```\r\n/usr/bin/ld /usr/local/lib/arm-linux-gnueabihf/libmavsdkd.so.1.4.0 : undefined reference to \u00ab __atomic_store_8 \u00bb\r\n/usr/bin/ld /usr/local/lib/arm-linux-gnueabihf/libmavsdkd.so.1.4.0 : r\u00e9f\u00e9rence ind\u00e9finie vers \u00ab __atomic_load_8 \u00bb\r\n```\r\n\r\nTo make it compile, I had to modify `CMakeLists.txt` of mavsdk to force link with libatomic:\r\n\r\n```\r\nif((BUILD_STATIC_MAVSDK_SERVER AND (\"${CMAKE_C_COMPILER_ID}\" STREQUAL \"GNU\")) OR\r\n    (${CMAKE_HOST_SYSTEM_PROCESSOR} MATCHES \"(armv6|armv7)\"))\r\n    target_link_libraries(mavsdk PRIVATE atomic)\r\nendif()\r\n```\r\nChanged to \r\n`target_link_libraries(mavsdk PRIVATE atomic)`\r\n\r\nIn fact just adding `armv8` in the MATCHES does'nt work.\r\n\r\nAfter that I also have to add the atomic link in my own `CMakeLists.txt` or the project is not compiling :\r\n```\r\ntarget_link_libraries(${PROJECT_NAME} PRIVATE\r\n    MAVSDK::mavsdk\r\n    ...\r\n    atomic\r\n)\r\n```\r\n\r\nDo you have any idea ?\r\n\r\n(-latomic flag is not working)\r\n",
+  "n_comments_total": 12,
+  "comments": [
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "That's odd.\r\n\r\nDo you mind checking the variable `${CMAKE_HOST_SYSTEM_PROCESSOR}` so that we can debug and fix this?\r\n\r\nJust add:\r\n```\r\nmessage(FATAL_ERROR \"host processor: ${CMAKE_HOST_SYSTEM_PROCESSOR}\")\r\n```\r\n\r\nAnd check the output."
+   },
+   {
+    "user": "Bowerdred",
+    "assoc": "NONE",
+    "body": "Here is the output of the command :\r\n\r\n`host processor: aarch64`\r\n\r\nOther strange thing is that mavlink is not compiled and I have to do it and install it from its own git repo whereas it was done automatically before ..."
+   },
+   {
+    "user": "Bowerdred",
+    "assoc": "NONE",
+    "body": "They are not working I have an `aarch64 - armhf` processor so I have an error : \r\n\r\n`error: package architecture (arm64) does not match system (armhf)`\r\n\r\nWhen I try with `armv7` package, I can install it but the library is never found by ldd so when I run my program I have the error : \r\n\r\n`./V1_8_MAVSDK: error while loading shared libraries: libmavsdk.so.1: cannot open shared object file: No such file or directory`"
+   },
+   {
+    "user": "Bowerdred",
+    "assoc": "NONE",
+    "body": "I think the problem is I am using a 32 bit OS so I will try with the 64 Raspbian OS to check if it's working or not !"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "aarch64 would be the 64bit version. If you're using a 32bit OS, then it should show you armv7, I'd guess."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Feel free to make a PR that fixes it for you."
+   },
+   {
+    "user": "reedev",
+    "assoc": "CONTRIBUTOR",
+    "body": "I can confirm that this is a 32 bit OS issue which I encountered in a different project too. Exactly the same issue, resolved by linking against atomic."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "PRs to fix it are welcome."
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 3,
+   "resolution_class": "answered",
+   "solved": true,
+   "resolution_evidence": [
+    "substantive maintainer answer (782 chars)"
+   ],
+   "relevancy_score": 0.5935,
+   "relevancy_hits": {
+    "pos": {
+     "build": 11.4,
+     "server_rpc": 1.0
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.4749
+  }
+ },
+ {
+  "number": 2111,
+  "url": "https://github.com/mavlink/MAVSDK/issues/2111",
+  "title": "ArduPilot - Possibility of using MAV_CMD_DO_SET_SERVO instead of MAV_CMD_DO_SET_ACTUATOR",
+  "state": "closed",
+  "labels": [
+   "feature"
+  ],
+  "created_at": "2023-08-09",
+  "body": "Hello,\r\n\r\nI've been messing around with the set-actuator example with my WSL2 ArduPilot SITL. I have seen that the set_actuator function is causing an unsupported message to appear in my terminal. Upon investigation of the source code: https://github.com/mavlink/MAVSDK/blob/fadfe22e7c053945107201e2638be9a7f8b8ee5c/src/mavsdk/plugins/action/action_impl.cpp#L516-L550\r\nI see that MAV_CMD_DO_SET_ACTUATOR is being used to only set _one_ actuator to a specific value. This command is unsupported in ArduPilot (indicated by it's absence in [this list](https://ardupilot.org/dev/docs/mavlink-other-commands.html#mav-cmds))\r\n\r\nIn theory, we could use MAV_CMD_DO_SET_SERVO to accomplish what MAV_CMD_DO_SET_ACTUATOR is doing in ArduPilot.\r\nHowever, I am not sure if MAV_CMD_DO_SET_ACTUATOR is supported in PX4 (https://github.com/PX4/PX4-Autopilot/pull/15281).\r\n\r\nWould it be more preferable to change the set_actuator function to use MAV_CMD_DO_SET_SERVO or to implement a switch statement that implements MAV_CMD_DO_SET_SERVO if the AP is found to be using ArduPilot?\r\nI could attempt to implement a case such as this: https://github.com/mavlink/MAVSDK/blob/fadfe22e7c053945107201e2638be9a7f8b8ee5c/src/mavsdk/plugins/action/action_impl.cpp#L658-L670\r\n",
+  "n_comments_total": 5,
+  "comments": [
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "I would be ok with sending another command for ArduPilot."
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "Same, I like the idea of the `if` statement, sending SET_SERVO for Ardupilot and SET_ACTUATOR for PX4:\r\n\r\n```\r\nif (_system_impl->autopilot() == SystemImpl::Autopilot::ArduPilot) { \r\n```"
+   },
+   {
+    "user": "trolledbypro",
+    "assoc": "CONTRIBUTOR",
+    "body": "I implemented it in my fork: \r\nhttps://github.com/mavlink/MAVSDK/compare/main...trolledbypro:MAVSDK:pr-ardupilot-set-servo\r\n\r\nLooks like this is all that needs to change to get it working on ArduPilot. The two commands are equivalent due to DO_SET_ACTUATOR only being used to change one actuator at a time.\r\n\r\nI'll submit a PR after some more testing, but this code is working with my ArduPilot SITL running set_actuator.\r\n\r\n@julianoes How much testing/what testing do I need to do before I can submit a PR?"
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "> How much testing/what testing do I need to do before I can submit a PR?\r\n\r\nIf it works for you, just open a PR. It is currently not working for Ardupilot anyway, and your change should be low-risk for PX4 since you have a pretty clean `if (ardupilot)` condition :+1:."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Looks like that's implemented."
+   }
+  ],
+  "linked_prs": [
+   {
+    "number": 2113,
+    "merged": true,
+    "title": "Added new code for MAV_CMD_DO_SET_SERVO ArduPilot"
+   }
+  ],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 3,
+   "resolution_class": "fixed_merged_pr",
+   "solved": true,
+   "resolution_evidence": [
+    "merged PR xref: [2113]"
+   ],
+   "relevancy_score": 0.4505,
+   "relevancy_hits": {
+    "pos": {
+     "sitl_sim": 1.4,
+     "lang": 2.0
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.4355
+  }
+ },
+ {
+  "number": 2163,
+  "url": "https://github.com/mavlink/MAVSDK/issues/2163",
+  "title": "\"Sending message failed\" on main branch - Cannot Upload Missions on PX4 or ArduPilot Systems",
+  "state": "closed",
+  "labels": [],
+  "created_at": "2023-10-20",
+  "body": "I have a CI pipeline which builds mavsdk and runs some various sitl tests, checking that I can connect to hardware, send missions etc. My runs on Wednesday were working as expected and thereafter, I have been getting lots of issues with sending missions to PX4 and ArduPilot flight controllers (see below).\r\n\r\n<img width=\"1035\" alt=\"Screenshot 2023-10-20 at 17 00 15\" src=\"https://github.com/mavlink/MAVSDK/assets/49697817/1c693f6a-e1b4-4a5e-aa0c-8089f9b4621a\">\r\n\r\nHas anyone encountered this? Hope there is a fix because it is quite a big failure mode to fail sending missions... For those wondering why I am not using a stable release version, there are some important fixes which have not been released yet and are in main currently.\r\n\r\nThanks for your help and let me know if you need more detail!\r\n\r\n# Edit\r\nWhen I use the below commit version on Main, my code works as before so it looks like something in the last two pull requests has caused this issue.\r\n`git checkout 76862be25267b8e1500a66223495c8cc23d7548a`",
+  "n_comments_total": 5,
+  "comments": [
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "> When I use the below commit version on Main, my code works as before so it looks like something in the last two pull requests has caused this issue.\r\n\r\nOh good catch, thanks for reporting this, that's helpful!"
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "What's the status here? Is that now fixed?"
+   },
+   {
+    "user": "OliverHeilmann",
+    "assoc": "NONE",
+    "body": "Sorry for the delay, just tested the latest main branch (debug) and the PX4 sitl environment works again i.e. mavlink messages are sending/ receiving correctly which is great.\r\n\r\nI did also test the latest branch with ArduPilot sitl and got the following issue:\r\n<img width=\"1074\" alt=\"Screenshot 2023-12-02 at 14 00 06\" src=\"https://github.com/mavlink/MAVSDK/assets/49697817/7f604fe3-5b8b-4c32-9799-c13101c6a160\">\r\n\r\nYou can see that the `AUTO` mode change was getting rejected in flight. Happy for this issue to be closed and a new one opened for this new problem though!"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Ok, set mode fails. Do you know where this originates?"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "There was no more follow up. I'm assuming everything is working."
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 2,
+   "resolution_class": "abandoned_no_response",
+   "solved": false,
+   "resolution_evidence": [
+    "abandonment language in closing comments"
+   ],
+   "relevancy_score": 0.3846,
+   "relevancy_hits": {
+    "pos": {
+     "sitl_sim": 1.7,
+     "docker_ci": 1.0
+    },
+    "neg": {
+     "flight_hw": 0.3
+    }
+   },
+   "is_meta": false,
+   "signal_score": 0.3843
+  }
+ },
+ {
+  "number": 2248,
+  "url": "https://github.com/mavlink/MAVSDK/issues/2248",
+  "title": "Building MAVSDK for Android failing (Apple Silicon M2 Max)",
+  "state": "closed",
+  "labels": [],
+  "created_at": "2024-03-13",
+  "body": "## Environment\r\n\r\n- Apple M2 Max Macbook Pro\r\n\r\n- 64 GB RAM\r\n\r\n- Mac OS Ventura\r\n\r\n- Docker Desktop 4.28.0\r\n\r\n## Problem\r\n\r\nI cloned the MAVSDK repo on the main branch, and tried to run the configuration step following the documentation to use dockcross.\r\n\r\nHowever, it fails every single time when it tries to build OpenSSL,\r\n\r\n```\r\n-- extracting...\r\n     src='/work/build/default/third_party/openssl/openssl/src/openssl-3.0.9.tar.gz'\r\n     dst='/work/build/default/third_party/openssl/openssl/src/openssl'\r\n-- extracting... [tar xfz]\r\n-- extracting... [analysis]\r\n-- extracting... [rename]\r\n-- extracting... [clean up]\r\n-- extracting... done\r\n[ 37%] No update step for 'openssl'\r\n[ 50%] Performing patch step for 'openssl'\r\npatching file Configurations/15-android.conf\r\nHunk #1 succeeded at 130 (offset 18 lines).\r\n[ 62%] Performing configure step for 'openssl'\r\nConfiguring OpenSSL version 3.0.9 for target android-arm64\r\nUsing os-specific seed configuration\r\nCreated configdata.pm\r\nRunning configdata.pm\r\nCreated Makefile.in\r\nCreated Makefile\r\nCreated include/openssl/configuration.h\r\n\r\n**********************************************************************\r\n***                                                                ***\r\n***   OpenSSL has been successfully configured                     ***\r\n***                                                                ***\r\n***   If you encounter a problem while building, please open an    ***\r\n***   issue on GitHub <https://github.com/openssl/openssl/issues>  ***\r\n***   and include the output from the following command:           ***\r\n***                                                                ***\r\n***       perl configdata.pm --dump                                ***\r\n***                                                                ***\r\n***   (If you are new to OpenSSL, you might want to consult the    ***\r\n***   'Troubleshooting' section in the INSTALL.md file first)      ***\r\n***                                                                ***\r\n**********************************************************************\r\n[ 75%] Performing build step for 'openssl'\r\nmake[3]: *** write jobserver: Bad file descriptor.  Stop.\r\nmake[3]: *** Waiting for unfinished jobs....\r\nmake[3]: *** write jobserver: Bad file descriptor.  Stop.\r\ngmake[2]: *** [CMakeFiles/openssl.dir/build.make:86: openssl/src/openssl-stamp/openssl-build] Error 2\r\ngmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/openssl.dir/all] Error 2\r\ngmake: *** [Makefile:91: all] Error 2\r\nCMake Error at third_party/cmake/build_target.cmake:51 (message):\r\n  /work/build/default/third_party/openssl failed to build!\r\nCall Stack (most recent call first):\r\n  third_party/CMakeLists.txt:23 (build_target)\r\n\r\n\r\n-- Configuring incomplete, errors occurred!\r\n```\r\n\r\nThe command being used to configure the build is\r\n\r\n```\r\n~/dockcross-android-arm64 cmake -DCMAKE_BUILD_TYPE=Debug -Bbuild/default -DBUILD_MAVSDK_SERVER=ON -DBUILD_SHARED_LIBS=ON -H.\r\n```\r\n\r\nThe end goal is\n...[truncated]",
+  "n_comments_total": 9,
+  "comments": [
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "It is interesting that the build happening inside a docker container fails on the M2 :thinking:.\r\n\r\nDo you know why that would be? What is this \"Bad file descriptor\"?"
+   },
+   {
+    "user": "Jai-GAY",
+    "assoc": "NONE",
+    "body": "> The end goal is to make modifications to MAVSDK C++ and bring it into the Android projects (mavsdk_server.aar and mavsdk-java.jar)\r\n\r\nWhat is the [difference between these two](https://github.com/mavlink/MAVSDK-Java)? I hope I can further understand and learn.\r\n"
+   },
+   {
+    "user": "rayw-dronesense",
+    "assoc": "CONTRIBUTOR",
+    "body": "> What is the [difference between these two](https://github.com/mavlink/MAVSDK-Java)? I hope I can further understand and learn.\r\n\r\n@Jai-GAY\r\n\r\n \r\nMAVSDK-Java is a wrapper interface that talks to the 'MAVSDK-server' using generated protobuf interfaces. The 'Server' contains a pre-built .so binary of MAVSDK C++, in this case, targets Android.\r\n\r\nJust having the Java wrapper and Server isn't enough, if you are looking to make modifications because the meat underneath is actually within the MAVSDK C++ project."
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "It seems like openssl fails to build with dockcross on the M2. I would try to remove MAVSDK from the equation and just build OpenSSL first. Then see if that fails or not, and go from there.\r\n\r\n[This is where we build openssl](https://github.com/mavlink/MAVSDK/tree/main/third_party/openssl), you could start from there."
+   },
+   {
+    "user": "Jai-GAY",
+    "assoc": "NONE",
+    "body": "> if you are looking to make modifications because the meat underneath is actually within the MAVSDK C++ project.\r\n\r\nokay, so as an open-source spirit, isn't it a pull request, submit?"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "FYI: https://github.com/openssl/openssl/issues/23845"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "@rayw-dronesense are you still looking into this?"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "OP disappeared, not sure what I should do, closing."
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 3,
+   "resolution_class": "answered",
+   "solved": true,
+   "resolution_evidence": [
+    "substantive maintainer answer (641 chars)"
+   ],
+   "relevancy_score": 0.5524,
+   "relevancy_hits": {
+    "pos": {
+     "build": 5.3,
+     "server_rpc": 3.0,
+     "docker_ci": 2.4,
+     "lang": 2.8
+    },
+    "neg": {
+     "mobile": 7.0,
+     "nonlinux": 1.0
+    }
+   },
+   "is_meta": false,
+   "signal_score": 0.4596
+  }
+ },
+ {
+  "number": 2353,
+  "url": "https://github.com/mavlink/MAVSDK/issues/2353",
+  "title": "TCP connection from MAVSDK breaks app after 16 minutes of idle time due to reconnection",
+  "state": "closed",
+  "labels": [
+   "bug"
+  ],
+  "created_at": "2024-07-19",
+  "body": "I'm developing an app that uses MAVSDK to connect to a device via the built-in MAVSDK TCP connection. MAVSDK has an excellent TCP reconnection mechanism that fits my requirements well, namely the possibility of temporary disconnection. In this case timer is started, which checks every second whether the connection has been restored. But after 16 minutes, this mechanism breaks my app with the message **\"socket errorToo many open files\"**. \r\n\r\nI did some basic research and the problem is that the MAVSDK in a loop reopens the sockets, but does not close them with the `close` function in case of unsuccessful execution of the `connect` function. \r\n\r\n```\r\n// from tcp_connection.cpp\r\n\r\n_socket_fd = socket(AF_INET, SOCK_STREAM, 0);\r\n```\r\n\r\nI have tested basic fix on Linux, but I don't know if it will work on other operating systems",
+  "n_comments_total": 4,
+  "comments": [
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "Would you like to open a PR with your proposed fix? :blush: "
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Good catch. Yes a PR would be great."
+   },
+   {
+    "user": "fibonacci-matrix",
+    "assoc": "CONTRIBUTOR",
+    "body": "I can do a PR in a few days, but I don't mind if someone else does it. Besides, https://github.com/mavlink/MAVSDK/pull/2342 will conflict with my changes "
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "#2342 is merged."
+   }
+  ],
+  "linked_prs": [
+   {
+    "number": 2357,
+    "merged": true,
+    "title": "core: Correctly close sockets"
+   }
+  ],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 3,
+   "resolution_class": "fixed_merged_pr",
+   "solved": true,
+   "resolution_evidence": [
+    "merged PR xref: [2357]"
+   ],
+   "relevancy_score": 0.2705,
+   "relevancy_hits": {
+    "pos": {
+     "lang": 1.0
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.4104
+  }
+ },
+ {
+  "number": 2431,
+  "url": "https://github.com/mavlink/MAVSDK/issues/2431",
+  "title": "Camera Commands Infinite loop with gazebo sitl with typhoon model",
+  "state": "closed",
+  "labels": [],
+  "created_at": "2024-10-22",
+  "body": "Hi,\r\n   I am trying to run the camera+gimbal with the gazebo sitl (px4 1.15.0) with mavsdk-python (mavsdk 2.12.11). When I run the camera.py example while manually running the mavsdk_server, I get the following logs from mavsdk_server. On the Mavsdk-python side i get timeout messages. The gimbal.py example runs fine without any problem.\r\n\r\nDoes this mean that the SITL with Typhoon model does not have camera server side implementation? Or am i missing something. I would like to test as much camera plugin with sitl mode as possible. Are there any alternatives for this? Thanks!\r\n\r\n```bash\r\n[10:30:48|Info ] MAVSDK version: v2.12.11 (mavsdk_impl.cpp:26)\r\n[10:30:48|Debug] Command debugging is on. (mavlink_command_receiver.cpp:26)\r\n[10:30:48|Info ] New system on: 127.0.0.1:54247 (with system ID: 1) (udp_connection.cpp:178)\r\n[10:30:48|Debug] New system ID: 1 Comp ID: 1 (mavsdk_impl.cpp:750)\r\n[10:30:48|Debug] Command debugging is on. (mavlink_command_sender.cpp:15)\r\n[10:30:48|Debug] Component Autopilot (1) added. (system_impl.cpp:366)\r\n[10:30:48|Debug] Component Gimbal (154) added. (system_impl.cpp:366)\r\n[10:30:48|Info ] System discovered (connection_initiator.h:39)\r\n[10:30:48|Info ] Server started (grpc_server.cpp:169)\r\n[10:30:48|Info ] Server set to listen on 0.0.0.0:50051 (grpc_server.cpp:170)\r\n[10:30:49|Warn ] Vehicle type changed (new type: 13, old type: 0) (system_impl.cpp:217)\r\n[10:30:49|Debug] Discovered 2 component(s) (system_impl.cpp:509)\r\n[10:30:49|Debug] COMMAND_LONG 520 to send to 1, 1 (mavlink_command_sender.cpp:112)\r\n[10:30:49|Debug] MAVLink: info: Connection to ground station lost        (system_impl.cpp:243)\r\n[10:30:49|Debug] Sent command 520 (mavlink_command_sender.cpp:407)\r\n[10:30:49|Debug] Received command ack for 520 with result 0 after 0.00235067 s (mavlink_command_sender.cpp:185)\r\n[10:30:49|Debug] MAVLink: critical: Preflight Fail: vertical velocity unstable (system_impl.cpp:243)\r\n[10:30:49|Debug] MAVLink: info: GCS connection regained  (system_impl.cpp:243)\r\n[10:30:49|Debug] MAVLink: critical: Preflight Fail: vertical velocity unstable (system_impl.cpp:243)\r\n[10:31:41|Debug] MAVLink: critical: Preflight Fail: height estimate not stable (system_impl.cpp:243)\r\n[10:31:50|Error] notify_current_settings has no camera definition (camera_impl.cpp:2149)\r\n[10:31:50|Error] notify_possible_setting_options has no camera definition (camera_impl.cpp:2192)\r\n[10:31:50|Debug] COMMAND_LONG 522 to send to 1, 100 (mavlink_command_sender.cpp:112)\r\n[10:31:50|Debug] Sent command 522 (mavlink_command_sender.cpp:407)\r\n[10:31:50|Debug] Command ack for 522 (from: 1/1) does not match command 522 (to: 1/100) after 0.001559 s (mavlink_command_sender.cpp:172)\r\n[10:31:50|Debug] Received ack from 1/1 for not-existing command: 522! Ignoring... (mavlink_command_sender.cpp:283)\r\n[10:31:50|Debug] Got timeout! (mavlink_command_sender.cpp:296)\r\n[10:31:50|Warn ] sending again after 0.508127 s, retries to do: 3  (522). (mavlink_command_sender.cpp:320)\r\n[10:31:50|Debug] Co\n...[truncated]",
+  "n_comments_total": 17,
+  "comments": [
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "> Does this mean that the SITL with Typhoon model does not have camera server side implementation?\r\n\r\nI believe this is correct. At least I know that https://github.com/JonasVautherin/px4-gazebo-headless does not have a camera implementation :+1:."
+   },
+   {
+    "user": "dsurver",
+    "assoc": "NONE",
+    "body": "Ah, then I know why it does not work. But why does the server go into an infinite loop?\r\n\r\nDoes this line mean something to debug this problem? Is 1/100 sysid/comp id for the supposed camera component?\r\n\r\n```bash\r\nCommand ack for 522 (from: 1/1) does not match command 522 (to: 1/100)\r\n```\r\n\r\nThe command should just fail right? "
+   },
+   {
+    "user": "dsurver",
+    "assoc": "NONE",
+    "body": "yes i am testing with px4-gazebo-headless. If the camera_manager_plugin only needs to be enabled in the model sdf file then seems to be enabled. \r\n\r\nregarding where does the plugin send mavlink, that should be in the sdf file right?\r\n```bash\r\n<plugin name=\"CameraManagerPlugin\" filename=\"libgazebo_camera_manager_plugin.so\">\r\n            <robotNamespace>typhoon_h480</robotNamespace>\r\n            <interval>1</interval>\r\n            <width>3840</width>\r\n            <height>2160</height>\r\n            <maximum_zoom>8.0</maximum_zoom>\r\n            <video_uri>udp://127.0.0.1:5600</video_uri>\r\n            <system_id>1</system_id>\r\n            <cam_component_id>100</cam_component_id>\r\n            <mavlink_cam_udp_port>14530</mavlink_cam_udp_port>\r\n        </plugin>\r\n```\r\nmavlink_cam_udp_port is 14530.\r\n\r\nNow in the init script for px4 sitl i see this line referring to the camera in the commented out line but the mavlink stream start commands refers to onboard module. \r\n[px4 init script](https://github.com/PX4/PX4-Autopilot/blob/0c451552c7c85bcc2dfe186e1659dd5ea1728a61/ROMFS/px4fmu_common/init.d-posix/px4-rc.mavlink#L28)\r\n\r\nDoes this mean that this is completely missing the camera module in the init script or wrong remote port?\r\n\r\n"
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "Right, so px4-gazebo-headless changes this px4-rc.mavlink file ([here](https://github.com/JonasVautherin/px4-gazebo-headless/blob/master/edit_rcS.bash#L58-L59)) in order to redirect some of the mavlink streams to the docker host on ports 14540 (for MAVSDK) and 14550 (for QGC).\r\n\r\nIt seems like the camera plugin sends to 14530. It probably stays inside the container. But for MAVSDK's purpose, we would rather have both PX4 and the camera plugin send on the same stream (from the same port, to the same port). Is there a way to configure it such that the camera plugin sends MAVLink to PX4 and PX4 forwards it to its other ports? I think some kind of forwarding existed, maybe it could be used here \ud83e\udd14.\r\n\r\n@julianoes: would that be a valid use for PX4 forwarding?"
+   },
+   {
+    "user": "dsurver",
+    "assoc": "NONE",
+    "body": "can it not be made to work like gimbal_plugin? is there a diference in how a camera manager interacts with px4 vs gimbal_manager <-> px4? "
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "How is the gimbal plugin working there? It would be interesting to know the difference with the camera plugin indeed \ud83d\udc4d "
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "> @julianoes: would that be a valid use for PX4 forwarding?\r\n\r\nWithout having read everything, yes that might help."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "I believe this is no longer an issue, at least the warnings are now disabled, so it shouldn't be as noisy."
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 3,
+   "resolution_class": "answered",
+   "solved": true,
+   "resolution_evidence": [
+    "substantive maintainer answer (2406 chars)"
+   ],
+   "relevancy_score": 0.7648,
+   "relevancy_hits": {
+    "pos": {
+     "sitl_sim": 17.2,
+     "build": 0.7,
+     "server_rpc": 4.4,
+     "docker_ci": 2.1,
+     "api_logic": 8.7,
+     "lang": 73.9,
+     "crash_repro": 0.3
+    },
+    "neg": {
+     "av_hw": 23.6
+    }
+   },
+   "is_meta": false,
+   "signal_score": 0.4609
+  }
+ },
+ {
+  "number": 2522,
+  "url": "https://github.com/mavlink/MAVSDK/issues/2522",
+  "title": "RC_Status and mavlink remote health",
+  "state": "closed",
+  "labels": [],
+  "created_at": "2025-03-14",
+  "body": "MAVSDK `RcStatus` will return `is_available = False` while autopilot has can't be armed\n\n[PX4 manualControlCheck.cpp](https://github.com/aminballoon/PX4-Autopilot/blob/v1.15.0-alpha1/src/modules/commander/HealthAndArmingChecks/checks/manualControlCheck.cpp)\n\nIn this case if **Kill switch engaged** *RCStatus::is_available will be False** by this Flag\n\n\n[RC_OK Flag check](https://github.com/mavlink/MAVSDK/blob/2304566ad9d1b7aa98bf0f12baee5f7151613589/src/mavsdk/plugins/telemetry/telemetry_impl.cpp#L1029-L1030C87) ``` const bool rc_ok = sys_status.onboard_control_sensors_health & MAV_SYS_STATUS_SENSOR_RC_RECEIVER; ```\n\nIn my opinion, when the kill switch is engaged, it doesn't mean that the RC is not available; it's available, but it just can't be armed.\n\nThe `rc_ok` Flag should not be check only MAV_SYS_STATUS_SENSOR_RC_RECEIVER or I need to contribute manualControlCheck in PX4 . \n\nI can add proto [Mavlink RC_CHANNELS_RAW](https://mavlink.io/en/messages/common.html#:~:text=UINT8_MAX%3A%20invalid/unknown.-,RC_CHANNELS_RAW,-(35)) for check the latest RC input by Timestamp and solve this issue.\nWhat do you think about this issue and my solution ?",
+  "n_comments_total": 2,
+  "comments": [
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Interesting. I would argue this needs changing/fixing on the PX4 side."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Sounds like a PX4 issue, so I'm closing this."
+   }
+  ],
+  "linked_prs": [],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 0,
+   "resolution_class": "unclear",
+   "solved": null,
+   "resolution_evidence": [
+    "closed by maintainer, no clear resolution marker"
+   ],
+   "relevancy_score": 0.5028,
+   "relevancy_hits": {
+    "pos": {
+     "server_rpc": 1.0,
+     "api_logic": 1.0,
+     "lang": 3.0
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.3186
+  }
+ },
+ {
+  "number": 2639,
+  "url": "https://github.com/mavlink/MAVSDK/issues/2639",
+  "title": "Bus error on Raspberry Pi with 3.9.0",
+  "state": "closed",
+  "labels": [
+   "bug"
+  ],
+  "created_at": "2025-08-12",
+  "body": "As per the title, I get a bus error on a Raspberry Pi armhf. Installed via release .deb.\n\nRunning under gdb gives:\n\n```\n[Thread debugging using libthread_db enabled]\nUsing host libthread_db library \"/lib/arm-linux-gnueabihf/libthread_db.so.1\".\n[02:48:16|Info ] MAVSDK version: v3.9.0 (mavsdk_impl.cpp:32)\n[New Thread 0xf7146400 (LWP 3085)]\n[New Thread 0xf6945400 (LWP 3086)]\nConnecting...\n[02:48:16|Warn ] Connection using tcp:// is deprecated, please use tcpin:// or tcpout:// (cli_arg.cpp:41)\n[New Thread 0xf5fff400 (LWP 3087)]\nWaiting for system...\n[02:48:16|Debug] New system ID: 1 Comp ID: 1 (mavsdk_impl.cpp:953)\n[New Thread 0xf55ff400 (LWP 3088)]\n[New Thread 0xf4dfe400 (LWP 3089)]\n[02:48:16|Debug] Component Autopilot (1) added. (system_impl.cpp:473)\n\nThread 4 \"main\" received signal SIGBUS, Bus error.\n[Switching to Thread 0xf5fff400 (LWP 3087)]\n0xf7acbd54 in float mav::Message::_readSingle<float>(mav::Field const&, int) const () from /lib/libmavsdk.so.3\n```\n\nWorks fine after downgrading to 3.8.1 (and 2.13.0 that I was using before that)\n",
+  "n_comments_total": 13,
+  "comments": [
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Can you get me the backtrace at that moment? "
+   },
+   {
+    "user": "tsantzi",
+    "assoc": "NONE",
+    "body": "Sure, here you go:\n\n```\n[Thread debugging using libthread_db enabled]\nUsing host libthread_db library \"/lib/arm-linux-gnueabihf/libthread_db.so.1\".\n[07:46:04|Info ] MAVSDK version: v3.9.0 (mavsdk_impl.cpp:32)\n[New Thread 0xf7146400 (LWP 22270)]\n[New Thread 0xf6945400 (LWP 22271)]\nConnecting...\n[07:46:05|Warn ] Connection using tcp:// is deprecated, please use tcpin:// or tcpout:// (cli_arg.cpp:41)\n[New Thread 0xf5fff400 (LWP 22272)]\n[07:46:05|Debug] New system ID: 1 Comp ID: 1 (mavsdk_impl.cpp:953)\n[New Thread 0xf55ff400 (LWP 22273)]\n[New Thread 0xf4dfe400 (LWP 22274)]\n[07:46:05|Debug] Component Autopilot (1) added. (system_impl.cpp:473)\nWaiting for system...\n\nThread 4 \"main\" received signal SIGBUS, Bus error.\n[Switching to Thread 0xf5fff400 (LWP 22272)]\n0xf7acbd54 in float mav::Message::_readSingle<float>(mav::Field const&, int) const () from /lib/libmavsdk.so.3\n(gdb) bt\n#0  0xf7acbd54 in float mav::Message::_readSingle<float>(mav::Field const&, int) const () from /lib/libmavsdk.so.3\n#1  0xf7ac8604 in mav::Message::getAsNativeTypeInVariant(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const () from /lib/libmavsdk.so.3\n#2  0xf7801d44 in mavsdk::LibmavReceiver::libmav_message_to_json[abi:cxx11](mav::Message const&) const () from /lib/libmavsdk.so.3\n#3  0xf57ff000 in ?? ()\nBacktrace stopped: previous frame identical to this frame (corrupt stack?)\n(gdb) \n```\n"
+   },
+   {
+    "user": "tsantzi",
+    "assoc": "NONE",
+    "body": "Turns out this is all that's needed to replicate the issue: \n\n```\n #include <stdio.h>\n #include <iostream>\n #include <thread>\n \n #include <mavsdk/mavsdk.h>\n \n \n int main(int argc, char **argv)\n {\n \u00a0\u00a0\u00a0\u00a0mavsdk::Mavsdk mavsdk{mavsdk::Mavsdk::Configuration{mavsdk::ComponentType::CompanionComputer}};\n \u00a0\u00a0\u00a0\u00a0std::optional<std::shared_ptr<mavsdk::System>> system;\n \n \u00a0\u00a0\u00a0\u00a0printf(\"Connecting...\\n\");\n \u00a0\u00a0\u00a0\u00a0mavsdk::ConnectionResult connection_result = mavsdk.add_any_connection(\"tcp://127.0.0.1:5760\");\n \u00a0\u00a0\u00a0\u00a0if (connection_result != mavsdk::ConnectionResult::Success)\n \u00a0\u00a0\u00a0\u00a0{\n \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0std::cerr << \"Connection failed: \" << connection_result << '\\n';\n \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0exit(1);\n \u00a0\u00a0\u00a0\u00a0}\n \n \u00a0\u00a0\u00a0\u00a0printf(\"Waiting for system...\\n\");\n \u00a0\u00a0\u00a0\u00a0system = mavsdk.first_autopilot(3.0);\n \u00a0\u00a0\u00a0\u00a0if (!system)\n \u00a0\u00a0\u00a0\u00a0{\n \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0std::cerr << \"Timed out waiting for system\\n\";\n \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0exit(1);\n \u00a0\u00a0\u00a0\u00a0}\n \n \u00a0\u00a0\u00a0\u00a0printf(\"Done\\n\");\n \n \u00a0\u00a0\u00a0\u00a0// Yield\n \u00a0\u00a0\u00a0\u00a0while (true)\n \u00a0\u00a0\u00a0\u00a0{\n \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0std::this_thread::sleep_for(std::chrono::milliseconds(1000));\n \u00a0\u00a0\u00a0\u00a0}\n }\n```\n\nWorks with 3.8.1, bus error with 3.9.0\n"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Are you building without cURL and OpenSSL, or what did you do about this:\n\n```\ncc1: error: '-mfloat-abi=hard': selected architecture lacks an FPU\ncc1: error: '-mfloat-abi=hard': selected architecture lacks an FPU\ncc1: error: '-mfloat-abi=hard': selected architecture lacks an FPU\ncc1: error: '-mfloat-abi=hard': selected architecture lacks an FPU\nmake[1]: *** [Makefile:4951: apps/lib/libapps-lib-app_libctx.o] Error 1\nmake[1]: *** Waiting for unfinished jobs....\nmake[1]: *** [Makefile:4959: apps/lib/libapps-lib-app_params.o] Error 1\nmake[1]: *** [Makefile:4967: apps/lib/libapps-lib-app_provider.o] Error 1\nmake[1]: *** [Makefile:4975: apps/lib/libapps-lib-app_rand.o] Error 1\nmake[1]: Leaving directory '/home/julian/src/MAVSDK/build-release/third_party/openssl/openssl/src/openssl-build'\nmake: *** [Makefile:2940: build_libs] Error 2\nninja: build stopped: subcommand failed.\n```"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Ok, managed with `-DBUILD_WITHOUT_CURL=ON` but then I get this linking error:\n\n```\n/usr/bin/ld: src/unit_tests/CMakeFiles/unit_tests_runner.dir/__/mavsdk/core/callback_list_test.cpp.o: undefined reference to symbol '__atomic_fetch_add_8@@LIBATOMIC_1.0'\n/usr/bin/ld: /lib/arm-linux-gnueabihf/libatomic.so.1: error adding symbols: DSO missing from command line\ncollect2: error: ld returned 1 exit status\n[189/210] Building CXX object src/system_tests/CMakeFiles/system_tests_runner.dir/camera_settings.cpp.o\nninja: build stopped: subcommand failed.\n```\n\nLooks like I needed to add `atomic` to the linked libs."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Ok,  I can reproduce the issue!"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "This will hopefully fix it: https://github.com/julianoes/libmavlike/pull/1"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Fix https://github.com/mavlink/MAVSDK/pull/2641 and release coming soon."
+   }
+  ],
+  "linked_prs": [
+   {
+    "number": 2641,
+    "merged": true,
+    "title": "third_party: update libmavlike to fix SIGBUS"
+   }
+  ],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 3,
+   "resolution_class": "fixed_merged_pr",
+   "solved": true,
+   "resolution_evidence": [
+    "merged PR xref: [2641]"
+   ],
+   "relevancy_score": 0.7794,
+   "relevancy_hits": {
+    "pos": {
+     "build": 6.9,
+     "server_rpc": 1.7,
+     "lang": 6.1,
+     "steps": 1.0
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.4911
+  }
+ },
+ {
+  "number": 2720,
+  "url": "https://github.com/mavlink/MAVSDK/issues/2720",
+  "title": "PX4 SITL MAVSDK test seg faulting",
+  "state": "closed",
+  "labels": [
+   "bug"
+  ],
+  "created_at": "2025-11-28",
+  "body": "I saw [seemingly random PX4 mavsdk tests in the PX4 CI seg fault](https://github.com/PX4/PX4-Autopilot/pull/25261#issuecomment-3586520441) and went into a rabbit hole to find out why.\n\nAfter managing to run the tests against a simple SIH simulation instance https://github.com/PX4/PX4-Autopilot/compare/main...maetugr/sih-ci I was able to reproduce seg faults every now and then locally.\nI then removed this line from Catch2: https://github.com/PX4/PX4-Autopilot/blob/main/test/mavsdk_tests/catch2/catch.hpp#L8027 which prevents it from capturing the seg fault and screwing up debugging.\nThen figuring out all the commands to run manually such that the python invocator can't capture the seg fault but I can do that with gdb:\n```\nDONT_RUN=1 make px4_sitl mavsdk_tests\nPX4_SIM_MODEL=sihsim_quadx PX4_SIM_SPEED_FACTOR=10 build/px4_sitl_default/bin/px4 build/px4_sitl_default/etc -s etc/init.d-posix/rcS -t test_data -d\ngdb --args build/px4_sitl_default/mavsdk_tests/mavsdk_tests --url udpin://0.0.0.0:14540 --speed-factor 10 \"Takeoff and hold position\"\n```\n\nIn gdb I used:\n```\ncatch signal SIGSEGV\nrun\n```\n\nand get the following output:\n```\n[03:43:36|Debug] MAVLink: info: Armed by external command        (system_impl.cpp:349)\n[03:43:36|Debug] MAVLink: info: Using default takeoff altitude: 10.0 m   (system_impl.cpp:349)\n[03:43:36|Debug] MAVLink: info: Takeoff detected         (system_impl.cpp:349)\n[Info] Takeoff detected\n    Event name: px4/commander_takeoff_detected\nCurrent speed factor: 6.94305 (set: 10)\nCurrent speed factor: 7.08703 (set: 10)\n[Thread 0x7ffff57fd6c0 (LWP 25143) exited]\n[Switching to Thread 0x7ffff5ffe6c0 (LWP 25142)]\n\nThread 3 \"mavsdk_tests\" hit Catchpoint 1 (signal SIGSEGV), mavsdk::SystemImpl::get_system_id (this=0xe2e2a73105de9efd)\n    at /__w/MAVSDK/MAVSDK/src/mavsdk/core/system_impl.cpp:684\nwarning: 684    /__w/MAVSDK/MAVSDK/src/mavsdk/core/system_impl.cpp: No such file or directory\n(gdb) bt\n#0  mavsdk::SystemImpl::get_system_id (this=0xe2e2a73105de9efd) at /__w/MAVSDK/MAVSDK/src/mavsdk/core/system_impl.cpp:684\n#1  0x00007ffff7476a8f in mavsdk::EventsImpl::get_or_create_event_handler (this=this@entry=0x55555575e6c0, \n    compid=compid@entry=1 '\\001') at /usr/include/c++/9/bits/shared_ptr_base.h:1020\n#2  0x00007ffff747781d in mavsdk::EventsImpl::get_health_and_arming_checks_report (this=this@entry=0x55555575e6c0)\n    at /__w/MAVSDK/MAVSDK/src/mavsdk/plugins/events/events_impl.cpp:253\n#3  0x00007ffff747bb7e in mavsdk::EventsImpl::handle_health_and_arming_check_update (this=0x55555575e6c0)\n    at /__w/MAVSDK/MAVSDK/src/mavsdk/plugins/events/events_impl.cpp:189\n#4  0x00007ffff73ab311 in std::function<void (__mavlink_message const&)>::operator()(__mavlink_message const&) const (\n    __args#0=..., this=0x555555723b68) at /usr/include/c++/9/bits/std_function.h:688\n#5  mavsdk::MavlinkMessageHandler::process_message (this=0x7fffe8000e10, message=...)\n    at /__w/MAVSDK/MAVSDK/src/mavsdk/core/mavlink_message_handler.cpp:159\n#6  0x00007ffff72ce70d in mav\n...[truncated]",
+  "n_comments_total": 18,
+  "comments": [
+   {
+    "user": "MaEtUgR",
+    "assoc": "COLLABORATOR",
+    "body": "Could it be that this invocation has https://github.com/mavlink/MAVSDK/blob/52825795bc79a9c0b8fbf02d3a5e2df2f58a32c8/src/mavsdk/plugins/events/events_impl.cpp#L83 ~has `_system_impl` NULL depending on timing.~ So far I'm just guessing. I need to make a debug build since I don't understand the details here.\n\n**EDIT:** No it's not NULL\n```\n(gdb) print this\n$1 = (const mavsdk::SystemImpl * const) 0xe2e2a73105de9efd\n```\n\n**EDIT2:** This one is also not NULL but maybe out of bounds \ud83d\udc40 \n```\n(gdb) print _target_address\nCannot access memory at address 0xe2e2a73105de9f0d\n```"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Amazing, thanks! And yes, probably a debug build next would make sense. I'll try to reproduce what you did next week."
+   },
+   {
+    "user": "MaEtUgR",
+    "assoc": "COLLABORATOR",
+    "body": "So as you already wrote it's likely that because of lifecycle the `_system_impl` shared pointer in the event handler is invalid (non-null) when there are event messages incoming and need processing. That this is on destruction can well be since my example test runs relatively briefly e.g. speedup factor 10 and just takeoff, check altitude, done. It faults at least every 4th time when I run it possibly related to a timing pattern.\n\nI'm trying to understand the lifecycle of a `System` in MAVSDK.\nHere they come to life:\nhttps://github.com/mavlink/MAVSDK/blob/52825795bc79a9c0b8fbf02d3a5e2df2f58a32c8/src/mavsdk/core/mavsdk_impl.cpp#L1068\nAnd here they seem to die:\nhttps://github.com/mavlink/MAVSDK/blob/52825795bc79a9c0b8fbf02d3a5e2df2f58a32c8/src/mavsdk/core/mavsdk_impl.cpp#L106\nSo it's like you probably already know some concurrency issue where another thread is still running processing messages while the main thread is destructing no? \ud83d\udc40"
+   },
+   {
+    "user": "MaEtUgR",
+    "assoc": "COLLABORATOR",
+    "body": "I have a `System` still in `_systems` in the `MavsdkImpl`:\n```\n(gdb) print _systems\n$3 = std::vector of length 1, capacity 1 = {{first = 1 '\\001', \n    second = std::shared_ptr<mavsdk::System> (use count 1, weak count 0) = {get() = 0x7fffe4000d90}}}\n```\nhence it tries to process messages from it but as per the assumption above the `_system_impl` is not valid anymore:\n```\n(gdb) print _systems[0].second->_system_impl\n$18 = std::shared_ptr<mavsdk::SystemImpl> (use count 13, weak count 0) = {get() = 0x7fffe4000dc0}\n```\nbut the address seems fine and I can get the ID \ud83d\udc40 \n```\n(gdb) print _systems[0].second->_system_impl->get_system_id()\n$20 = 1 '\\001'\n```\n\nsooo only in the `EventyImpl` the `_system_impl` is invalid \ud83e\udd14\n```\n(gdb) print _system_impl\n$23 = std::shared_ptr<mavsdk::SystemImpl> (use count 13, weak count 0) = {get() = 0xa4c6fc4c64f65243}\n```\nSo it's not the same? At least in this instance of time..."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "When you do an `ldd buid/path/to/mavsdk_tests`, does it show the right/patched mavsdk version? I doesn't look like you're using my patches."
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "No, I take it back, it still happens, just less likely:\n\n```\n[Thread debugging using libthread_db enabled]\nUsing host libthread_db library \"/lib/x86_64-linux-gnu/libthread_db.so.1\".\nCore was generated by `/home/julianoes/src/upstream/PX4-Autopilot/build/px4_sitl_default/mavsdk_tests/'.\nProgram terminated with signal SIGSEGV, Segmentation fault.\n#0  0x000073d8ba1072fc in mavsdk::SystemImpl::get_system_id() const () from /usr/local/lib/libmavsdk.so.3\n[Current thread is 1 (Thread 0x73d8b81fe640 (LWP 133123))]\n(gdb) bt\n#0  0x000073d8ba1072fc in mavsdk::SystemImpl::get_system_id() const () from /usr/local/lib/libmavsdk.so.3\n#1  0x000073d8ba3f1b62 in mavsdk::EventsImpl::get_or_create_event_handler(unsigned char) () from /usr/local/lib/libmavsdk.so.3\n#2  0x000073d8ba3f31aa in mavsdk::EventsImpl::get_health_and_arming_checks_report() () from /usr/local/lib/libmavsdk.so.3\n#3  0x000073d8ba3f2974 in mavsdk::EventsImpl::handle_health_and_arming_check_update() () from /usr/local/lib/libmavsdk.so.3\n#4  0x000073d8ba3f3a97 in mavsdk::EventsImpl::handle_current_mode(__mavlink_message const&) () from /usr/local/lib/libmavsdk.so.3\n#5  0x000073d8ba40730e in void std::__invoke_impl<void, void (mavsdk::EventsImpl::*&)(__mavlink_message const&), mavsdk::EventsImpl*&, __mavlink_message const&>(std::__invoke_memfun_deref, void (mavsdk::EventsImpl::*&)(__mavlink_message const&), mavsdk::EventsImpl*&, __mavlink_message const&) () from /usr/local/lib/libmavsdk.so.3\n#6  0x000073d8ba405dd7 in std::__invok\n...[truncated]"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "Haven't seen the segfault after yet another fix in the events plugin: https://github.com/mavlink/MAVSDK/pull/2723"
+   },
+   {
+    "user": "MaEtUgR",
+    "assoc": "COLLABORATOR",
+    "body": "Amazing! Problem resolved \u2705\nMost likely https://github.com/mavlink/MAVSDK/pull/2723 did the trick \ud83d\udc4d\nThank you so much for fixing this! \ud83d\ude4f "
+   }
+  ],
+  "linked_prs": [
+   {
+    "number": 2721,
+    "merged": true,
+    "title": "Fix segfaults on events destruction"
+   },
+   {
+    "number": 26024,
+    "merged": true,
+    "title": "mavsdk_tests: bump MAVSDK version to v3.11.2"
+   }
+  ],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 3,
+   "resolution_class": "fixed_merged_pr",
+   "solved": true,
+   "resolution_evidence": [
+    "merged PR xref: [2721, 26024]"
+   ],
+   "relevancy_score": 0.97,
+   "relevancy_hits": {
+    "pos": {
+     "sitl_sim": 3.4,
+     "build": 19.9,
+     "docker_ci": 2.0,
+     "api_logic": 0.3,
+     "lang": 22.8,
+     "crash_repro": 1.4,
+     "steps": 1.7
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.6794
+  }
+ },
+ {
+  "number": 2895,
+  "url": "https://github.com/mavlink/MAVSDK/issues/2895",
+  "title": "Add support for disabling native heartbeat sending and triggering HEARTBEAT over gRPC",
+  "state": "closed",
+  "labels": [],
+  "created_at": "2026-06-09",
+  "body": "I would like to contribute a feature that lets MAVSDK users disable internally generated HEARTBEAT sending and instead trigger transmission through gRPC.\n\nThe gRPC API would be a fail-closed, one-shot request to send a single MAVSDK-configured HEARTBEAT, not a toggle or persistent enable state. If the client stops calling, disconnects, or fails, MAVSDK does not continue sending heartbeats through that path. The client is responsible for calling at the desired rate (e.g. ~1 Hz).\n\nThe gRPC call would not set HEARTBEAT fields; MAVSDK continues to own message content (sysid, compid, mav_type, etc.). The call only requests that MAVSDK send its configured heartbeat.\n\nSome integrations need an external process to control when MAVSDK sends heartbeats, while MAVSDK still constructs the actual MAVLink HEARTBEAT message. This avoids duplicating heartbeat construction outside MAVSDK.\n\n**Proposed Solution**\n- Add a configuration option (e.g. automatic_heartbeats_enabled) to disable native heartbeat sending.\n- Add a gRPC API to trigger one configured HEARTBEAT per request.\n- Optionally expose via mavsdk_server CLI (e.g. --no-automatic-heartbeats).\n\nDefault behavior stays unchanged.",
+  "n_comments_total": 7,
+  "comments": [
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "Is your use-case that you want MAVSDK to stop sending heartbeats in case your program crashes? If it is something different, can you explain it?\n\nAlso you mention gRPC so I assume you are using some MAVSDK bindings. Which ones? MAVSDK-Python?"
+   },
+   {
+    "user": "tpayne-censystech",
+    "assoc": "CONTRIBUTOR",
+    "body": "Yes, that is the main use case.\n\nWe are using MAVSDK to interface with a PX4 vehicle from our own application. We want the heartbeat to represent the health/presence of the application using MAVSDK, not just whether MAVSDK-server is still running.\n\nIf that application crashes, disconnects from MAVSDK-server, or stops servicing the control path, we want PX4 to see the GCS/companion component as offline so it can trigger the configured MAVLink lost-link failsafe behavior, such as RTL.\n\nWe also have test cases where we want to continue subscribing to telemetry from PX4 through MAVSDK, while intentionally disabling outbound heartbeat transmission so we can verify PX4's lost-link behavior.\n\nWe are not using MAVSDK-Python. We are using our own application that communicates with MAVSDK-server over gRPC.\n"
+   },
+   {
+    "user": "julianoes",
+    "assoc": "COLLABORATOR",
+    "body": "I guess that would be acceptable as a feature. What do you think @JonasVautherin? Either explicit heartbeat triggering, or a timeout that stops it?"
+   },
+   {
+    "user": "tpayne-censystech",
+    "assoc": "CONTRIBUTOR",
+    "body": "I like the timeout idea as long as it can be configured at runtime."
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "Yeah I think it should work \ud83d\udc4d "
+   },
+   {
+    "user": "tpayne-censystech",
+    "assoc": "CONTRIBUTOR",
+    "body": "Thanks @JonasVautherin \n\nFollowing the timeout idea @julianoes suggested, I\u2019m planning to implement this as a heartbeat watchdog (deadman timer) rather than the original one-shot \u201csend one HEARTBEAT per gRPC call\u201d design.\n\nThe idea is that MAVSDK keeps sending periodic heartbeats as it does today and still owns the message content (sysid, compid, mav_type, etc.). The client\u2019s job is to keep feeding the watchdog over gRPC at roughly the desired rate. If the client crashes, hangs, or disconnects and stops feeding, heartbeats stop after the configured timeout so PX4 can treat the GCS/companion as offline and trigger lost-link failsafes like RTL.\n\nThe timeout would be configurable at runtime, and default behavior would stay unchanged when the watchdog isn\u2019t enabled. That should cover both our production use case (heartbeats reflect application liveness, not just mavsdk_server) and our lost-link testing (subscribe to telemetry, stop feeding, verify failsafe behavior).\n\nLet me know if that direction works for you and I\u2019ll open a PR."
+   },
+   {
+    "user": "JonasVautherin",
+    "assoc": "COLLABORATOR",
+    "body": "Yes that works for me \ud83d\udc4d "
+   }
+  ],
+  "linked_prs": [
+   {
+    "number": 415,
+    "merged": true,
+    "title": "feat(core): add FeedHeartbeatWatchdog RPC"
+   },
+   {
+    "number": 2905,
+    "merged": true,
+    "title": "feat(core): add heartbeat watchdog (deadman timer) (#2895)"
+   },
+   {
+    "number": 421,
+    "merged": true,
+    "title": "core: raise heartbeat watchdog minimum timeout to 2 s"
+   },
+   {
+    "number": 3020,
+    "merged": false,
+    "title": "core: heartbeat watchdog (deadman timer), reworked"
+   }
+  ],
+  "close_commits": [],
+  "ASSIGNED": {
+   "bucket": 3,
+   "resolution_class": "fixed_merged_pr",
+   "solved": true,
+   "resolution_evidence": [
+    "merged PR xref: [415, 2905, 421]"
+   ],
+   "relevancy_score": 0.3979,
+   "relevancy_hits": {
+    "pos": {
+     "server_rpc": 8.8,
+     "api_logic": 1.0,
+     "lang": 0.7,
+     "crash_repro": 0.3
+    },
+    "neg": {}
+   },
+   "is_meta": false,
+   "signal_score": 0.5692
+  }
+ }
+]

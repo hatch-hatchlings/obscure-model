@@ -1,0 +1,10 @@
+[{"number": 2543,
+  "solved_assigned": true,
+  "solved_verdict": true,
+  "solved_agree": true,
+  "relevancy_assigned": 0.3339,
+  "relevancy_verdict": 0.85,
+  "relevancy_agree": false,
+  "cloud_verifiable": "yes",
+  "confidence": "high",
+  "note": "Adjudicated directly, not by subagent. Reporter reproduced it in Mission Planner SITL with a minimal Python script; it is a parameter-corruption bug in mission import parsing with an existing unit-test file (mission_import_test.cpp). Scored low only because DIGICAM_CONTROL / 'take a picture' tripped the camera-hardware negative."}]

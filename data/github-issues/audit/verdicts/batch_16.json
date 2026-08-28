@@ -1,0 +1,74 @@
+[
+ {
+  "number": 2434,
+  "solved_assigned": true,
+  "solved_verdict": true,
+  "solved_agree": true,
+  "relevancy_assigned": 0.7433,
+  "relevancy_verdict": 0.8,
+  "relevancy_agree": true,
+  "cloud_verifiable": "yes",
+  "confidence": "high",
+  "note": ""
+ },
+ {
+  "number": 1153,
+  "solved_assigned": true,
+  "solved_verdict": true,
+  "solved_agree": true,
+  "relevancy_assigned": 0.7329,
+  "relevancy_verdict": 0.75,
+  "relevancy_agree": true,
+  "cloud_verifiable": "yes",
+  "confidence": "high",
+  "note": ""
+ },
+ {
+  "number": 1253,
+  "solved_assigned": true,
+  "solved_verdict": true,
+  "solved_agree": true,
+  "relevancy_assigned": 0.6972,
+  "relevancy_verdict": 0.7,
+  "relevancy_agree": true,
+  "cloud_verifiable": "yes",
+  "confidence": "medium",
+  "note": "core question (where to find mavsdk_server) clearly answered; later multi-drone/follow_me sub-question trails off unresolved but doesn't change the verdict"
+ },
+ {
+  "number": 2611,
+  "solved_assigned": true,
+  "solved_verdict": true,
+  "solved_agree": true,
+  "relevancy_assigned": 0.6015,
+  "relevancy_verdict": 0.8,
+  "relevancy_agree": true,
+  "cloud_verifiable": "yes",
+  "confidence": "high",
+  "note": "pure mutex double-unlock bug, no SITL/hardware needed at all; assigned score reads a bit low but within tolerance"
+ },
+ {
+  "number": 2000,
+  "solved_assigned": true,
+  "solved_verdict": false,
+  "solved_agree": false,
+  "relevancy_assigned": 0.3079,
+  "relevancy_verdict": 0.3,
+  "relevancy_agree": true,
+  "cloud_verifiable": "partial",
+  "confidence": "high",
+  "note": "maintainer never understood the question and the thread ends with him asking the author to clarify; no working answer was ever given, so not solved"
+ },
+ {
+  "number": 1056,
+  "solved_assigned": true,
+  "solved_verdict": true,
+  "solved_agree": true,
+  "relevancy_assigned": 0.1263,
+  "relevancy_verdict": 0.15,
+  "relevancy_agree": true,
+  "cloud_verifiable": "no",
+  "confidence": "medium",
+  "note": "trivial rename/cleanup task, no reproducible bug to verify"
+ }
+]
